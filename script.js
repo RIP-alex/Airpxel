@@ -138,27 +138,27 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== ANIMATION DES BARRES DE COMPÉTENCES =====
     
-    // Fonction pour animer les barres de compétences
-    function animateSkillBars() {
-        skillLevels.forEach(skillLevel => {
-            const level = skillLevel.getAttribute('data-level');
-            
-            // Vérifier si la section des compétences est visible
-            const skillsSection = document.getElementById('skills');
-            if (isElementInViewport(skillsSection) && !skillLevel.style.width) {
-                // Délai avant l'animation pour créer un effet en cascade
-                setTimeout(() => {
-                    skillLevel.style.width = `${level}%`;
-                }, 100);
-            }
+    // Cette fonction n'est plus nécessaire avec le nouveau design des compétences
+    // mais on garde les animations pour les autres éléments
+    function handleSkillCards() {
+        const skillCards = document.querySelectorAll('.skill-card');
+        
+        skillCards.forEach((card, index) => {
+            // Ajouter un délai progressif pour l'animation d'entrée
+            setTimeout(() => {
+                if (isElementInViewport(card.closest('.skill-group'))) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            }, index * 100);
         });
     }
     
     // Déclencher l'animation au chargement initial
-    animateSkillBars();
+    handleSkillCards();
     
     // Écouteur d'événement pour le défilement
-    window.addEventListener('scroll', animateSkillBars);
+    window.addEventListener('scroll', handleSkillCards);
     
     // ===== ANIMATION DOUCE POUR LES LIENS D'ANCRAGE =====
     
