@@ -6,6 +6,46 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.nav-link');
     const skillLevels = document.querySelectorAll('.skill-level');
+    const contactForm = document.getElementById('contact-form');
+    const navContainer = document.querySelector('.nav-container');
+    const navIndicator = document.querySelector('.nav-indicator');
+    
+    // ===== ANIMATION DE L'INDICATEUR DE NAVIGATION =====
+    
+    // Fonction pour mettre à jour l'indicateur de navigation
+    function updateNavIndicator(link) {
+        if (!navIndicator) return;
+        
+        const linkRect = link.getBoundingClientRect();
+        const navRect = navContainer.getBoundingClientRect();
+        
+        navIndicator.style.width = `${linkRect.width}px`;
+        navIndicator.style.left = `${linkRect.left - navRect.left}px`;
+    }
+    
+    // Initialiser l'indicateur de navigation
+    function initNavIndicator() {
+        if (!navIndicator || !navLinks.length) return;
+        
+        // Initialiser l'indicateur sur le premier lien
+        updateNavIndicator(navLinks[0]);
+        
+        // Ajouter des écouteurs d'événements pour tous les liens
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                updateNavIndicator(this);
+            });
+        });
+        
+        // Restaurer l'indicateur au lien actif lorsque la souris quitte la navigation
+        navContainer.addEventListener('mouseleave', function() {
+            const activeLink = document.querySelector('.nav-link.active') || navLinks[0];
+            updateNavIndicator(activeLink);
+        });
+    }
+    
+    // Initialiser l'indicateur de navigation
+    initNavIndicator();
     
     // ===== GESTION DU THÈME SOMBRE/CLAIR =====
     
@@ -96,34 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Écouteur d'événement pour le défilement
     window.addEventListener('scroll', animateSections);
     
-    // ===== NAVIGATION ACTIVE =====
-    
-    // Fonction pour mettre à jour le lien actif dans la navigation
-    function updateActiveNavLink() {
-        const scrollPosition = window.scrollY;
-        
-        sections.forEach(section => {
-            const sectionId = section.getAttribute('id');
-            const sectionOffset = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            
-            if (scrollPosition >= sectionOffset && scrollPosition < sectionOffset + sectionHeight) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
-    
-    // Mettre à jour le lien actif au chargement
-    updateActiveNavLink();
-    
-    // Écouteur d'événement pour le défilement
-    window.addEventListener('scroll', updateActiveNavLink);
-    
     // ===== ANIMATION DES BARRES DE COMPÉTENCES =====
     
     // Fonction pour animer les barres de compétences
@@ -200,4 +212,62 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Animer l'en-tête après un court délai
     setTimeout(animateHeader, 100);
+    
+    // ===== VALIDATION DU FORMULAIRE DE CONTACT =====
+    
+    // Fonction pour valider le formulaire de contact
+    function validateContactForm(event) {
+        let isValid = true;
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+        
+        // Supprimer les classes d'erreur précédentes
+        const inputs = [nameInput, emailInput, subjectInput, messageInput];
+        inputs.forEach(input => {
+            input.classList.remove('error');
+        });
+        
+        // Valider le nom (au moins 2 caractères)
+        if (nameInput.value.trim().length < 2) {
+            nameInput.classList.add('error');
+            isValid = false;
+        }
+        
+        // Valider l'email avec une regex simple
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim())) {
+            emailInput.classList.add('error');
+            isValid = false;
+        }
+        
+        // Valider le sujet (au moins 3 caractères)
+        if (subjectInput.value.trim().length < 3) {
+            subjectInput.classList.add('error');
+            isValid = false;
+        }
+        
+        // Valider le message (au moins 10 caractères)
+        if (messageInput.value.trim().length < 10) {
+            messageInput.classList.add('error');
+            isValid = false;
+        }
+        
+        // Si le formulaire n'est pas valide, empêcher l'envoi
+        if (!isValid) {
+            event.preventDefault();
+            
+            // Faire défiler jusqu'au premier champ en erreur
+            const firstError = document.querySelector('.error');
+            if (firstError) {
+                firstError.focus();
+            }
+        }
+    }
+    
+    // Attacher l'événement de soumission au formulaire
+    if (contactForm) {
+        contactForm.addEventListener('submit', validateContactForm);
+    }
 });
