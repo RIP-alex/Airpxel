@@ -4,6 +4,7 @@
     --color-primary: #101820;          /* Bleu foncé presque noir */
     --color-secondary: #c3a343;        /* Or */
     --color-accent: #c3a343;          /* Or pour les accents */
+    --color-highlight: #4285f4;       /* Bleu vif pour certains accents */
     --color-light: #f5f5f5;           /* Blanc cassé */
     --color-dark: #1a1a1a;            /* Noir riche */
     --color-gray: #777;               /* Gris moyen */
@@ -16,8 +17,8 @@
     --text-secondary: #555;
     
     /* Typographie */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Raleway', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
     
     /* Espacements */
     --spacing-xs: 0.5rem;
@@ -43,6 +44,25 @@
     --color-primary: #1a1a1a;
     --color-secondary: #c3a343;
     --color-accent: #d4af37;          /* Or plus clair pour meilleure visibilité */
+    
+    /* Fonds et textes */
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #f5f5f5;
+    --text-secondary: #bebebe;
+    
+    /* Effets */
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== THÈME SOMBRE ===== */
+[data-theme="dark"] {
+    --color-primary: #1a1a1a;
+    --color-secondary: #c3a343;
+    --color-accent: #d4af37;          /* Or plus clair pour meilleure visibilité */
+    --color-highlight: #64b5f6;       /* Bleu plus clair pour le thème sombre */
     
     /* Fonds et textes */
     --bg-primary: #121212;
@@ -105,23 +125,6 @@ a {
 a:hover {
     color: var(--color-secondary);
     text-decoration: underline;
-}
-
-/* ===== HEADER ===== */
-.header {
-    background-color: var(--color-primary);
-    color: var(--color-light);
-    padding: var(--spacing-xl) var(--spacing-md);
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 35vh;
-    background-image: 
-        radial-gradient(circle at 25% 15%, rgba(195, 163, 67, 0.05) 5%, transparent 60%),
-        radial-gradient(circle at 75% 85%, rgba(195, 163, 67, 0.05) 5%, transparent 60%);
 }
 
 .header-content {
