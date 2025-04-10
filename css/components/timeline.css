@@ -1,12 +1,12 @@
-/* Styles pour la timeline horizontale */
+/* CSS amélioré pour la timeline horizontale */
 
 /* Conteneur principal de la timeline */
 .horizontal-timeline {
     position: relative;
     width: 100%;
-    padding: 80px 0;
+    padding: 60px 0 120px; /* Plus d'espace en bas pour les cartes */
     margin-top: 30px;
-    overflow: hidden;
+    overflow: visible; /* Changé de hidden à visible pour voir les cartes qui débordent */
 }
 
 /* Ligne de la timeline */
@@ -15,7 +15,7 @@
     width: 90%;
     height: 4px;
     background-color: var(--color-bg-tertiary);
-    margin: 0 auto 30px;
+    margin: 0 auto 80px; /* Plus d'espace sous la ligne pour les cartes */
     border-radius: var(--radius-full);
 }
 
@@ -28,7 +28,7 @@
 
 .year-marker {
     position: absolute;
-    bottom: 15px;
+    top: -25px; /* Déplacé au-dessus de la ligne */
     transform: translateX(-50%);
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
@@ -40,17 +40,19 @@
     position: relative;
     width: 90%;
     margin: 0 auto;
-    height: 400px; /* Hauteur fixe pour les éléments de la timeline */
+    min-height: 400px; /* Hauteur minimale pour les éléments de la timeline */
 }
 
 /* Élément individuel de la timeline */
 .timeline-item.horizontal {
     position: absolute;
-    top: 0;
+    top: -80px; /* Position initiale au-dessus de la ligne */
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: all 0.5s ease;
+    width: auto; /* Permettre aux éléments de prendre leur largeur naturelle */
+    transform: translateX(-50%); /* Centrer l'élément sur sa position left */
 }
 
 /* Points sur la timeline */
@@ -60,7 +62,10 @@
     border-radius: 50%;
     background-color: var(--color-accent-primary);
     margin-bottom: 15px;
-    position: relative;
+    position: absolute;
+    top: -42px; /* Position relative à l'élément timeline-item.horizontal */
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
     box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
 }
@@ -73,24 +78,31 @@
     padding: var(--space-4);
     box-shadow: var(--shadow-md);
     position: relative;
-    transform: translateX(-50%);
     max-height: 350px;
     overflow-y: auto;
     transition: all 0.3s ease;
 }
 
 .timeline-card:hover {
-    transform: translateX(-50%) translateY(-5px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
 /* Style pour les cartes qui alternent en haut/bas */
-.timeline-item.horizontal:nth-child(even) .timeline-card {
-    margin-top: 20px;
+.timeline-item.horizontal:nth-child(even) {
+    top: 30px; /* En dessous de la ligne pour les éléments pairs */
 }
 
-.timeline-item.horizontal:nth-child(odd) .timeline-card {
-    margin-top: -380px;
+.timeline-item.horizontal:nth-child(even) .timeline-dot {
+    top: -88px; /* Ajuster la position du point pour les éléments pairs */
+}
+
+.timeline-item.horizontal:nth-child(odd) {
+    top: -180px; /* Au-dessus de la ligne pour les éléments impairs */
+}
+
+.timeline-item.horizontal:nth-child(odd) .timeline-dot {
+    top: 0; /* Ajuster la position du point pour les éléments impairs */
 }
 
 /* Contrôles de navigation */
@@ -113,6 +125,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-md);
+    color: var(--color-text-primary);
 }
 
 .timeline-control:hover {
@@ -123,28 +136,60 @@
 /* Animation d'entrée pour les éléments de la timeline */
 .timeline-item.horizontal {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(-50%) translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .timeline-item.horizontal.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Styles pour les onglets (Expériences/Formation) */
+.journey-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+}
+
+.journey-tab {
+    padding: var(--space-2) var(--space-4);
+    background-color: transparent;
+    border: 2px solid var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    transition: all var(--transition-normal) var(--transition-function);
+    cursor: pointer;
+}
+
+.journey-tab.active,
+.journey-tab:hover {
+    background-color: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    color: white;
 }
 
 /* Responsive pour les petits écrans */
 @media (max-width: 768px) {
     .timeline-items-container {
-        height: 450px;
+        min-height: 500px;
     }
     
     .timeline-card {
         width: 250px;
     }
     
-    .timeline-item.horizontal:nth-child(odd) .timeline-card,
-    .timeline-item.horizontal:nth-child(even) .timeline-card {
-        margin-top: 20px; /* Tous les éléments en bas sur mobile */
+    /* Sur mobile, toutes les cartes en dessous de la ligne */
+    .timeline-item.horizontal:nth-child(odd),
+    .timeline-item.horizontal:nth-child(even) {
+        top: 30px;
+    }
+    
+    .timeline-item.horizontal:nth-child(odd) .timeline-dot,
+    .timeline-item.horizontal:nth-child(even) .timeline-dot {
+        top: -88px;
     }
 }
 

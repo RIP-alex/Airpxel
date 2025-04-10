@@ -187,7 +187,7 @@
                         
                         <!-- Conteneur des éléments de la timeline -->
                         <div class="timeline-items-container">
-                            <!-- Élément de timeline -->
+                            <!-- IMPORTANT: Les left doivent correspondre aux positions des dates -->
                             <div class="timeline-item horizontal" style="left: 80%">
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-card">
@@ -256,7 +256,7 @@
                                 </div>
                             </div>
                             
-                            <div class="timeline-item horizontal" style="left: 15%">
+                            <div class="timeline-item horizontal" style="left: 10%">
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-card">
                                     <div class="timeline-date">2015 - 2016</div>
@@ -366,6 +366,12 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <!-- Contrôles de navigation pour la timeline -->
+                        <div class="timeline-controls">
+                            <button class="timeline-control prev-btn" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+                            <button class="timeline-control next-btn"aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>
