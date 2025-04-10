@@ -10,6 +10,11 @@ function initSkillTabs() {
     
     console.log(`${categories.length} catégories trouvées`);
     
+    // Cacher toutes les sections de contenu au démarrage
+    document.querySelectorAll('.skill-details-content').forEach(content => {
+        content.classList.remove('active');
+    });
+    
     categories.forEach(category => {
         category.addEventListener('click', () => {
             const categoryId = category.getAttribute('data-category');
@@ -20,19 +25,23 @@ function initSkillTabs() {
             // Ajouter la classe active à la catégorie cliquée
             category.classList.add('active');
             
-            // Afficher le contenu des compétences correspondant
+            // Masquer tous les contenus
             const contents = document.querySelectorAll('.skill-details-content');
             contents.forEach(content => {
                 content.classList.remove('active');
             });
             
+            // Afficher le contenu correspondant
             const targetContent = document.querySelector(`.skill-details-content[data-category="${categoryId}"]`);
             if (targetContent) {
-                targetContent.classList.add('active');
-                console.log(`Contenu activé pour: ${categoryId}`);
-                
-                // Animation d'apparition des icônes une par une
-                animateSkillIcons(targetContent);
+                // Attendre un court instant avant d'afficher pour permettre la transition
+                setTimeout(() => {
+                    targetContent.classList.add('active');
+                    console.log(`Contenu activé pour: ${categoryId}`);
+                    
+                    // Animation d'apparition des icônes une par une
+                    animateSkillIcons(targetContent);
+                }, 50);
             } else {
                 console.error(`Contenu non trouvé pour la catégorie: ${categoryId}`);
             }
@@ -40,27 +49,26 @@ function initSkillTabs() {
     });
 }
 
-// Fonction pour animer l'apparition des icônes de compétences
+
+// Fonction améliorée pour animer l'apparition des icônes de compétences
 function animateSkillIcons(container) {
     const icons = container.querySelectorAll('.skill-icon-item');
     console.log(`Animation de ${icons.length} icônes`);
     
     // Réinitialiser les styles d'animation pour toutes les icônes
     icons.forEach(icon => {
-        icon.style.opacity = '0';
-        icon.style.transform = 'translateY(20px)';
+        // Supprimer la classe revealed pour réinitialiser l'animation
+        icon.classList.remove('revealed');
     });
     
     // Animer chaque icône avec un délai progressif
     icons.forEach((icon, index) => {
         setTimeout(() => {
-            icon.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-            icon.style.opacity = '1';
-            icon.style.transform = 'translateY(0)';
-        }, 50 + index * 50); // Délai de base + délai progressif
+            // Ajouter la classe pour déclencher l'animation
+            icon.classList.add('revealed');
+        }, 100 + index * 80); // Délai progressif plus prononcé
     });
 }
-
 // Fonction pour initialiser la première catégorie par défaut
 function initDefaultCategory() {
     console.log("Initialisation de la catégorie par défaut");

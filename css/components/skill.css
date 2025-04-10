@@ -132,6 +132,32 @@
     color: white;
 }
 
+/* Style pour cacher les contenus inactifs */
+.skill-details-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skill-details-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation d'apparition pour les icônes */
+.skill-icon-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skill-details-content.active .skill-icon-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Media queries pour la responsivité */
 @media (max-width: 768px) {
     .skill-categories {
