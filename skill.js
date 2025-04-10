@@ -1,28 +1,40 @@
-// skill.js - Gestion des fonctionnalités de la section compétences
-
 // Fonction principale pour initialiser les onglets de compétences
 function initSkillTabs() {
+    console.log("Initialisation des onglets de compétences");
     const categories = document.querySelectorAll('.skill-category');
+    
+    if (categories.length === 0) {
+        console.log("Aucune catégorie de compétences trouvée");
+        return;
+    }
+    
+    console.log(`${categories.length} catégories trouvées`);
     
     categories.forEach(category => {
         category.addEventListener('click', () => {
+            const categoryId = category.getAttribute('data-category');
+            console.log(`Clic sur la catégorie: ${categoryId}`);
+            
             // Retirer la classe active de toutes les catégories
             categories.forEach(c => c.classList.remove('active'));
             // Ajouter la classe active à la catégorie cliquée
             category.classList.add('active');
             
             // Afficher le contenu des compétences correspondant
-            const categoryId = category.getAttribute('data-category');
-            document.querySelectorAll('.skill-details-content').forEach(content => {
+            const contents = document.querySelectorAll('.skill-details-content');
+            contents.forEach(content => {
                 content.classList.remove('active');
             });
             
             const targetContent = document.querySelector(`.skill-details-content[data-category="${categoryId}"]`);
             if (targetContent) {
                 targetContent.classList.add('active');
+                console.log(`Contenu activé pour: ${categoryId}`);
                 
                 // Animation d'apparition des icônes une par une
                 animateSkillIcons(targetContent);
+            } else {
+                console.error(`Contenu non trouvé pour la catégorie: ${categoryId}`);
             }
         });
     });
@@ -31,6 +43,7 @@ function initSkillTabs() {
 // Fonction pour animer l'apparition des icônes de compétences
 function animateSkillIcons(container) {
     const icons = container.querySelectorAll('.skill-icon-item');
+    console.log(`Animation de ${icons.length} icônes`);
     
     // Réinitialiser les styles d'animation pour toutes les icônes
     icons.forEach(icon => {
@@ -50,15 +63,20 @@ function animateSkillIcons(container) {
 
 // Fonction pour initialiser la première catégorie par défaut
 function initDefaultCategory() {
+    console.log("Initialisation de la catégorie par défaut");
     const firstCategory = document.querySelector('.skill-category');
     if (firstCategory) {
         // Simuler un clic sur la première catégorie
         firstCategory.click();
+        console.log("Première catégorie activée");
+    } else {
+        console.error("Aucune catégorie trouvée pour l'initialisation par défaut");
     }
 }
 
 // Initialisation au chargement du document
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM chargé - Initialisation des skills");
     initSkillTabs();
     initDefaultCategory();
 });
