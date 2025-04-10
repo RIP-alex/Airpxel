@@ -173,23 +173,96 @@
                 <!-- Conteneur des timelines -->
                 <div class="journey-content">
                     <!-- Timeline des expériences -->
-                    <div class="timeline-container horizontal-timeline active" id="experience-timeline">
-                        <!-- Ligne de temps horizontale avec années marqueurs -->
-                        <div class="timeline-line">
+                    <div class="timeline-container parallax-timeline active" id="experience-timeline">
+                        <!-- Ligne de temps principale -->
+                        <div class="timeline-track">
+                            <div class="timeline-line"></div>
+                            
+                            <!-- Marqueurs d'années -->
                             <div class="timeline-years">
                                 <span class="year-marker" style="left: 0%">2013</span>
-                                <span class="year-marker" style="left: 20%">2015</span>
-                                <span class="year-marker" style="left: 40%">2019</span>
-                                <span class="year-marker" style="left: 60%">2023</span>
-                                <span class="year-marker" style="left: 80%">2024</span>
+                                <span class="year-marker" style="left: 25%">2015</span>
+                                <span class="year-marker" style="left: 50%">2019</span>
+                                <span class="year-marker" style="left: 75%">2023</span>
+                                <span class="year-marker" style="left: 100%">2024</span>
+                            </div>
+                            
+                            <!-- Points sur la timeline -->
+                            <div class="timeline-points">
+                                <div class="timeline-point" style="left: 0%" data-year="2013"></div>
+                                <div class="timeline-point" style="left: 25%" data-year="2015"></div>
+                                <div class="timeline-point" style="left: 50%" data-year="2019"></div>
+                                <div class="timeline-point" style="left: 75%" data-year="2023"></div>
+                                <div class="timeline-point" style="left: 100%" data-year="2024"></div>
                             </div>
                         </div>
                         
-                        <!-- Conteneur des éléments de la timeline -->
-                        <div class="timeline-items-container">
-                            <!-- IMPORTANT: Les left doivent correspondre aux positions des dates -->
-                            <div class="timeline-item horizontal" style="left: 80%">
-                                <div class="timeline-dot"></div>
+                        <!-- Conteneur des cartes d'information -->
+                        <div class="timeline-cards-container">
+                            <!-- 2013 - Infographiste -->
+                            <div class="timeline-card-wrapper" data-year="2013">
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2013 - 2014</div>
+                                    <h3 class="timeline-title">Infographiste / Chargé de communication</h3>
+                                    <div class="timeline-subtitle">CONSEIL REGIONAL - CHÂTEAU DE LUNEVILLE</div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Création de supports multiples, réseaux sociaux, mailing, photographie</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2015 - Président d'association -->
+                            <div class="timeline-card-wrapper" data-year="2015">
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2015 - 2019</div>
+                                    <h3 class="timeline-title">Président d'association</h3>
+                                    <div class="timeline-subtitle">Association Hurrikane Crew</div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Organisation, création, sécurité, communication sur des événements musicaux et culturels</li>
+                                            <li>Bénévolat et acteur sur divers festivals et expositions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2019 - Mécanicien Agricole -->
+                            <div class="timeline-card-wrapper" data-year="2019">
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2019 - 2021</div>
+                                    <h3 class="timeline-title">Mécanicien Agricole</h3>
+                                    <div class="timeline-subtitle">SARL Voutrin-Cherrier</div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Réparation, intervention, installation, préparation sur véhicule agricole et machinerie</li>
+                                            <li>Réparation sur tout type d'appareil de parc et jardin</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2023 - Responsable de communication -->
+                            <div class="timeline-card-wrapper" data-year="2023">
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2023 - Aujourd'hui</div>
+                                    <h3 class="timeline-title">Responsable de communication</h3>
+                                    <div class="timeline-subtitle">CASI Lorraine</div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Élaboration et mise en œuvre de la stratégie de communication globale</li>
+                                            <li>Création et gestion des contenus pour les supports numériques et imprimés</li>
+                                            <li>Animation des réseaux sociaux et gestion de la présence en ligne</li>
+                                            <li>Coordination des relations avec les partenaires et prestataires externes</li>
+                                            <li>Organisation et promotion d'événements internes et externes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2024 - Développeur Fullstack -->
+                            <div class="timeline-card-wrapper" data-year="2024">
                                 <div class="timeline-card">
                                     <div class="timeline-date">2024 - Aujourd'hui</div>
                                     <h3 class="timeline-title">Développeur Fullstack</h3>
@@ -207,85 +280,9 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="timeline-item horizontal" style="left: 60%">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2023 - Aujourd'hui</div>
-                                    <h3 class="timeline-title">Responsable de communication</h3>
-                                    <div class="timeline-subtitle">CASI Lorraine</div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Élaboration et mise en œuvre de la stratégie de communication globale</li>
-                                            <li>Création et gestion des contenus pour les supports numériques et imprimés</li>
-                                            <li>Animation des réseaux sociaux et gestion de la présence en ligne</li>
-                                            <li>Coordination des relations avec les partenaires et prestataires externes</li>
-                                            <li>Organisation et promotion d'événements internes et externes</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item horizontal" style="left: 40%">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2019 - 2021</div>
-                                    <h3 class="timeline-title">Mécanicien Agricole</h3>
-                                    <div class="timeline-subtitle">SARL Voutrin-Cherrier</div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Réparation, intervention, installation, préparation sur véhicule agricole et machinerie</li>
-                                            <li>Réparation sur tout type d'appareil de parc et jardin</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item horizontal" style="left: 20%">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2015 - 2019</div>
-                                    <h3 class="timeline-title">Président d'association</h3>
-                                    <div class="timeline-subtitle">Association Hurrikane Crew</div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Organisation, création, sécurité, communication sur des événements musicaux et culturels</li>
-                                            <li>Bénévolat et acteur sur divers festivals et expositions</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item horizontal" style="left: 10%">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2015 - 2016</div>
-                                    <h3 class="timeline-title">Infographiste / Chargé de communication</h3>
-                                    <div class="timeline-subtitle">UNION REGIONAL DES SCOP DE L'EST</div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Création de supports multiples, réseaux sociaux, mailing, photographie</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item horizontal" style="left: 0%">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2013 - 2014</div>
-                                    <h3 class="timeline-title">Infographiste / Chargé de communication</h3>
-                                    <div class="timeline-subtitle">CONSEIL REGIONAL - CHÂTEAU DE LUNEVILLE</div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Création de supports multiples, réseaux sociaux, mailing, photographie</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         
-                        <!-- Contrôles de navigation pour la timeline -->
+                        <!-- Contrôles de navigation -->
                         <div class="timeline-controls">
                             <button class="timeline-control prev-btn" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
                             <button class="timeline-control next-btn" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
@@ -293,58 +290,46 @@
                     </div>
                     
                     <!-- Timeline de formation -->
-                    <div class="timeline-container horizontal-timeline" id="education-timeline">
-                        <!-- Ligne de temps horizontale avec années marqueurs -->
-                        <div class="timeline-line">
+                    <div class="timeline-container parallax-timeline" id="education-timeline">
+                        <!-- Ligne de temps principale -->
+                        <div class="timeline-track">
+                            <div class="timeline-line"></div>
+                            
+                            <!-- Marqueurs d'années -->
                             <div class="timeline-years">
                                 <span class="year-marker" style="left: 0%">2008</span>
-                                <span class="year-marker" style="left: 20%">2010</span>
-                                <span class="year-marker" style="left: 40%">2011</span>
-                                <span class="year-marker" style="left: 70%">2018</span>
-                                <span class="year-marker" style="left: 90%">2024</span>
+                                <span class="year-marker" style="left: 25%">2010</span>
+                                <span class="year-marker" style="left: 50%">2011</span>
+                                <span class="year-marker" style="left: 75%">2018</span>
+                                <span class="year-marker" style="left: 100%">2024</span>
+                            </div>
+                            
+                            <!-- Points sur la timeline -->
+                            <div class="timeline-points">
+                                <div class="timeline-point" style="left: 0%" data-year="2008"></div>
+                                <div class="timeline-point" style="left: 25%" data-year="2010"></div>
+                                <div class="timeline-point" style="left: 50%" data-year="2011"></div>
+                                <div class="timeline-point" style="left: 75%" data-year="2018"></div>
+                                <div class="timeline-point" style="left: 100%" data-year="2024"></div>
                             </div>
                         </div>
                         
-                        <!-- Conteneur des éléments de la timeline -->
-                        <div class="timeline-items-container">
-                            <div class="timeline-item horizontal" style="left: 90%">
-                                <div class="timeline-dot"></div>
+                        <!-- Conteneur des cartes d'information -->
+                        <div class="timeline-cards-container">
+                            <!-- 2008 - BEP Électronique -->
+                            <div class="timeline-card-wrapper" data-year="2008">
                                 <div class="timeline-card">
-                                    <div class="timeline-date">2024 - En cours</div>
-                                    <h3 class="timeline-title">Formation Développeur Fullstack</h3>
-                                    <div class="timeline-subtitle">Metz Numérique School</div>
+                                    <div class="timeline-date">2008</div>
+                                    <h3 class="timeline-title">BEP Électronique</h3>
+                                    <div class="timeline-subtitle">Lycée Pierre de Coubertin</div>
                                     <div class="timeline-details">
-                                        <p>Formation Développeur Web et Web Mobile</p>
+                                        <p>Brevet d'Études Professionnelles en Électronique</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="timeline-item horizontal" style="left: 70%">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2018</div>
-                                    <h3 class="timeline-title">CAP Mécanicien Agricole</h3>
-                                    <div class="timeline-subtitle">AFPA Verdun</div>
-                                    <div class="timeline-details">
-                                        <p>CAP MÉCANICIEN AGRICOLE avec option PARC ET JARDIN</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item horizontal" style="left: 40%">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2011</div>
-                                    <h3 class="timeline-title">BAC Infographiste Metteur en Page</h3>
-                                    <div class="timeline-subtitle">AFPA Vandoeuvre</div>
-                                    <div class="timeline-details">
-                                        <p>Formation professionnelle en infographie</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item horizontal" style="left: 20%">
-                                <div class="timeline-dot"></div>
+                            <!-- 2010 - BAC STI Électronique -->
+                            <div class="timeline-card-wrapper" data-year="2010">
                                 <div class="timeline-card">
                                     <div class="timeline-date">2010</div>
                                     <h3 class="timeline-title">BAC STI Électronique</h3>
@@ -355,20 +340,44 @@
                                 </div>
                             </div>
                             
-                            <div class="timeline-item horizontal" style="left: 0%">
-                                <div class="timeline-dot"></div>
+                            <!-- 2011 - BAC Infographiste -->
+                            <div class="timeline-card-wrapper" data-year="2011">
                                 <div class="timeline-card">
-                                    <div class="timeline-date">2008</div>
-                                    <h3 class="timeline-title">BEP Électronique</h3>
-                                    <div class="timeline-subtitle">Lycée Pierre de Coubertin</div>
+                                    <div class="timeline-date">2011</div>
+                                    <h3 class="timeline-title">BAC Infographiste Metteur en Page</h3>
+                                    <div class="timeline-subtitle">AFPA Vandoeuvre</div>
                                     <div class="timeline-details">
-                                        <p>Brevet d'Études Professionnelles en Électronique</p>
+                                        <p>Formation professionnelle en infographie</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2018 - CAP Mécanicien -->
+                            <div class="timeline-card-wrapper" data-year="2018">
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2018</div>
+                                    <h3 class="timeline-title">CAP Mécanicien Agricole</h3>
+                                    <div class="timeline-subtitle">AFPA Verdun</div>
+                                    <div class="timeline-details">
+                                        <p>CAP MÉCANICIEN AGRICOLE avec option PARC ET JARDIN</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2024 - Formation Développeur -->
+                            <div class="timeline-card-wrapper" data-year="2024">
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2024 - En cours</div>
+                                    <h3 class="timeline-title">Formation Développeur Fullstack</h3>
+                                    <div class="timeline-subtitle">Metz Numérique School</div>
+                                    <div class="timeline-details">
+                                        <p>Formation Développeur Web et Web Mobile</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Contrôles de navigation pour la timeline -->
+                        <!-- Contrôles de navigation -->
                         <div class="timeline-controls">
                             <button class="timeline-control prev-btn" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
                             <button class="timeline-control next-btn"aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>

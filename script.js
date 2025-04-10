@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initThemeToggle();
     initHeroCanvas();
     initSkillsCanvas();
-    initHorizontalTimeline();
+    initTimeline();
     initFormAnimations();
     initRevealAnimations();
     initSkillsTabs();
