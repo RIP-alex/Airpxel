@@ -1,0 +1,126 @@
+/* Main CSS - Importe tous les fichiers CSS */
+
+/* Base */
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+/* Layout */
+@import 'layout/grid.css';
+@import 'layout/header.css';
+@import 'layout/sections.css';
+@import 'layout/footer.css';
+
+/* Components */
+@import 'components/navigation.css';
+@import 'components/buttons.css';
+@import 'components/forms.css';
+@import 'components/cards.css';
+@import 'components/timeline.css';
+
+/* Animations */
+@import 'animations/transitions.css';
+@import 'animations/effects.css';
+
+/* ===== MEDIA QUERIES ===== */
+/* Ces media queries peuvent également être placées dans chaque fichier concerné */
+
+/* Pour grands écrans */
+@media (min-width: 1400px) {
+    :root {
+        --section-max-width: 1320px;
+    }
+}
+
+/* Pour écrans moyens */
+@media (max-width: 1200px) {
+    :root {
+        --section-max-width: 90%;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-5xl);
+    }
+
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .about-visual {
+        order: -1;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+/* Pour tablettes */
+@media (max-width: 768px) {
+    :root {
+        --side-nav-width-collapsed: 0px;
+        --side-nav-width-expanded: 250px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-tagline {
+        font-size: var(--font-size-lg);
+    }
+
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .skill-categories {
+        flex-wrap: wrap;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Pour mobiles */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero-tagline {
+        font-size: var(--font-size-base);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-button,
+    .cta-link {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .section-container {
+        padding: var(--space-6) var(--space-4);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,124 @@
+/* ===== HEADER ===== */
+
+/* Section Marker */
+.section-marker {
+    position: fixed;
+    top: var(--space-4);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-full);
+    padding: var(--space-2) var(--space-4);
+    box-shadow: var(--shadow-md);
+    z-index: var(--z-elevated);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+    transition: opacity var(--transition-normal) var(--transition-function), transform var(--transition-normal) var(--transition-function);
+}
+
+    .section-marker.visible {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+.current-section {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-right: var(--space-3);
+}
+
+.progress-container {
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--color-accent-primary);
+    width: 0;
+    transition: width var(--transition-normal) var(--transition-function);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: var(--side-nav-width-collapsed);
+    transition: margin-left var(--transition-normal) var(--transition-function);
+}
+
+.side-nav.expanded ~ .main-content {
+    margin-left: var(--side-nav-width-expanded);
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-modal);
+    transition: opacity var(--transition-slow) var(--transition-function), visibility var(--transition-slow) var(--transition-function);
+}
+
+    .loader.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: var(--space-4);
+}
+
+.loader-circle {
+    fill: none;
+    stroke: var(--color-accent-primary);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 252;
+    stroke-dashoffset: 252;
+    animation: loader-dash 2s ease-in-out infinite;
+}
+
+.loader-text {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .section-marker {
+        top: var(--space-2);
+        padding: var(--space-1) var(--space-3);
+    }
+
+    .current-section {
+        font-size: var(--font-size-xs);
+    }
+
+    .progress-container {
+        width: 40px;
+        height: 3px;
+    }
+}

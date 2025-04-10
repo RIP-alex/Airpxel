@@ -1,0 +1,291 @@
+/* ===== BUTTONS ===== */
+
+/* Styles de base des boutons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-6);
+    font-weight: 500;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal) var(--transition-function);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .btn:active {
+        transform: translateY(0);
+    }
+
+/* Variantes de boutons */
+.btn-primary {
+    background: var(--color-accent-primary);
+    color: white;
+}
+
+    .btn-primary:hover {
+        background: var(--color-accent-secondary);
+    }
+
+.btn-secondary {
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+}
+
+    .btn-secondary:hover {
+        background: var(--color-bg-secondary);
+    }
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--color-accent-primary);
+    color: var(--color-accent-primary);
+}
+
+    .btn-outline:hover {
+        background: var(--color-accent-primary);
+        color: white;
+    }
+
+.btn-gradient {
+    background: var(--color-gradient-1);
+    color: white;
+}
+
+.btn-link {
+    background: transparent;
+    padding: var(--space-2) 0;
+    color: var(--color-text-secondary);
+    border-radius: 0;
+}
+
+    .btn-link:hover {
+        color: var(--color-accent-primary);
+        transform: translateX(4px);
+    }
+
+/* Tailles de boutons */
+.btn-sm {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-sm);
+}
+
+.btn-lg {
+    padding: var(--space-4) var(--space-8);
+    font-size: var(--font-size-lg);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Boutons avec icônes */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.btn-icon-only {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: var(--radius-full);
+}
+
+.btn-icon-left i {
+    margin-right: var(--space-2);
+}
+
+.btn-icon-right i {
+    margin-left: var(--space-2);
+}
+
+/* Effets sur boutons */
+.btn-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+.btn-ripple:active::after {
+    animation: ripple 1s ease-out;
+}
+
+.btn-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .btn-shadow:hover {
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+/* Boutons de navigation */
+.cta-button {
+    display: inline-block;
+    padding: var(--space-3) var(--space-6);
+    background: var(--color-gradient-1);
+    color: white;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-normal) var(--transition-function);
+}
+
+    .cta-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transition: transform var(--transition-slow) var(--transition-function);
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+    }
+
+        .cta-button:hover::before {
+            transform: translateX(100%);
+        }
+
+.cta-link {
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: all var(--transition-normal) var(--transition-function);
+}
+
+    .cta-link:hover {
+        color: var(--color-accent-primary);
+        transform: translateX(5px);
+    }
+
+    .cta-link i {
+        font-size: var(--font-size-sm);
+        transition: transform var(--transition-normal) var(--transition-function);
+    }
+
+    .cta-link:hover i {
+        transform: translateX(2px);
+    }
+
+/* Bouton de soumission de formulaire */
+.submit-btn {
+    position: relative;
+    width: 100%;
+    padding: var(--space-3) var(--space-6);
+    background: var(--color-gradient-1);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform var(--transition-normal) var(--transition-function);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+    }
+
+.btn-icon {
+    transition: transform var(--transition-normal) var(--transition-function);
+}
+
+.submit-btn:hover .btn-icon {
+    transform: translateX(3px);
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform var(--transition-slow) var(--transition-function);
+}
+
+.submit-btn:hover::before {
+    transform: translateX(100%);
+}
+
+.submit-btn.loading .btn-text,
+.submit-btn.loading .btn-icon {
+    opacity: 0;
+}
+
+.submit-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-right-color: white;
+    border-radius: var(--radius-full);
+    opacity: 0;
+    transition: all var(--transition-normal) var(--transition-function);
+}
+
+.submit-btn.loading .submit-loader {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    animation: rotate 1s linear infinite;
+}
+
+/* État désactivé */
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Animations */
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0) translate(-50%, -50%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(20, 20) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

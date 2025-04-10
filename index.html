@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -37,14 +37,53 @@
             <div class="nav-toggle-icon"></div>
         </div>
         <div class="side-nav-content">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <div class="nav-logo-img">AR</div>
+                <div class="nav-logo-text">Alexandre Rippling</div>
+            </div>
+
+            <!-- Liens de navigation -->
             <ul class="nav-links">
-                <li><a href="#hero" class="nav-link active" data-nav="hero">Accueil</a></li>
-                <li><a href="#about" class="nav-link" data-nav="about">À propos</a></li>
-                <li><a href="#journey" class="nav-link" data-nav="journey">Parcours</a></li>
-                <li><a href="#skills" class="nav-link" data-nav="skills">Compétences</a></li>
-                <li><a href="#projects" class="nav-link" data-nav="projects">Projets</a></li>
-                <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+                <li>
+                    <a href="#hero" class="nav-link active" data-nav="hero">
+                        <div class="nav-link-icon"><i class="fas fa-home"></i></div>
+                        <span class="nav-link-text">Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link" data-nav="about">
+                        <div class="nav-link-icon"><i class="fas fa-user"></i></div>
+                        <span class="nav-link-text">À propos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#journey" class="nav-link" data-nav="journey">
+                        <div class="nav-link-icon"><i class="fas fa-road"></i></div>
+                        <span class="nav-link-text">Parcours</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" class="nav-link" data-nav="skills">
+                        <div class="nav-link-icon"><i class="fas fa-code"></i></div>
+                        <span class="nav-link-text">Compétences</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-link" data-nav="projects">
+                        <div class="nav-link-icon"><i class="fas fa-briefcase"></i></div>
+                        <span class="nav-link-text">Projets</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link" data-nav="contact">
+                        <div class="nav-link-icon"><i class="fas fa-envelope"></i></div>
+                        <span class="nav-link-text">Contact</span>
+                    </a>
+                </li>
             </ul>
+
+            <!-- Pied de navigation -->
             <div class="nav-footer">
                 <div class="theme-toggle" id="theme-toggle">
                     <div class="theme-toggle-track">
@@ -53,21 +92,18 @@
                     <span class="theme-toggle-text">Thème clair</span>
                 </div>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/alexandrerippling" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <a href="https://linkedin.com/in/alexripp" target="_blank" class="social-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/arippling" target="_blank" class="social-link" aria-label="GitHub">
+                    <a href="https://github.com/RIP-alex" target="_blank" class="social-link" aria-label="GitHub">
                         <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.handietdev.fr" target="_blank" class="social-link" aria-label="Site Web">
-                        <i class="fas fa-globe"></i>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Marqueur de section -->
+    <!-- Marqueur de section (conservé et amélioré) -->
     <div class="section-marker">
         <div class="current-section">Accueil</div>
         <div class="progress-container">
@@ -265,7 +301,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Formation -->
                     <div class="timeline-container" id="education-timeline">
                         <div class="timeline-scroller">
@@ -339,7 +375,7 @@
                     <h2 class="section-title">Compétences</h2>
                     <div class="section-subtitle">Expertise technique & savoir-faire</div>
                 </div>
-                
+
                 <div class="skills-container">
                     <div class="skill-categories">
                         <div class="skill-category active" data-category="dev">
@@ -361,12 +397,12 @@
                             <h3>Technique & Mécanique</h3>
                         </div>
                     </div>
-                    
+
                     <div class="skills-visualization">
                         <div class="skills-3d-container">
                             <canvas id="skills-canvas"></canvas>
                         </div>
-                        
+
                         <div class="skill-details">
                             <div class="skill-details-content active" data-category="dev">
                                 <div class="skill-grid">
@@ -438,7 +474,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="skill-details-content" data-category="design">
                                 <div class="skill-grid">
                                     <div class="skill-item">
@@ -476,7 +512,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="skill-details-content" data-category="tech">
                                 <div class="skill-grid">
                                     <div class="skill-item">
@@ -516,7 +552,7 @@
                     <h2 class="section-title">Projets</h2>
                     <div class="section-subtitle">Réalisations & portfolio</div>
                 </div>
-                
+
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-preview">
@@ -536,7 +572,7 @@
                             <p class="project-description">Ajoutez vos projets en remplaçant ce texte par une description de votre réalisation.</p>
                         </div>
                     </div>
-                    
+
                     <div class="project-card">
                         <div class="project-preview">
                             <div class="project-image placeholder"></div>
@@ -555,7 +591,7 @@
                             <p class="project-description">Ajoutez vos projets en remplaçant ce texte par une description de votre réalisation.</p>
                         </div>
                     </div>
-                    
+
                     <div class="project-card">
                         <div class="project-preview">
                             <div class="project-image placeholder"></div>
@@ -575,7 +611,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="more-projects">
                     <a href="https://github.com/arippling" target="_blank" class="more-projects-link">
                         Voir plus de projets sur GitHub <i class="fab fa-github"></i>
@@ -591,12 +627,12 @@
                     <h2 class="section-title">Contact</h2>
                     <div class="section-subtitle">Travaillons ensemble</div>
                 </div>
-                
+
                 <div class="contact-content">
                     <div class="contact-text">
                         <h3 class="contact-heading">Discutons de votre projet</h3>
                         <p class="contact-introduction">Vous avez un projet ou une opportunité à discuter ? Je serais ravi d'échanger avec vous pour voir comment je peux vous accompagner.</p>
-                        
+
                         <div class="contact-socials">
                             <a href="https://linkedin.com/in/alexandrerippling" target="_blank" class="contact-social-item">
                                 <div class="social-icon">
@@ -607,7 +643,7 @@
                                     <span class="social-username">alexandrerippling</span>
                                 </div>
                             </a>
-                            
+
                             <a href="https://github.com/arippling" target="_blank" class="contact-social-item">
                                 <div class="social-icon">
                                     <i class="fab fa-github"></i>
@@ -617,7 +653,7 @@
                                     <span class="social-username">arippling</span>
                                 </div>
                             </a>
-                            
+
                             <a href="https://www.handietdev.fr" target="_blank" class="contact-social-item">
                                 <div class="social-icon">
                                     <i class="fas fa-globe"></i>
@@ -629,7 +665,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="contact-form-container">
                         <form id="contact-form" class="contact-form" action="https://formsubmit.co/your-email-here" method="POST">
                             <!-- FormSubmit anti-spam honeypot -->
@@ -638,7 +674,7 @@
                             <input type="hidden" name="_captcha" value="false">
                             <!-- Success page after submission -->
                             <input type="hidden" name="_next" value="https://votre-site.github.io/success.html">
-                            
+
                             <div class="form-group">
                                 <div class="input-wrapper">
                                     <input type="text" id="name" name="name" required class="form-input">
@@ -646,7 +682,7 @@
                                     <div class="input-line"></div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <div class="input-wrapper">
                                     <input type="email" id="email" name="email" required class="form-input">
@@ -654,7 +690,7 @@
                                     <div class="input-line"></div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <div class="input-wrapper">
                                     <input type="text" id="subject" name="subject" required class="form-input">
@@ -662,7 +698,7 @@
                                     <div class="input-line"></div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <div class="input-wrapper">
                                     <textarea id="message" name="message" rows="5" required class="form-input form-textarea"></textarea>
@@ -670,7 +706,7 @@
                                     <div class="input-line"></div>
                                 </div>
                             </div>
-                            
+
                             <button type="submit" class="submit-btn">
                                 <span class="btn-text">Envoyer</span>
                                 <div class="btn-icon">
