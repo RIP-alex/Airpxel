@@ -83,10 +83,10 @@
                     <span class="theme-toggle-text">Thème clair</span>
                 </div>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/alexandrerippling" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <a href="https://linkedin.com/in/alexripp" target="_blank" class="social-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/arippling" target="_blank" class="social-link" aria-label="GitHub">
+                    <a href="https://github.com/rip-alex" target="_blank" class="social-link" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -163,164 +163,206 @@
                     <h2 class="section-title">Parcours</h2>
                     <div class="section-subtitle">Expériences professionnelles & formation</div>
                 </div>
+                
+                <!-- Navigation entre expériences et formation -->
                 <div class="journey-nav">
                     <button class="journey-tab active" data-tab="experience">Expériences</button>
                     <button class="journey-tab" data-tab="education">Formation</button>
                 </div>
+                
+                <!-- Conteneur des timelines -->
                 <div class="journey-content">
-                    <div class="timeline-container active" id="experience-timeline">
-                        <div class="timeline-scroller">
-                            <div class="timeline">
-                                <div class="timeline-item" data-year="2024">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2024 - Aujourd'hui</div>
-                                        <h3 class="timeline-title">Développeur Fullstack</h3>
-                                        <div class="timeline-subtitle">Metz Numérique School</div>
-                                        <div class="timeline-tags">
-                                            <span class="timeline-tag">En formation</span>
-                                        </div>
-                                        <div class="timeline-details">
-                                            <ul class="timeline-list">
-                                                <li>Développement Front-end : HTML, CSS, JavaScript, React</li>
-                                                <li>Développement Back-end : PHP, Node.js, bases de données SQL/NoSQL</li>
-                                                <li>Conception d'applications web responsive et accessibles</li>
-                                                <li>Gestion de projets web avec méthodologies agiles</li>
-                                            </ul>
-                                        </div>
+                    <!-- Timeline des expériences -->
+                    <div class="timeline-container horizontal-timeline active" id="experience-timeline">
+                        <!-- Ligne de temps horizontale avec années marqueurs -->
+                        <div class="timeline-line">
+                            <div class="timeline-years">
+                                <span class="year-marker" style="left: 0%">2013</span>
+                                <span class="year-marker" style="left: 20%">2015</span>
+                                <span class="year-marker" style="left: 40%">2019</span>
+                                <span class="year-marker" style="left: 60%">2023</span>
+                                <span class="year-marker" style="left: 80%">2024</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Conteneur des éléments de la timeline -->
+                        <div class="timeline-items-container">
+                            <!-- Élément de timeline -->
+                            <div class="timeline-item horizontal" style="left: 80%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2024 - Aujourd'hui</div>
+                                    <h3 class="timeline-title">Développeur Fullstack</h3>
+                                    <div class="timeline-subtitle">Metz Numérique School</div>
+                                    <div class="timeline-tags">
+                                        <span class="timeline-tag">En formation</span>
+                                    </div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Développement Front-end : HTML, CSS, JavaScript, React</li>
+                                            <li>Développement Back-end : PHP, Node.js, bases de données SQL/NoSQL</li>
+                                            <li>Conception d'applications web responsive et accessibles</li>
+                                            <li>Gestion de projets web avec méthodologies agiles</li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-year="2023">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2023 - Aujourd'hui</div>
-                                        <h3 class="timeline-title">Responsable de communication</h3>
-                                        <div class="timeline-subtitle">CASI Lorraine</div>
-                                        <div class="timeline-details">
-                                            <ul class="timeline-list">
-                                                <li>Élaboration et mise en œuvre de la stratégie de communication globale</li>
-                                                <li>Création et gestion des contenus pour les supports numériques et imprimés</li>
-                                                <li>Animation des réseaux sociaux et gestion de la présence en ligne</li>
-                                                <li>Coordination des relations avec les partenaires et prestataires externes</li>
-                                                <li>Organisation et promotion d'événements internes et externes</li>
-                                            </ul>
-                                        </div>
+                            </div>
+                            
+                            <div class="timeline-item horizontal" style="left: 60%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2023 - Aujourd'hui</div>
+                                    <h3 class="timeline-title">Responsable de communication</h3>
+                                    <div class="timeline-subtitle">CASI Lorraine</div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Élaboration et mise en œuvre de la stratégie de communication globale</li>
+                                            <li>Création et gestion des contenus pour les supports numériques et imprimés</li>
+                                            <li>Animation des réseaux sociaux et gestion de la présence en ligne</li>
+                                            <li>Coordination des relations avec les partenaires et prestataires externes</li>
+                                            <li>Organisation et promotion d'événements internes et externes</li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-year="2019">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2019 - 2021</div>
-                                        <h3 class="timeline-title">Mécanicien Agricole</h3>
-                                        <div class="timeline-subtitle">SARL Voutrin-Cherrier</div>
-                                        <div class="timeline-details">
-                                            <ul class="timeline-list">
-                                                <li>Réparation, intervention, installation, préparation sur véhicule agricole et machinerie</li>
-                                                <li>Réparation sur tout type d'appareil de parc et jardin</li>
-                                            </ul>
-                                        </div>
+                            </div>
+                            
+                            <div class="timeline-item horizontal" style="left: 40%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2019 - 2021</div>
+                                    <h3 class="timeline-title">Mécanicien Agricole</h3>
+                                    <div class="timeline-subtitle">SARL Voutrin-Cherrier</div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Réparation, intervention, installation, préparation sur véhicule agricole et machinerie</li>
+                                            <li>Réparation sur tout type d'appareil de parc et jardin</li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-year="2015">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2015 - 2019</div>
-                                        <h3 class="timeline-title">Président d'association</h3>
-                                        <div class="timeline-subtitle">Association Hurrikane Crew</div>
-                                        <div class="timeline-details">
-                                            <ul class="timeline-list">
-                                                <li>Organisation, création, sécurité, communication sur des événements musicaux et culturels</li>
-                                                <li>Bénévolat et acteur sur divers festivals et expositions</li>
-                                            </ul>
-                                        </div>
+                            </div>
+                            
+                            <div class="timeline-item horizontal" style="left: 20%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2015 - 2019</div>
+                                    <h3 class="timeline-title">Président d'association</h3>
+                                    <div class="timeline-subtitle">Association Hurrikane Crew</div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Organisation, création, sécurité, communication sur des événements musicaux et culturels</li>
+                                            <li>Bénévolat et acteur sur divers festivals et expositions</li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-year="2015">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2015 - 2016</div>
-                                        <h3 class="timeline-title">Infographiste / Chargé de communication</h3>
-                                        <div class="timeline-subtitle">UNION REGIONAL DES SCOP DE L'EST</div>
-                                        <div class="timeline-details">
-                                            <ul class="timeline-list">
-                                                <li>Création de supports multiples, réseaux sociaux, mailing, photographie</li>
-                                            </ul>
-                                        </div>
+                            </div>
+                            
+                            <div class="timeline-item horizontal" style="left: 15%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2015 - 2016</div>
+                                    <h3 class="timeline-title">Infographiste / Chargé de communication</h3>
+                                    <div class="timeline-subtitle">UNION REGIONAL DES SCOP DE L'EST</div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Création de supports multiples, réseaux sociaux, mailing, photographie</li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-year="2013">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2013 - 2014</div>
-                                        <h3 class="timeline-title">Infographiste / Chargé de communication</h3>
-                                        <div class="timeline-subtitle">CONSEIL REGIONAL - CHÂTEAU DE LUNEVILLE</div>
-                                        <div class="timeline-details">
-                                            <ul class="timeline-list">
-                                                <li>Création de supports multiples, réseaux sociaux, mailing, photographie</li>
-                                            </ul>
-                                        </div>
+                            </div>
+                            
+                            <div class="timeline-item horizontal" style="left: 0%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2013 - 2014</div>
+                                    <h3 class="timeline-title">Infographiste / Chargé de communication</h3>
+                                    <div class="timeline-subtitle">CONSEIL REGIONAL - CHÂTEAU DE LUNEVILLE</div>
+                                    <div class="timeline-details">
+                                        <ul class="timeline-list">
+                                            <li>Création de supports multiples, réseaux sociaux, mailing, photographie</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Contrôles de navigation pour la timeline -->
+                        <div class="timeline-controls">
+                            <button class="timeline-control prev-btn" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+                            <button class="timeline-control next-btn" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+                        </div>
                     </div>
-
-                    <div class="timeline-container" id="education-timeline">
-                        <div class="timeline-scroller">
-                            <div class="timeline">
-                                <div class="timeline-item" data-year="2024">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2024 - En cours</div>
-                                        <h3 class="timeline-title">Formation Développeur Fullstack</h3>
-                                        <div class="timeline-subtitle">Metz Numérique School</div>
-                                        <div class="timeline-details">
-                                            <p>Formation Développeur Web et Web Mobile</p>
-                                        </div>
+                    
+                    <!-- Timeline de formation -->
+                    <div class="timeline-container horizontal-timeline" id="education-timeline">
+                        <!-- Ligne de temps horizontale avec années marqueurs -->
+                        <div class="timeline-line">
+                            <div class="timeline-years">
+                                <span class="year-marker" style="left: 0%">2008</span>
+                                <span class="year-marker" style="left: 20%">2010</span>
+                                <span class="year-marker" style="left: 40%">2011</span>
+                                <span class="year-marker" style="left: 70%">2018</span>
+                                <span class="year-marker" style="left: 90%">2024</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Conteneur des éléments de la timeline -->
+                        <div class="timeline-items-container">
+                            <div class="timeline-item horizontal" style="left: 90%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2024 - En cours</div>
+                                    <h3 class="timeline-title">Formation Développeur Fullstack</h3>
+                                    <div class="timeline-subtitle">Metz Numérique School</div>
+                                    <div class="timeline-details">
+                                        <p>Formation Développeur Web et Web Mobile</p>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-year="2018">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2018</div>
-                                        <h3 class="timeline-title">CAP Mécanicien Agricole</h3>
-                                        <div class="timeline-subtitle">AFPA Verdun</div>
-                                        <div class="timeline-details">
-                                            <p>CAP MÉCANICIEN AGRICOLE avec option PARC ET JARDIN</p>
-                                        </div>
+                            </div>
+                            
+                            <div class="timeline-item horizontal" style="left: 70%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2018</div>
+                                    <h3 class="timeline-title">CAP Mécanicien Agricole</h3>
+                                    <div class="timeline-subtitle">AFPA Verdun</div>
+                                    <div class="timeline-details">
+                                        <p>CAP MÉCANICIEN AGRICOLE avec option PARC ET JARDIN</p>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-year="2011">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2011</div>
-                                        <h3 class="timeline-title">BAC Infographiste Metteur en Page</h3>
-                                        <div class="timeline-subtitle">AFPA Vandoeuvre</div>
-                                        <div class="timeline-details">
-                                            <p>Formation professionnelle en infographie</p>
-                                        </div>
+                            </div>
+                            
+                            <div class="timeline-item horizontal" style="left: 40%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2011</div>
+                                    <h3 class="timeline-title">BAC Infographiste Metteur en Page</h3>
+                                    <div class="timeline-subtitle">AFPA Vandoeuvre</div>
+                                    <div class="timeline-details">
+                                        <p>Formation professionnelle en infographie</p>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-year="2010">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2010</div>
-                                        <h3 class="timeline-title">BAC STI Électronique</h3>
-                                        <div class="timeline-subtitle">Lycée Pierre de Coubertin</div>
-                                        <div class="timeline-details">
-                                            <p>Baccalauréat Sciences et Technologies Industrielles, spécialité Électronique</p>
-                                        </div>
+                            </div>
+                            
+                            <div class="timeline-item horizontal" style="left: 20%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2010</div>
+                                    <h3 class="timeline-title">BAC STI Électronique</h3>
+                                    <div class="timeline-subtitle">Lycée Pierre de Coubertin</div>
+                                    <div class="timeline-details">
+                                        <p>Baccalauréat Sciences et Technologies Industrielles, spécialité Électronique</p>
                                     </div>
                                 </div>
-                                <div class="timeline-item" data-year="2008">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-date">2008</div>
-                                        <h3 class="timeline-title">BEP Électronique</h3>
-                                        <div class="timeline-subtitle">Lycée Pierre de Coubertin</div>
-                                        <div class="timeline-details">
-                                            <p>Brevet d'Études Professionnelles en Électronique</p>
-                                        </div>
+                            </div>
+                            
+                            <div class="timeline-item horizontal" style="left: 0%">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-card">
+                                    <div class="timeline-date">2008</div>
+                                    <h3 class="timeline-title">BEP Électronique</h3>
+                                    <div class="timeline-subtitle">Lycée Pierre de Coubertin</div>
+                                    <div class="timeline-details">
+                                        <p>Brevet d'Études Professionnelles en Électronique</p>
                                     </div>
                                 </div>
                             </div>
@@ -336,8 +378,9 @@
                     <h2 class="section-title">Compétences</h2>
                     <div class="section-subtitle">Expertise technique & savoir-faire</div>
                 </div>
-
+                
                 <div class="skills-container">
+                    <!-- Onglets de catégories -->
                     <div class="skill-categories">
                         <div class="skill-category active" data-category="dev">
                             <div class="category-icon">
@@ -358,212 +401,91 @@
                             <h3>Technique & Mécanique</h3>
                         </div>
                     </div>
-
+                    
+                    <!-- Contenu des compétences -->
                     <div class="skills-visualization">
-                        <div class="skills-3d-container">
-                            <canvas id="skills-canvas"></canvas>
+                        <!-- Développement Web -->
+                        <div class="skill-details-content active" data-category="dev">
+                            <div class="skills-grid">
+                                <div class="skill-icon-item">
+                                    <i class="fab fa-html5"></i>
+                                    <span>HTML</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <span>CSS</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fab fa-js"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fab fa-react"></i>
+                                    <span>React</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fab fa-php"></i>
+                                    <span>PHP</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fab fa-node-js"></i>
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>SQL</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Éco-conception</span>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="skill-details">
-                            <div class="skill-details-content active" data-category="dev">
-                                <div class="skill-grid">
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fab fa-html5"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>HTML</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 85%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fab fa-css3-alt"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>CSS</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 80%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fab fa-js"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>JavaScript</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 75%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fab fa-react"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>React</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 65%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fab fa-php"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>PHP</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 60%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fab fa-node-js"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Node.js</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 55%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-database"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>SQL</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 70%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-leaf"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Éco-conception</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 80%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        
+                        <!-- Design & Communication -->
+                        <div class="skill-details-content" data-category="design">
+                            <div class="skills-grid">
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-palette"></i>
+                                    <span>Design Graphique</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-photo-video"></i>
+                                    <span>Infographie</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Communication</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-signal"></i>
+                                    <span>Stratégie Digitale</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Gestion de Contenu</span>
                                 </div>
                             </div>
-
-                            <div class="skill-details-content" data-category="design">
-                                <div class="skill-grid">
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-palette"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Design Graphique</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 80%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-photo-video"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Infographie</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 75%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-bullhorn"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Communication</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 85%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-signal"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Stratégie Digitale</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 70%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-edit"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Gestion de Contenu</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 80%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </div>
+                        
+                        <!-- Technique & Mécanique -->
+                        <div class="skill-details-content" data-category="tech">
+                            <div class="skills-grid">
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-wrench"></i>
+                                    <span>Mécanique Agricole</span>
                                 </div>
-                            </div>
-
-                            <div class="skill-details-content" data-category="tech">
-                                <div class="skill-grid">
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-wrench"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Mécanique Agricole</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 70%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-car-mechanic"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Mécanique Parc & Jardin</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 65%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-plug"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Électronique</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 55%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-logo">
-                                            <i class="fas fa-tools"></i>
-                                        </div>
-                                        <div class="skill-info">
-                                            <h4>Outillage</h4>
-                                            <div class="skill-level">
-                                                <div class="skill-bar" style="width: 80%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-car"></i>
+                                    <span>Mécanique Parc & Jardin</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-plug"></i>
+                                    <span>Électronique</span>
+                                </div>
+                                <div class="skill-icon-item">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Outillage</span>
                                 </div>
                             </div>
                         </div>
@@ -656,33 +578,33 @@
                         <p class="contact-introduction">Vous avez un projet ou une opportunité à discuter ? Je serais ravi d'échanger avec vous pour voir comment je peux vous accompagner.</p>
 
                         <div class="contact-socials">
-                            <a href="https://linkedin.com/in/alexandrerippling" target="_blank" class="contact-social-item">
+                            <a href="https://linkedin.com/in/alexripp" target="_blank" class="contact-social-item">
                                 <div class="social-icon">
                                     <i class="fab fa-linkedin-in"></i>
                                 </div>
                                 <div class="social-text">
                                     <span class="social-label">LinkedIn</span>
-                                    <span class="social-username">alexandrerippling</span>
+                                    <span class="social-username">alexripp</span>
                                 </div>
                             </a>
 
-                            <a href="https://github.com/arippling" target="_blank" class="contact-social-item">
+                            <a href="https://github.com/rip-alex" target="_blank" class="contact-social-item">
                                 <div class="social-icon">
                                     <i class="fab fa-github"></i>
                                 </div>
                                 <div class="social-text">
                                     <span class="social-label">GitHub</span>
-                                    <span class="social-username">arippling</span>
+                                    <span class="social-username">RIP-alex</span>
                                 </div>
                             </a>
 
-                            <a href="https://www.handietdev.fr" target="_blank" class="contact-social-item">
+                            <a href="https://rip-alex.github.io/Airpxel/" target="_blank" class="contact-social-item">
                                 <div class="social-icon">
                                     <i class="fas fa-globe"></i>
                                 </div>
                                 <div class="social-text">
                                     <span class="social-label">Site Web</span>
-                                    <span class="social-username">handietdev.fr</span>
+                                    <span class="social-username">en cours de production</span>
                                 </div>
                             </a>
                         </div>
@@ -690,10 +612,10 @@
 
                     <div class="contact-form-container">
                         <form id="contact-form" class="contact-form" action="https://formsubmit.co/alexandre.rippling@gmail.com" method="POST">
-                            <label for="_honey" class="visually-hidden">Do not fill this field</label>
+                            <input type="hidden" name="_subject" value="Nouveau message de contact">
                             <input type="text" id="_honey" name="_honey" style="display:box">
                             <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="https://airpxel.io/success.html">
+                            <input type="hidden" name="_next" value="https://rip-alex.github.io/Airpxel/success.html">
 
                             <div class="form-group">
                                 <div class="input-wrapper">
@@ -762,5 +684,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.156.1/three.min.js"></script>
     <script src="script.js"></script>
+    <script src="timeline.js"></script>
 </body>
 </html>
