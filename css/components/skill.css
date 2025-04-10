@@ -1,0 +1,57 @@
+/* Styles pour la nouvelle grille de compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.skill-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-4);
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal) var(--transition-function);
+    cursor: default;
+}
+
+.skill-icon-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    background-color: var(--color-bg-secondary);
+}
+
+.skill-icon-item i {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-3);
+    color: var(--color-accent-primary);
+    transition: transform var(--transition-normal) var(--transition-function);
+}
+
+.skill-icon-item:hover i {
+    transform: scale(1.2);
+}
+
+.skill-icon-item span {
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: var(--space-4);
+    }
+    
+    .skill-icon-item {
+        padding: var(--space-3);
+    }
+    
+    .skill-icon-item i {
+        font-size: 2rem;
+    }
+}
