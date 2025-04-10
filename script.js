@@ -28,11 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initSectionObserver();
     initThemeToggle();
     initHeroCanvas();
-    initSkillsCanvas();
-    initTimeline();
     initFormAnimations();
     initRevealAnimations();
-    initSkillsTabs();
     
     // Gestion du défilement et du redimensionnement
     window.addEventListener('scroll', handleScroll);
