@@ -51,7 +51,7 @@ function initNavigation() {
     const navToggle = document.querySelector('.nav-toggle');
     const sideNav = document.querySelector('.side-nav');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     if (navToggle) {
         navToggle.addEventListener('click', () => {
             isMenuOpen = !isMenuOpen;
@@ -59,7 +59,29 @@ function initNavigation() {
             sideNav.classList.toggle('mobile-visible');
         });
     }
-    
+
+    // Vérifier si le menu doit être ouvert en fonction de la largeur d'écran
+    function checkScreenSize() {
+        if (window.innerWidth > 1200) {
+            sideNav.classList.add('expanded');
+            isMenuOpen = true;
+        } else if (window.innerWidth <= 1200 && window.innerWidth > 768) {
+            sideNav.classList.remove('expanded');
+            sideNav.classList.remove('mobile-visible');
+            isMenuOpen = false;
+        } else if (window.innerWidth <= 768) {
+            sideNav.classList.remove('expanded');
+            sideNav.classList.remove('mobile-visible');
+            isMenuOpen = false;
+        }
+    }
+
+    // Vérifier la taille d'écran au chargement
+    checkScreenSize();
+
+    // Vérifier la taille d'écran lors du redimensionnement
+    window.addEventListener('resize', checkScreenSize);
+
     // Gestion des liens de navigation
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -68,22 +90,22 @@ function initNavigation() {
                 sideNav.classList.remove('mobile-visible');
                 isMenuOpen = false;
             }
-            
+
             // Si lien interne, défilement en douceur
             const href = link.getAttribute('href');
             if (href.startsWith('#')) {
                 e.preventDefault();
                 const targetId = href.substring(1);
                 const targetElement = document.getElementById(targetId);
-                
+
                 if (targetElement) {
                     const offsetTop = targetElement.offsetTop;
-                    
+
                     window.scrollTo({
                         top: offsetTop,
                         behavior: 'smooth'
                     });
-                    
+
                     // Mettre à jour le lien actif
                     navLinks.forEach(l => l.classList.remove('active'));
                     link.classList.add('active');
@@ -93,7 +115,7 @@ function initNavigation() {
             }
         });
     });
-    
+
     // Initialiser le marqueur de section
     updateSectionMarker('hero');
 }
@@ -102,18 +124,18 @@ function initNavigation() {
 function initSectionObserver() {
     const sections = document.querySelectorAll('.section');
     const sectionMarker = document.querySelector('.section-marker');
-    
+
     const options = {
         root: null,
         rootMargin: '-20% 0px -79% 0px', // Considère qu'une section est active quand elle occupe 20-80% de la vue
         threshold: 0
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const sectionId = entry.target.getAttribute('id');
-                
+
                 // Mettre à jour le lien actif
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.classList.remove('active');
@@ -121,23 +143,23 @@ function initSectionObserver() {
                         link.classList.add('active');
                     }
                 });
-                
+
                 // Mettre à jour la section actuelle
                 currentSection = sectionId;
                 document.querySelectorAll('.section').forEach(s => {
                     s.classList.remove('active-section');
                 });
                 entry.target.classList.add('active-section');
-                
+
                 // Mettre à jour le marqueur de section
                 updateSectionMarker(sectionId);
-                
+
                 // Animer les éléments de la section actuelle
                 const revealElements = entry.target.querySelectorAll('[class*="reveal-"]');
                 revealElements.forEach(el => {
                     el.classList.add('revealed');
                 });
-                
+
                 // Animer les éléments échelonnés
                 const staggerElements = entry.target.querySelectorAll('.stagger-reveal');
                 staggerElements.forEach(el => {
@@ -146,12 +168,12 @@ function initSectionObserver() {
             }
         });
     }, options);
-    
+
     // Observer toutes les sections
     sections.forEach(section => {
         observer.observe(section);
     });
-    
+
     // Afficher le marqueur de section après avoir scrollé un peu
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100 && !hasScrolled) {
@@ -169,7 +191,7 @@ function updateSectionMarker(sectionId) {
     const marker = document.querySelector('.section-marker');
     const sectionTitle = document.querySelector(`#${sectionId} .section-title`);
     let title = '';
-    
+
     if (sectionId === 'hero') {
         title = 'Accueil';
     } else if (sectionTitle) {
@@ -177,9 +199,9 @@ function updateSectionMarker(sectionId) {
     } else {
         title = sectionId.charAt(0).toUpperCase() + sectionId.slice(1);
     }
-    
+
     document.querySelector('.current-section').textContent = title;
-    
+
     // Calculer la progression dans la section
     const section = document.getElementById(sectionId);
     if (section) {
@@ -187,11 +209,11 @@ function updateSectionMarker(sectionId) {
         const sectionHeight = section.offsetHeight;
         const scrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
-        
+
         // Calculer le pourcentage de progression
         let progress = (scrollY - sectionTop + viewportHeight / 2) / sectionHeight;
         progress = Math.max(0, Math.min(1, progress));
-        
+
         document.querySelector('.progress-bar').style.width = `${progress * 100}%`;
     }
 }
