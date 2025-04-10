@@ -3,8 +3,7 @@ let isThemeDark = false;
 let isMenuOpen = false;
 let currentSection = 'hero';
 let hasScrolled = false;
-let heroCanvas, skillsCanvas;
-let skillsScene, skillsCamera, skillsRenderer;
+let heroCanvas;
 let heroParticles = [];
 let colors = {
     primary: '#0F172A',
@@ -262,7 +261,6 @@ function initThemeToggle() {
         
         // Réinitialiser les canvas avec les nouvelles couleurs
         if (heroCanvas) initHeroCanvas();
-        if (skillsCanvas) initSkillsCanvas();
     });
 }
 
@@ -344,60 +342,6 @@ function initHeroCanvas() {
     // Redimensionner le canvas lors du redimensionnement de la fenêtre
     window.addEventListener('resize', resizeCanvas);
 }
-
-// ===== VISUALISATION DES COMPÉTENCES =====
-function initSkillsCanvas() {
-    const skillsSection = document.getElementById('skills');
-    if (!skillsSection) return;
-    
-    // Changer la catégorie de compétences active
-    const categories = document.querySelectorAll('.skill-category');
-    categories.forEach(category => {
-        category.addEventListener('click', () => {
-            // Retirer la classe active de toutes les catégories
-            categories.forEach(c => c.classList.remove('active'));
-            // Ajouter la classe active à la catégorie cliquée
-            category.classList.add('active');
-            
-            // Afficher le contenu des compétences correspondant
-            const categoryId = category.getAttribute('data-category');
-            document.querySelectorAll('.skill-details-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            document.querySelector(`.skill-details-content[data-category="${categoryId}"]`).classList.add('active');
-            
-            // Animer les barres de compétences
-            setTimeout(() => {
-                const bars = document.querySelectorAll(`.skill-details-content[data-category="${categoryId}"] .skill-bar`);
-                bars.forEach(bar => {
-                    const width = bar.style.width;
-                    bar.style.width = '0';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 50);
-                });
-            }, 100);
-        });
-    });
-    
-    // Initialiser les barres de compétences de la première catégorie
-    setTimeout(() => {
-        const firstCategory = document.querySelector('.skill-category.active');
-        if (firstCategory) {
-            const categoryId = firstCategory.getAttribute('data-category');
-            const bars = document.querySelectorAll(`.skill-details-content[data-category="${categoryId}"] .skill-bar`);
-            bars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 50);
-            });
-        }
-    }, 1000);
-}
-
-
 
 // ===== ANIMATIONS DU FORMULAIRE =====
 function initFormAnimations() {
