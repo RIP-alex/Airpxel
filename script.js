@@ -29,9 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initThemeToggle();
     initHeroCanvas();
     initSkillsCanvas();
-    initJourneyTabs();
+    initHorizontalTimeline();
     initFormAnimations();
     initRevealAnimations();
+    initSkillsTabs();
     
     // Gestion du défilement et du redimensionnement
     window.addEventListener('scroll', handleScroll);
@@ -399,44 +400,7 @@ function initSkillsCanvas() {
     }, 1000);
 }
 
-// ===== ONGLETS PARCOURS =====
-function initJourneyTabs() {
-    const tabs = document.querySelectorAll('.journey-tab');
-    
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = tab.getAttribute('data-tab');
-            
-            // Mettre à jour les onglets actifs
-            document.querySelectorAll('.journey-tab').forEach(t => {
-                t.classList.remove('active');
-            });
-            tab.classList.add('active');
-            
-            // Afficher le contenu correspondant
-            document.querySelectorAll('.timeline-container').forEach(container => {
-                container.classList.remove('active');
-            });
-            document.getElementById(`${target}-timeline`).classList.add('active');
-            
-            // Animer les éléments de la timeline
-            setTimeout(() => {
-                const timelineItems = document.querySelectorAll(`#${target}-timeline .timeline-item`);
-                timelineItems.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.classList.add('visible');
-                    }, index * 100);
-                });
-            }, 100);
-        });
-    });
-    
-    // Activer l'onglet par défaut
-    const firstTab = document.querySelector('.journey-tab');
-    if (firstTab) {
-        firstTab.click();
-    }
-}
+
 
 // ===== ANIMATIONS DU FORMULAIRE =====
 function initFormAnimations() {
