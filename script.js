@@ -3,8 +3,6 @@ let isThemeDark = false;
 let isMenuOpen = false;
 let currentSection = 'hero';
 let hasScrolled = false;
-let heroCanvas;
-let heroParticles = [];
 let colors = {
     primary: '#0F172A',
     secondary: '#1E293B',
@@ -162,6 +160,13 @@ function initSectionObserver() {
                 staggerElements.forEach(el => {
                     el.classList.add('revealed');
                 });
+                
+                // Gérer l'animation du hero
+                if (sectionId === 'hero' && window.heroAnimation) {
+                    window.heroAnimation.init(colors);
+                } else if (window.heroAnimation) {
+                    window.heroAnimation.stop();
+                }
             }
         });
     }, options);
@@ -259,88 +264,19 @@ function initThemeToggle() {
             };
         }
         
-        // Réinitialiser les canvas avec les nouvelles couleurs
-        if (heroCanvas) initHeroCanvas();
+        // Réinitialiser l'animation hero avec les nouvelles couleurs
+        if (window.heroAnimation) {
+            window.heroAnimation.init(colors);
+        }
     });
 }
 
 // ===== CANVAS HERO =====
 function initHeroCanvas() {
-    heroCanvas = document.getElementById('hero-canvas');
-    if (!heroCanvas) return;
-    
-    const ctx = heroCanvas.getContext('2d');
-    const resizeCanvas = () => {
-        heroCanvas.width = heroCanvas.offsetWidth;
-        heroCanvas.height = heroCanvas.offsetHeight;
-    };
-    
-    resizeCanvas();
-    
-    // Créer les particules
-    heroParticles = [];
-    const particleCount = Math.floor(heroCanvas.width * heroCanvas.height / 10000);
-    
-    for (let i = 0; i < particleCount; i++) {
-        heroParticles.push({
-            x: Math.random() * heroCanvas.width,
-            y: Math.random() * heroCanvas.height,
-            radius: Math.random() * 2 + 1,
-            color: [colors.accent, colors.accentSecondary, colors.accentTertiary][Math.floor(Math.random() * 3)],
-            speedX: Math.random() * 0.5 - 0.25,
-            speedY: Math.random() * 0.5 - 0.25,
-            proximity: []
-        });
+    // Utiliser le module externe pour l'animation du hero
+    if (window.heroAnimation && typeof window.heroAnimation.init === 'function') {
+        window.heroAnimation.init(colors);
     }
-    
-    // Animation des particules
-    function animate() {
-        requestAnimationFrame(animate);
-        ctx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
-        
-        heroParticles.forEach(particle => {
-            // Déplacer la particule
-            particle.x += particle.speedX;
-            particle.y += particle.speedY;
-            
-            // Rebondir sur les bords
-            if (particle.x < 0 || particle.x > heroCanvas.width) particle.speedX *= -1;
-            if (particle.y < 0 || particle.y > heroCanvas.height) particle.speedY *= -1;
-            
-            // Dessiner la particule
-            ctx.beginPath();
-            ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-            ctx.fillStyle = particle.color;
-            ctx.fill();
-            
-            // Réinitialiser les particules proches
-            particle.proximity = [];
-        });
-        
-        // Connecter les particules proches
-        for (let i = 0; i < heroParticles.length; i++) {
-            for (let j = i + 1; j < heroParticles.length; j++) {
-                const dx = heroParticles[i].x - heroParticles[j].x;
-                const dy = heroParticles[i].y - heroParticles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < 100) {
-                    ctx.beginPath();
-                    ctx.moveTo(heroParticles[i].x, heroParticles[i].y);
-                    ctx.lineTo(heroParticles[j].x, heroParticles[j].y);
-                    ctx.strokeStyle = `rgba(59, 130, 246, ${1 - distance / 100})`;
-                    ctx.lineWidth = 0.5;
-                    ctx.stroke();
-                }
-            }
-        }
-    }
-    
-    // Lancer l'animation
-    animate();
-    
-    // Redimensionner le canvas lors du redimensionnement de la fenêtre
-    window.addEventListener('resize', resizeCanvas);
 }
 
 // ===== ANIMATIONS DU FORMULAIRE =====
@@ -452,12 +388,5 @@ function handleScroll() {
 
 // ===== GESTION DU REDIMENSIONNEMENT =====
 function handleResize() {
-    // Redimensionner les canvas
-    if (heroCanvas) {
-        heroCanvas.width = heroCanvas.offsetWidth;
-        heroCanvas.height = heroCanvas.offsetHeight;
-        
-        // Recréer les particules
-        initHeroCanvas();
-    }
+    // Rien à faire ici pour le hero canvas puisqu'il est géré dans hero-animation.js
 }
