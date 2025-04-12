@@ -6,12 +6,16 @@
 
 // Données des projets
 const projectsData = {
-    'bugtracker': {
+    'Projet-Bugtracker': {
         title: 'Gestion de tickets (BugTracker)',
         tags: ['C#', 'ASP.NET Core', 'SQL Server', 'Bootstrap'],
         images: [
-            'placeholder.jpg', // Remplacez par les chemins vers vos images
-            'placeholder.jpg',
+            'Bugtracker-connexion.png',
+            'Bugtracker-session-admin.png',
+            'Bugtracker-session-user.png',
+            'Bugtracker-edit-admin.png',
+            'Bugtracker-listing-user.png',
+
             'placeholder.jpg'
         ],
         description: 'Un système de gestion de tickets conçu pour les entreprises afin de suivre et résoudre efficacement les problèmes signalés par les employés ou les clients. Ce projet permet de centraliser la gestion des tâches, d\'attribuer des responsabilités et de suivre l\'état d\'avancement des tickets.\n\nEn tant que développeur full-stack, j\'étais responsable de la conception et de l\'implémentation des fonctionnalités principales, de la gestion des bases de données, et de l\'intégration des contrôleurs et des vues Razor Pages. J\'ai également travaillé sur la sécurisation des accès et l\'optimisation des performances.',
