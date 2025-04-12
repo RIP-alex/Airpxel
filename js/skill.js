@@ -1,4 +1,11 @@
-// Fonction principale pour initialiser les onglets de compétences
+/**
+ * skill.js - Gestion des onglets de compétences
+ * Ce module gère l'affichage et l'interaction avec la section des compétences
+ */
+
+/**
+ * Initialise les onglets de compétences
+ */
 function initSkillTabs() {
     console.log("Initialisation des onglets de compétences");
     const categories = document.querySelectorAll('.skill-category');
@@ -49,8 +56,10 @@ function initSkillTabs() {
     });
 }
 
-
-// Fonction améliorée pour animer l'apparition des icônes de compétences
+/**
+ * Anime l'apparition des icônes de compétences
+ * @param {HTMLElement} container - Le conteneur contenant les icônes
+ */
 function animateSkillIcons(container) {
     const icons = container.querySelectorAll('.skill-icon-item');
     console.log(`Animation de ${icons.length} icônes`);
@@ -69,7 +78,10 @@ function animateSkillIcons(container) {
         }, 100 + index * 80); // Délai progressif plus prononcé
     });
 }
-// Fonction pour initialiser la première catégorie par défaut
+
+/**
+ * Initialise la première catégorie par défaut
+ */
 function initDefaultCategory() {
     console.log("Initialisation de la catégorie par défaut");
     const firstCategory = document.querySelector('.skill-category');
@@ -82,9 +94,37 @@ function initDefaultCategory() {
     }
 }
 
-// Initialisation au chargement du document
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM chargé - Initialisation des skills");
-    initSkillTabs();
-    initDefaultCategory();
-});
+/**
+ * Initialise les barres de progression de compétences
+ */
+function initSkillBars() {
+    const skillBars = document.querySelectorAll('.skill-bar');
+    
+    if (skillBars.length === 0) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const width = bar.dataset.width || bar.style.width;
+                
+                // Réinitialiser d'abord
+                bar.style.width = '0';
+                
+                // Puis animer après un court délai
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+                
+                observer.unobserve(bar);
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    skillBars.forEach(bar => {
+        observer.observe(bar);
+    });
+}
+
+// Exporter les fonctions
+export { initSkillTabs, initDefaultCategory, initSkillBars, animateSkillIcons };

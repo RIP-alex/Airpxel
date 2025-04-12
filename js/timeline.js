@@ -1,9 +1,40 @@
 /**
- * timeline-parallax.js
- * Ce fichier contient toutes les fonctions pour gérer la timeline avec effet parallaxe
+ * timeline.js - Gestion de la timeline
+ * Ce module encapsule toutes les fonctionnalités liées à la timeline
+ * en reprenant le code original mais en le rendant compatible avec l'architecture modulaire
  */
 
-// Fonction pour initialiser la timeline avec effet parallaxe
+/**
+ * Fonction principale d'initialisation
+ */
+function initTimeline() {
+    console.log('Initialisation de la timeline parallaxe...');
+    
+    // Initialiser la timeline avec effet parallaxe
+    initParallaxTimeline();
+    
+    // Initialiser les onglets
+    initTimelineTabs();
+    
+    // Ajouter les effets avancés
+    addAdvancedParallaxEffects();
+    
+    // Ajouter les animations au défilement
+    addScrollAnimations();
+    
+    // Ajouter la navigation par swipe sur mobile
+    addSwipeNavigation();
+    
+    // Réinitialiser lors du redimensionnement de la fenêtre
+    window.addEventListener('resize', () => {
+        console.log('Redimensionnement détecté, réinitialisation de la timeline...');
+        initParallaxTimeline();
+    });
+}
+
+/**
+ * Initialise la timeline avec effet parallaxe
+ */
 function initParallaxTimeline() {
     const timelineContainers = document.querySelectorAll('.parallax-timeline');
     
@@ -136,7 +167,9 @@ function initParallaxTimeline() {
     });
 }
 
-// Initialiser la navigation entre les onglets (expériences/formation)
+/**
+ * Initialiser la navigation entre les onglets (expériences/formation)
+ */
 function initTimelineTabs() {
     const tabs = document.querySelectorAll('.journey-tab');
     
@@ -174,7 +207,9 @@ function initTimelineTabs() {
     }
 }
 
-// Ajout d'effets d'interaction avancés pour la parallaxe
+/**
+ * Ajout d'effets d'interaction avancés pour la parallaxe
+ */
 function addAdvancedParallaxEffects() {
     const timelineContainers = document.querySelectorAll('.parallax-timeline');
     
@@ -225,7 +260,9 @@ function addAdvancedParallaxEffects() {
     });
 }
 
-// Fonction pour ajouter des animations de défilement
+/**
+ * Fonction pour ajouter des animations de défilement
+ */
 function addScrollAnimations() {
     // Vérifier si IntersectionObserver est disponible
     if ('IntersectionObserver' in window) {
@@ -253,7 +290,9 @@ function addScrollAnimations() {
     }
 }
 
-// Fonction pour gérer les swipes sur mobile
+/**
+ * Fonction pour gérer les swipes sur mobile
+ */
 function addSwipeNavigation() {
     const timelineContainers = document.querySelectorAll('.parallax-timeline');
     
@@ -294,34 +333,12 @@ function addSwipeNavigation() {
     });
 }
 
-// Fonction principale d'initialisation
-function initTimeline() {
-    console.log('Initialisation de la timeline parallaxe...');
-    
-    // Initialiser la timeline avec effet parallaxe
-    initParallaxTimeline();
-    
-    // Initialiser les onglets
-    initTimelineTabs();
-    
-    // Ajouter les effets avancés
-    addAdvancedParallaxEffects();
-    
-    // Ajouter les animations au défilement
-    addScrollAnimations();
-    
-    // Ajouter la navigation par swipe sur mobile
-    addSwipeNavigation();
-    
-    // Réinitialiser lors du redimensionnement de la fenêtre
-    window.addEventListener('resize', () => {
-        console.log('Redimensionnement détecté, réinitialisation de la timeline...');
-        initParallaxTimeline();
-    });
-}
-
-// Exécuter l'initialisation quand le DOM est chargé
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM chargé, initialisation de la timeline...');
-    initTimeline();
-});
+// Exporter les fonctions
+export { 
+    initTimeline, 
+    initParallaxTimeline, 
+    initTimelineTabs, 
+    addAdvancedParallaxEffects,
+    addScrollAnimations,
+    addSwipeNavigation
+};
