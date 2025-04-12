@@ -19,6 +19,7 @@
 @import 'components/timeline.css';
 @import 'components/skill.css';
 @import 'components/hero.css';
+@import 'components/modal.css';
 
 /* Animations */
 @import 'animations/transitions.css';
