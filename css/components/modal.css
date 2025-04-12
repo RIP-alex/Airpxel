@@ -96,6 +96,10 @@
 
 .modal-gallery {
     margin-bottom: var(--space-6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .gallery-main {
@@ -112,6 +116,8 @@
     object-fit: cover;
     object-position: center;
     transition: transform var(--transition-normal) var(--transition-function);
+    margin: 0 auto;
+    display: block;
 }
 
 .gallery-main-image:hover {
