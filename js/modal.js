@@ -10,7 +10,7 @@ const projectsData = {
         title: 'Gestion de tickets (BugTracker)',
         tags: ['C#', 'ASP.NET Core', 'SQL Server', 'Bootstrap'],
         images: [
-            'images/Projet-Bugtracker/Bugtracker-accueil.png',
+            'images/Projet-Bugtracker/Bugtracker-Accueil.png',
             'images/Projet-Bugtracker/Bugtracker-connexion.png',
             'images/Projet-Bugtracker/Bugtracker-session-admin.png',
             'images/Projet-Bugtracker/Bugtracker-session-user.png',
