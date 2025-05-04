@@ -2268,118 +2268,96 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-backdrop-filter: blur(5px);
 }
 
-/* Style mixte pour l'option combinée */
-.project-card.under-construction {
-  background: var(--color-bg-secondary);
-  border-left: 4px solid var(--color-accent-tertiary);
-  max-width: 800px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Styles pour la carte "en construction" */
+.construction-card {
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--color-accent-tertiary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card.under-construction:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+.construction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
-@media (min-width: 768px) {
-  .project-card.under-construction {
-    flex-direction: row;
-  }
+.construction-content {
+    padding: 25px;
 }
 
-.project-card.under-construction .project-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: var(--color-accent-tertiary);
-  background-color: rgba(245, 158, 11, 0.1);
-  padding: 20px;
-  min-height: 200px;
-  flex-basis: 30%;
+.construction-icon {
+    font-size: 3rem;
+    color: var(--color-accent-tertiary);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.project-card.under-construction .project-info {
-  padding: 20px;
-  flex-grow: 1;
+.construction-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
 }
 
-.project-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: var(--color-accent-primary);
+.construction-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
 }
 
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 15px;
-}
-
-.project-tag {
-  font-size: 0.75rem;
-  padding: 4px 10px;
-  background-color: var(--color-bg-tertiary);
-  border-radius: var(--radius-full);
-  color: var(--color-text-secondary);
-}
-
-.project-description {
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 15px;
-  line-height: 1.6;
+.construction-description {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 /* Style pour la liste de tâches */
 .dev-tasks {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
 }
 
 .dev-tasks li {
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
 }
 
 .dev-tasks li i {
-  margin-right: 10px;
-  color: var(--color-accent-secondary);
-  width: 20px;
-  text-align: center;
+    margin-right: 10px;
+    color: var(--color-accent-secondary);
+    width: 20px;
+    text-align: center;
 }
 
 /* Barre de progression */
 .progress-container {
-  margin-top: 20px;
-  background-color: var(--color-bg-tertiary);
-  border-radius: var(--radius-full);
-  overflow: hidden;
-  height: 10px;
-  position: relative;
+    margin-top: 20px;
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    height: 10px;
+    position: relative;
 }
 
 .progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-tertiary));
-  border-radius: var(--radius-full);
-  transition: width 1.5s ease-in-out;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-tertiary));
+    border-radius: var(--radius-full);
+    transition: width 1.5s ease-in-out;
 }
 
 .progress-text {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.8rem;
-  text-align: right;
-  color: var(--color-text-secondary);
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    text-align: right;
+    color: var(--color-text-secondary);
 }
