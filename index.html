@@ -1,892 +1,426 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
+    <!-- ===== MÉTADONNÉES DE BASE ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handi & Dev | Développeur & Designer Créatif</title>
-    <meta name="description" content="Portfolio d'Alexandre Rippling, développeur fullstack et designer créatif. Handi&Dev : Coder avec créativité, réussir avec détermination.">
-
+    <meta name="description" content="Alexandre Rippling - Développeur Fullstack en formation, expert en communication et design. Handi&Dev : Coder avec créativité, réussir avec détermination.">
+    <meta name="keywords" content="développeur fullstack, handi&dev, alexandre rippling, web développement, javascript, php, react, lunéville">
+    <meta name="author" content="Alexandre Rippling">
+    <meta name="robots" content="index, follow">
+    
+    <!-- ===== TITRE ===== -->
+    <title>Alexandre Rippling | Développeur Fullstack & Designer Créatif - Handi&Dev</title>
+    
+    <!-- ===== SEO ET PARTAGE SOCIAL ===== -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.handietdev.fr">
+    <meta property="og:title" content="Alexandre Rippling | Développeur Fullstack & Designer Créatif">
+    <meta property="og:description" content="Handi&Dev : Coder avec créativité, réussir avec détermination. Développeur Fullstack en formation, expert en communication et design.">
+    <meta property="og:image" content="https://www.handietdev.fr/assets/images/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.handietdev.fr">
+    <meta property="twitter:title" content="Alexandre Rippling | Développeur Fullstack & Designer Créatif">
+    <meta property="twitter:description" content="Handi&Dev : Coder avec créativité, réussir avec détermination.">
+    <meta property="twitter:image" content="https://www.handietdev.fr/assets/images/og-image.jpg">
+    
+    <!-- ===== FAVICON ET ICÔNES ===== -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- ===== PWA ET MOBILE ===== -->
+    <meta name="theme-color" content="#3B82F6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Alexandre Rippling CV">
+    
+    <!-- ===== PRÉCHARGEMENT DES RESSOURCES ===== -->
+    <!-- Polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- ===== FEUILLES DE STYLE ===== -->
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/typography.css">
+    
+    <!-- Layout -->
+    <link rel="stylesheet" href="css/layout/header.css">
+    <link rel="stylesheet" href="css/layout/grid.css">
+    <link rel="stylesheet" href="css/layout/footer.css">
+    
+    <!-- Composants -->
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/timeline.css">
+    
+    <!-- Sections -->
+    <link rel="stylesheet" href="css/sections/hero.css">
+    <link rel="stylesheet" href="css/sections/about.css">
+    <link rel="stylesheet" href="css/sections/projects.css">
+    <link rel="stylesheet" href="css/sections/contact.css">
+    
+    <!-- Utilitaires -->
+    <link rel="stylesheet" href="css/utilities/animations.css">
+    <link rel="stylesheet" href="css/utilities/accessibility.css">
+    
+    <!-- CSS principal -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="projects.css">
-
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ===== DONNÉES STRUCTURÉES ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alexandre Rippling",
+        "jobTitle": "Développeur Fullstack",
+        "description": "Développeur Fullstack en formation, expert en communication et design",
+        "url": "https://www.handietdev.fr",
+        "sameAs": [
+            "https://linkedin.com/in/alexandrerippling",
+            "https://github.com/arippling"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4 B Quai de Sélestat",
+            "addressLocality": "Lunéville",
+            "postalCode": "54300",
+            "addressCountry": "FR"
+        },
+        "email": "alexandre.rippling@gmail.com",
+        "telephone": "+33669591434",
+        "knowsAbout": [
+            "Développement Web",
+            "JavaScript",
+            "PHP",
+            "React",
+            "Node.js",
+            "HTML5",
+            "CSS3",
+            "Design UX/UI",
+            "Communication digitale"
+        ]
+    }
+    </script>
 </head>
-<body class="loading">
-    <div class="loader">
-        <div class="loader-content">
-            <svg viewBox="0 0 100 100" class="loader-svg">
-                <circle cx="50" cy="50" r="40" class="loader-circle"></circle>
-            </svg>
-            <div class="loader-text">Chargement</div>
-        </div>
-    </div>
 
-    <nav class="side-nav">
-        <div class="nav-toggle">
-            <div class="nav-toggle-icon"></div>
-        </div>
-        <div class="side-nav-content">
-            <div class="nav-logo">
-                <div class="nav-logo-img">AR</div>
-                <div class="nav-logo-text">Alexandre Rippling</div>
-            </div>
-
-            <ul class="nav-links">
-                <li>
-                    <a href="#hero" class="nav-link active" data-nav="hero">
-                        <div class="nav-link-icon"><i class="fas fa-home"></i></div>
-                        <span class="nav-link-text">Accueil</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about" class="nav-link" data-nav="about">
-                        <div class="nav-link-icon"><i class="fas fa-user"></i></div>
-                        <span class="nav-link-text">À propos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#journey" class="nav-link" data-nav="journey">
-                        <div class="nav-link-icon"><i class="fas fa-road"></i></div>
-                        <span class="nav-link-text">Parcours</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#skills" class="nav-link" data-nav="skills">
-                        <div class="nav-link-icon"><i class="fas fa-code"></i></div>
-                        <span class="nav-link-text">Compétences</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#projects" class="nav-link" data-nav="projects">
-                        <div class="nav-link-icon"><i class="fas fa-briefcase"></i></div>
-                        <span class="nav-link-text">Projets</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact" class="nav-link" data-nav="contact">
-                        <div class="nav-link-icon"><i class="fas fa-envelope"></i></div>
-                        <span class="nav-link-text">Contact</span>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="nav-footer">
-                <div class="theme-toggle" id="theme-toggle">
-                    <div class="theme-toggle-track">
-                        <div class="theme-toggle-thumb"></div>
-                    </div>
-                    <span class="theme-toggle-text">Thème clair</span>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/alexrip" target="_blank" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/rip-alex" target="_blank" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+<body class="loading" id="app">
+    <!-- ===== LIENS D'ÉVITEMENT (ACCESSIBILITÉ) ===== -->
+    <nav aria-label="Liens d'évitement">
+        <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+        <a href="#navigation" class="skip-link">Aller à la navigation</a>
+        <a href="#contact" class="skip-link">Aller au contact</a>
     </nav>
-
-    <div class="section-marker">
-        <div class="current-section">Accueil</div>
-        <div class="progress-container">
-            <div class="progress-bar"></div>
+    
+    <!-- ===== LOADER DE CHARGEMENT ===== -->
+    <div class="loader" aria-hidden="true">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Chargement du portfolio...</p>
         </div>
     </div>
-
-    <main class="main-content">
-        <section id="hero" class="section hero-section active-section" data-section="hero">
-            <div class="hero-canvas-container">
-                <canvas id="hero-canvas"></canvas>
+    
+    <!-- ===== NAVIGATION PRINCIPALE ===== -->
+    <header class="header" id="navigation" role="banner">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="#hero" class="header-logo" aria-label="Alexandre Rippling - Retour à l'accueil">
+                <span class="logo-text">A<span class="logo-accent">R</span></span>
+            </a>
+            
+            <!-- Navigation principale -->
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#hero" class="nav-link active" data-section="hero">
+                            <span class="nav-text">Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-section="about">
+                            <span class="nav-text">À propos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link" data-section="experience">
+                            <span class="nav-text">Parcours</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link" data-section="skills">
+                            <span class="nav-text">Compétences</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link" data-section="projects">
+                            <span class="nav-text">Projets</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" data-section="contact">
+                            <span class="nav-text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Actions header -->
+            <div class="header-actions">
+                <!-- Toggle thème -->
+                <button class="theme-toggle" aria-label="Basculer entre thème sombre et clair" title="Changer de thème">
+                    <i class="fas fa-sun theme-icon-light" aria-hidden="true"></i>
+                    <i class="fas fa-moon theme-icon-dark" aria-hidden="true"></i>
+                </button>
+                
+                <!-- Menu mobile -->
+                <button class="mobile-menu-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
             </div>
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="hero-title-line">ALEXANDRE</span>
-                        <span class="hero-title-line accent">RIPPLING</span>
-                    </h1>
-                    <div class="hero-tagline">
-                        <span class="tag-highlight">Handi&Dev</span> : Coder avec créativité, réussir avec détermination
+        </div>
+        
+        <!-- Indicateur de progression -->
+        <div class="scroll-progress" aria-hidden="true">
+            <div class="scroll-progress-bar"></div>
+        </div>
+    </header>
+    
+    <!-- ===== CONTENU PRINCIPAL ===== -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Section Hero -->
+        <section id="hero" class="section hero-section" aria-labelledby="hero-title">
+            <div class="hero-background" aria-hidden="true"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 id="hero-title" class="hero-title">
+                            Alexandre<br>
+                            <span class="hero-accent">Rippling</span>
+                        </h1>
+                        
+                        <p class="hero-tagline">
+                            <strong>Handi&Dev</strong> : Coder avec créativité, réussir avec détermination
+                        </p>
+                        
+                        <p class="hero-description">
+                            Développeur Fullstack en formation chez Metz Numérique School, expert en communication et design. 
+                            Mon parcours atypique me donne une perspective unique pour créer des solutions innovantes et accessibles.
+                        </p>
+                        
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                <span>Découvrir mes projets</span>
+                            </a>
+                            <a href="#contact" class="btn btn-secondary">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span>Me contacter</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Réseaux sociaux -->
+                        <div class="hero-social">
+                            <a href="https://linkedin.com/in/alexandrerippling" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil LinkedIn d'Alexandre Rippling">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/arippling" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil GitHub d'Alexandre Rippling">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.handietdev.fr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Site web Handi&Dev">
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Illustration hero -->
+                    <div class="hero-visual" aria-hidden="true">
+                        <div class="hero-illustration">
+                            <!-- Animation canvas sera injectée ici -->
+                            <canvas id="hero-canvas"></canvas>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-cta">
-                    <a href="#about" class="cta-button">Découvrir mon profil</a>
-                    <a href="#contact" class="cta-link">Me contacter <i class="fas fa-arrow-right"></i></a>
+                
+                <!-- Indicateur de scroll -->
+                <div class="scroll-indicator" aria-hidden="true">
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <span class="scroll-text">Défiler pour explorer</span>
                 </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="scroll-text">Défiler</div>
-                <div class="scroll-icon"></div>
             </div>
         </section>
-
-        <section id="about" class="section about-section" data-section="about">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 class="section-title">À propos</h2>
-                    <div class="section-subtitle">Mon parcours, mes valeurs</div>
-                </div>
+        
+        <!-- Section À propos -->
+        <section id="about" class="section about-section" aria-labelledby="about-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="about-title" class="section-title">À propos de moi</h2>
+                    <p class="section-subtitle">
+                        Un parcours riche et diversifié au service de l'innovation technologique
+                    </p>
+                </header>
+                
                 <div class="about-content">
-                    <div class="about-text-container">
-                        <div class="about-text animate-text">
-                            <p class="highlight-text">Je suis <span class="text-highlight">polyvalent</span>, <span class="text-highlight">organisé</span>, <span class="text-highlight">créatif</span>, <span class="text-highlight">autonome</span>.</p>
-                            <p>Mon parcours atypique m'a doté d'une <span class="text-highlight">résilience</span> et d'une <span class="text-highlight">détermination</span> exceptionnelles. J'ai le sens de l'écoute, de la pratique et de la logique, me permettant de m'adapter efficacement à différentes situations et publics.</p>
-                            <p>La richesse de mes expériences m'a permis d'acquérir des connaissances variées, des métiers manuels au relationnel, en passant par l'informatique et le développement web. Cette diversité me donne une perspective unique pour résoudre des problèmes complexes avec créativité.</p>
-                            <p>Je porte la conviction que les défis personnels sont une source d'innovation. Mon engagement : être un professionnel performant et un exemple de persévérance pour ceux qui font face à des obstacles similaires.</p>
-                        </div>
-                        <div class="profile-strengths">
-                            <div class="strength-item">
-                                <div class="strength-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <div class="strength-text">
-                                    <h3>Développement</h3>
-                                    <p>Création d'applications web modernes et accessibles</p>
-                                </div>
-                            </div>
-                            <div class="strength-item">
-                                <div class="strength-icon">
-                                    <i class="fas fa-pencil-ruler"></i>
-                                </div>
-                                <div class="strength-text">
-                                    <h3>Design</h3>
-                                    <p>Conception graphique et infographie professionnelle</p>
-                                </div>
-                            </div>
-                            <div class="strength-item">
-                                <div class="strength-icon">
-                                    <i class="fas fa-bullhorn"></i>
-                                </div>
-                                <div class="strength-text">
-                                    <h3>Communication</h3>
-                                    <p>Stratégie et gestion de contenus digitaux</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-visual">
-                        <div class="profile-shape">
-                            <div class="shape-element"></div>
-                        </div>
-                    </div>
+                    <!-- Contenu généré dynamiquement -->
                 </div>
             </div>
         </section>
-
-        <section id="journey" class="section journey-section" data-section="journey">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 class="section-title">Parcours</h2>
-                    <div class="section-subtitle">Expériences professionnelles & formation</div>
-                </div>
+        
+        <!-- Section Parcours -->
+        <section id="experience" class="section experience-section" aria-labelledby="experience-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="experience-title" class="section-title">Mon Parcours</h2>
+                    <p class="section-subtitle">
+                        Expériences professionnelles et formation continue
+                    </p>
+                </header>
                 
-                <!-- Navigation entre expériences et formation -->
-                <div class="journey-nav">
-                    <button class="journey-tab active" data-tab="experience">Expériences</button>
-                    <button class="journey-tab" data-tab="education">Formation</button>
-                </div>
-                
-                <!-- Conteneur des timelines -->
-                <div class="journey-content">
-                    <!-- Timeline des expériences -->
-                    <div class="timeline-container parallax-timeline active" id="experience-timeline">
-                        <!-- Ligne de temps principale -->
-                        <div class="timeline-track">
-                            <div class="timeline-line"></div>
-                            
-                            <!-- Marqueurs d'années -->
-                            <div class="timeline-years">
-                                <span class="year-marker" style="left: 0%">2013</span>
-                                <span class="year-marker" style="left: 25%">2015</span>
-                                <span class="year-marker" style="left: 50%">2019</span>
-                                <span class="year-marker" style="left: 75%">2023</span>
-                                <span class="year-marker" style="left: 100%">2024</span>
-                            </div>
-                            
-                            <!-- Points sur la timeline -->
-                            <div class="timeline-points">
-                                <div class="timeline-point" style="left: 0%" data-year="2013"></div>
-                                <div class="timeline-point" style="left: 25%" data-year="2015"></div>
-                                <div class="timeline-point" style="left: 50%" data-year="2019"></div>
-                                <div class="timeline-point" style="left: 75%" data-year="2023"></div>
-                                <div class="timeline-point" style="left: 100%" data-year="2024"></div>
-                            </div>
-                        </div>
-                        
-                        <!-- Conteneur des cartes d'information -->
-                        <div class="timeline-cards-container">
-                            <!-- 2013 - Infographiste -->
-                            <div class="timeline-card-wrapper" data-year="2013">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2013 - 2014</div>
-                                    <h3 class="timeline-title">Infographiste / Chargé de communication</h3>
-                                    <div class="timeline-subtitle">CONSEIL REGIONAL - CHÂTEAU DE LUNEVILLE</div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Création de supports multiples, réseaux sociaux, mailing, photographie</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2015 - Président d'association -->
-                            <div class="timeline-card-wrapper" data-year="2015">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2015 - 2019</div>
-                                    <h3 class="timeline-title">Président d'association</h3>
-                                    <div class="timeline-subtitle">Association Hurrikane Crew</div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Organisation, création, sécurité, communication sur des événements musicaux et culturels</li>
-                                            <li>Bénévolat et acteur sur divers festivals et expositions</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2019 - Mécanicien Agricole -->
-                            <div class="timeline-card-wrapper" data-year="2019">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2019 - 2021</div>
-                                    <h3 class="timeline-title">Mécanicien Agricole</h3>
-                                    <div class="timeline-subtitle">SARL Voutrin-Cherrier</div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Réparation, intervention, installation, préparation sur véhicule agricole et machinerie</li>
-                                            <li>Réparation sur tout type d'appareil de parc et jardin</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2023 - Responsable de communication -->
-                            <div class="timeline-card-wrapper" data-year="2023">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2023 - Aujourd'hui</div>
-                                    <h3 class="timeline-title">Responsable de communication</h3>
-                                    <div class="timeline-subtitle">CASI Lorraine</div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Élaboration et mise en œuvre de la stratégie de communication globale</li>
-                                            <li>Création et gestion des contenus pour les supports numériques et imprimés</li>
-                                            <li>Animation des réseaux sociaux et gestion de la présence en ligne</li>
-                                            <li>Coordination des relations avec les partenaires et prestataires externes</li>
-                                            <li>Organisation et promotion d'événements internes et externes</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2024 - Développeur Fullstack -->
-                            <div class="timeline-card-wrapper" data-year="2024">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2024 - Aujourd'hui</div>
-                                    <h3 class="timeline-title">Développeur Fullstack</h3>
-                                    <div class="timeline-subtitle">Metz Numérique School</div>
-                                    <div class="timeline-tags">
-                                        <span class="timeline-tag">En formation</span>
-                                    </div>
-                                    <div class="timeline-details">
-                                        <ul class="timeline-list">
-                                            <li>Conception et modélisation d'applications : gestion de projet, maquettage, méthodes de développement, base de données</li>
-                                            <li>Développement Front-end : JavaScript, React, Vite.js, Node.js, Angular, React Native, accessibilité</li>
-                                            <li>Développement Back-end : PHP, Symfony, API REST, Java, MongoDB</li>
-                                            <li>Déploiement et production : Linux, performance, sécurité, DevOps, Docker</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Contrôles de navigation -->
-                        <div class="timeline-controls">
-                            <button class="timeline-control prev-btn" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
-                            <button class="timeline-control next-btn" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                    
-                    <!-- Timeline de formation -->
-                    <div class="timeline-container parallax-timeline" id="education-timeline">
-                        <!-- Ligne de temps principale -->
-                        <div class="timeline-track">
-                            <div class="timeline-line"></div>
-                            
-                            <!-- Marqueurs d'années -->
-                            <div class="timeline-years">
-                                <span class="year-marker" style="left: 0%">2008</span>
-                                <span class="year-marker" style="left: 25%">2010</span>
-                                <span class="year-marker" style="left: 50%">2011</span>
-                                <span class="year-marker" style="left: 75%">2018</span>
-                                <span class="year-marker" style="left: 100%">2024</span>
-                            </div>
-                            
-                            <!-- Points sur la timeline -->
-                            <div class="timeline-points">
-                                <div class="timeline-point" style="left: 0%" data-year="2008"></div>
-                                <div class="timeline-point" style="left: 25%" data-year="2010"></div>
-                                <div class="timeline-point" style="left: 50%" data-year="2011"></div>
-                                <div class="timeline-point" style="left: 75%" data-year="2018"></div>
-                                <div class="timeline-point" style="left: 100%" data-year="2024"></div>
-                            </div>
-                        </div>
-                        
-                        <!-- Conteneur des cartes d'information -->
-                        <div class="timeline-cards-container">
-                            <!-- 2008 - BEP Électronique -->
-                            <div class="timeline-card-wrapper" data-year="2008">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2008</div>
-                                    <h3 class="timeline-title">BEP Électronique</h3>
-                                    <div class="timeline-subtitle">Lycée Pierre de Coubertin</div>
-                                    <div class="timeline-details">
-                                        <p>Brevet d'Études Professionnelles en Électronique</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2010 - BAC STI Électronique -->
-                            <div class="timeline-card-wrapper" data-year="2010">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2010</div>
-                                    <h3 class="timeline-title">BAC STI Électronique</h3>
-                                    <div class="timeline-subtitle">Lycée Pierre de Coubertin</div>
-                                    <div class="timeline-details">
-                                        <p>Baccalauréat Sciences et Technologies Industrielles, spécialité Électronique</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2011 - BAC Infographiste -->
-                            <div class="timeline-card-wrapper" data-year="2011">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2011</div>
-                                    <h3 class="timeline-title">BAC Infographiste Metteur en Page</h3>
-                                    <div class="timeline-subtitle">AFPA Vandoeuvre</div>
-                                    <div class="timeline-details">
-                                        <p>Formation professionnelle en infographie</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2018 - CAP Mécanicien -->
-                            <div class="timeline-card-wrapper" data-year="2018">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2018</div>
-                                    <h3 class="timeline-title">CAP Mécanicien Agricole</h3>
-                                    <div class="timeline-subtitle">AFPA Verdun</div>
-                                    <div class="timeline-details">
-                                        <p>CAP MÉCANICIEN AGRICOLE avec option PARC ET JARDIN</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 2024 - Formation Développeur -->
-                            <div class="timeline-card-wrapper" data-year="2024">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">2024 - En cours</div>
-                                    <h3 class="timeline-title">Bachelor Développeur Fullstack</h3>
-                                    <div class="timeline-subtitle">Metz Numérique School</div>
-                                    <div class="timeline-details">
-                                        <p>Formation Développeur Web et Web Mobile</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Contrôles de navigation -->
-                        <div class="timeline-controls">
-                            <button class="timeline-control prev-btn" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
-                            <button class="timeline-control next-btn"aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
+                <div class="experience-content">
+                    <!-- Timeline générée dynamiquement -->
                 </div>
             </div>
         </section>
-
-        <section id="skills" class="section skills-section" data-section="skills">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 class="section-title">Compétences</h2>
-                    <div class="section-subtitle">Expertise technique & savoir-faire</div>
-                </div>
+        
+        <!-- Section Compétences -->
+        <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="skills-title" class="section-title">Compétences</h2>
+                    <p class="section-subtitle">
+                        Un ensemble de compétences techniques et humaines acquises au fil des expériences
+                    </p>
+                </header>
                 
-                <div class="skills-container">
-                    <!-- Onglets de catégories -->
-                    <div class="skill-categories">
-                        <div class="skill-category active" data-category="dev">
-                            <div class="category-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h3>Développement Web</h3>
-                        </div>
-                        <div class="skill-category" data-category="design">
-                            <div class="category-icon">
-                                <i class="fas fa-palette"></i>
-                            </div>
-                            <h3>Design & Communication</h3>
-                        </div>
-                        <div class="skill-category" data-category="tech">
-                            <div class="category-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <h3>Technique & Mécanique</h3>
-                        </div>
-                        <div class="skill-category" data-category="management">
-                            <div class="category-icon">
-                                <i class="fas fa-users-cog"></i>
-                            </div>
-                            <h3>Compétences Humaines</h3>
-                        </div>
-                    </div>
-                    
-                    <!-- Contenu des compétences -->
-                    <div class="skills-visualization">
-                        <!-- Développement Web -->
-                        <div class="skill-details-content active" data-category="dev">
-                            <div class="skills-grid">
-                                <div class="skill-icon-item">
-                                    <i class="fab fa-html5"></i>
-                                    <span>HTML</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fab fa-css3-alt"></i>
-                                    <span>CSS</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fab fa-js"></i>
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fab fa-react"></i>
-                                    <span>React</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fab fa-php"></i>
-                                    <span>PHP</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fab fa-node-js"></i>
-                                    <span>Node.js</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-database"></i>
-                                    <span>SQL</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fa-solid fa-server"></i>
-                                    <span>MongoDB</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-leaf"></i>
-                                    <span>Éco-conception</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Design & Communication -->
-                        <div class="skill-details-content" data-category="design">
-                            <div class="skills-grid">
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-palette"></i>
-                                    <span>Design Graphique</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-photo-video"></i>
-                                    <span>Infographie</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-bullhorn"></i>
-                                    <span>Communication</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-signal"></i>
-                                    <span>Stratégie Digitale</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-edit"></i>
-                                    <span>Gestion de Contenu</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Technique & Mécanique -->
-                        <div class="skill-details-content" data-category="tech">
-                            <div class="skills-grid">
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-wrench"></i>
-                                    <span>Mécanique Agricole</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-car"></i>
-                                    <span>Mécanique Parc & Jardin</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-plug"></i>
-                                    <span>Électronique</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-tools"></i>
-                                    <span>Outillage</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Compétences Humaines -->
-                        <div class="skill-details-content" data-category="management">
-                            <div class="skills-subtitle">Compétences acquises en tant que Président d'Association</div>
-                            <div class="skills-grid">
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-sitemap"></i>
-                                    <span>Organisation Événementielle</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Gestion d'Équipe</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-handshake"></i>
-                                    <span>Partenariats</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>Gestion de la Sécurité</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skills-subtitle">Compétences développées suite à mon parcours de réadaptation</div>
-                            <div class="skills-grid">
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-brain"></i>
-                                    <span>Résilience</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-sync-alt"></i>
-                                    <span>Adaptabilité</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-route"></i>
-                                    <span>Persévérance</span>
-                                </div>
-                                <div class="skill-icon-item">
-                                    <i class="fas fa-puzzle-piece"></i>
-                                    <span>Résolution de Problèmes</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="skills-content">
+                    <!-- Compétences générées dynamiquement -->
                 </div>
             </div>
         </section>
-
-        <section id="projects" class="section projects-section" data-section="projects">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 class="section-title">Projets</h2>
-                    <div class="section-subtitle">Réalisations & portfolio</div>
-                </div>
+        
+        <!-- Section Projets -->
+        <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="projects-title" class="section-title">Mes Projets</h2>
+                    <p class="section-subtitle">
+                        Réalisations techniques et créatives
+                    </p>
+                </header>
                 
-                <div class="projects-grid">
-                    <!-- Premier projet (existant) - en premier -->
-                    <div class="project-item">
-                        <div class="project-image">
-                            <img src="images/Projet-Bugtracker/Bugtracker-Accueil.png" alt="Projet Bugtracker">
-                            <div class="project-hover">
-                                <h3>Gestion des tickets - Bugtracker</h3>
-                                <p>Un système de gestion de tickets afin de suivre et résoudre efficacement les problèmes signalés.</p>
-                                <a href="#" class="button project-link" data-project-id="Projet-Bugtracker">Voir le Projet</a>
-                            </div>
-                        </div>
-                    </div>
-
-                   <div class="project-card">
-                    <div class="project-preview">
-                        <div class="project-image placeholder restauscan-bg"></div>
-                        <div class="project-overlay">
-                            <div class="project-cta">
-                                <a href="#" class="project-link">Projet privé</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">RestauScan</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">Express.js</span>
-                            <span class="project-tag">JWT</span>
-                            <span class="project-tag">Architecture Modulaire</span>
-                        </div>
-                        <p class="project-description">
-                            Plateforme Node.js de gestion restaurant avec architecture modulaire fine. 
-                            Système d'authentification JWT, cryptographie QR avancée, gestion des passages 
-                            et API RESTful sécurisée. Développement selon les principes Clean Code 
-                            avec modules indépendants et responsabilité unique.
-                        </p>
-                    </div>
-                </div>
-                
-                <style>
-                /* Styles spécifiques RestauScan - Intégration Airpxel */
-                .restauscan-bg {
-                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                    position: relative;
-                    overflow: hidden;
-                }
-                
-                .restauscan-bg::before {
-                    content: '🍽️';
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-size: 3rem;
-                    opacity: 0.4;
-                    color: white;
-                }
-                
-                .restauscan-bg::after {
-                    content: '';
-                    position: absolute;
-                    bottom: 10px;
-                    right: 10px;
-                    width: 40px;
-                    height: 40px;
-                    background: rgba(255, 255, 255, 0.2);
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                /* Badges spécialisés pour technologies backend */
-                .project-tag:nth-child(1) { /* Node.js */
-                    background: linear-gradient(45deg, #339933, #66cc66);
-                    color: white;
-                }
-                
-                .project-tag:nth-child(2) { /* Express.js */
-                    background: linear-gradient(45deg, #000000, #333333);
-                    color: white;
-                }
-                
-                .project-tag:nth-child(3) { /* JWT */
-                    background: linear-gradient(45deg, #000000, #d63aff);
-                    color: white;
-                }
-                
-                .project-tag:nth-child(4) { /* Architecture */
-                    background: linear-gradient(45deg, #9C27B0, #E91E63);
-                    color: white;
-                }
-                
-                /* Animation subtile pour le projet RestauScan */
-                .project-card:hover .restauscan-bg::before {
-                    transform: translate(-50%, -50%) scale(1.1);
-                    transition: transform 0.3s ease;
-                }
-                </style>
-
-
-                    
-                    <!-- Autre projets à venir (en dessous) -->
-                    <div class="projects-coming-soon">
-                        <div class="coming-soon-header">
-                            <div class="construction-icon">
-                                <i class="fas fa-hard-hat"></i>
-                            </div>
-                            <h3>Chantier en cours</h3>
-                        </div>
-                        
-                        <div class="coming-soon-tags">
-                            <span class="coming-soon-tag">Patience</span>
-                            <span class="coming-soon-tag">Formation</span>
-                            <span class="coming-soon-tag">Bientôt disponible</span>
-                        </div>
-                        
-                        <p class="coming-soon-description">
-                            Veuillez excuser la poussière virtuelle! Le propriétaire de ce site est actuellement en formation intensive de développement web.
-                        </p>
-                        
-                        <div class="dev-status">
-                            <p>Le développeur est actuellement occupé à :</p>
-                            <ul class="dev-tasks">
-                                <li><i class="fas fa-coffee"></i> Boire du café</li>
-                                <li><i class="fas fa-bug"></i> Combattre des bugs mystérieux</li>
-                                <li><i class="fas fa-book"></i> Lire la documentation (pour la 100ème fois)</li>
-                                <li><i class="fas fa-laptop-code"></i> Coder des projets impressionnants (bientôt disponibles!)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="loading-container">
-                            <div class="spinner">
-                                <div class="double-bounce1"></div>
-                                <div class="double-bounce2"></div>
-                            </div>
-                            <div class="progress-container">
-                                <div class="progress-bar" style="width: 42%"></div>
-                                <span class="progress-text">42% - La réponse à tout!</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="projects-content">
+                    <!-- Projets générés dynamiquement -->
                 </div>
             </div>
         </section>
-
-        <section id="contact" class="section contact-section" data-section="contact">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 class="section-title">Contact</h2>
-                    <div class="section-subtitle">Travaillons ensemble</div>
-                </div>
-
+        
+        <!-- Section Contact -->
+        <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="contact-title" class="section-title">Travaillons ensemble</h2>
+                    <p class="section-subtitle">
+                        Vous avez un projet ou une opportunité à discuter ? Contactez-moi !
+                    </p>
+                </header>
+                
                 <div class="contact-content">
-                    <div class="contact-text">
-                        <h3 class="contact-heading">Discutons de votre projet</h3>
-                        <p class="contact-introduction">Vous avez un projet ou une opportunité à discuter ? Je serais ravi d'échanger avec vous pour voir comment je peux vous accompagner.</p>
-
-                        <div class="contact-socials">
-                            <a href="https://linkedin.com/in/alexrip" target="_blank" class="contact-social-item">
-                                <div class="social-icon">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                                <div class="social-text">
-                                    <span class="social-label">LinkedIn</span>
-                                    <span class="social-username">Connecter. Collaborer. Créer</span>
-                                </div>
-                            </a>
-
-                            <a href="https://github.com/rip-alex" target="_blank" class="contact-social-item">
-                                <div class="social-icon">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                                <div class="social-text">
-                                    <span class="social-label">GitHub</span>
-                                    <span class="social-username">Voyez comment je transforme les idées en code</span>
-                                </div>
-                            </a>
-
-                            <a href="https://rip-alex.github.io/Airpxel/" target="_blank" class="contact-social-item">
-                                <div class="social-icon">
-                                    <i class="fas fa-globe"></i>
-                                </div>
-                                <div class="social-text">
-                                    <span class="social-label">Site Web</span>
-                                    <span class="social-username">en cours de production</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-container">
-                        <form id="contact-form" class="contact-form" action="https://formsubmit.co/alexandre.rippling@gmail.com" method="POST">
-                            <input type="hidden" name="_subject" value="Nouveau message de contact">
-                            <input type="hidden" name="_captcha" value="true">
-                            <input type="hidden" name="_next" value="https://rip-alex.github.io/Airpxel/success.html">
-
-                            <div class="form-group">
-                                <div class="input-wrapper">
-                                    <input type="text" id="name" name="name" required class="form-input">
-                                    <label for="name" class="form-label">Nom</label>
-                                    <div class="input-line"></div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="input-wrapper">
-                                    <input type="email" id="email" name="email" required class="form-input">
-                                    <label for="email" class="form-label">Email</label>
-                                    <div class="input-line"></div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="input-wrapper">
-                                    <input type="text" id="subject" name="subject" required class="form-input">
-                                    <label for="subject" class="form-label">Sujet</label>
-                                    <div class="input-line"></div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="input-wrapper">
-                                    <textarea id="message" name="message" rows="5" required class="form-input form-textarea"></textarea>
-                                    <label for="message" class="form-label">Message</label>
-                                    <div class="input-line"></div>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="submit-btn">
-                                <span class="btn-text">Envoyer</span>
-                                <div class="btn-icon">
-                                    <i class="fas fa-paper-plane"></i>
-                                </div>
-                                <div class="submit-loader"></div>
-                            </button>
-                        </form>
-                    </div>
+                    <!-- Formulaire et informations générés dynamiquement -->
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Modale de projet -->
-<div id="project-modal" class="project-modal">
-    <div class="modal-overlay"></div>
-    <div class="modal-content">
-        <button class="modal-close">&times;</button>
-        <div class="modal-header">
-            <h2 class="modal-title">Titre du projet</h2>
-            <div class="modal-tags"></div>
-        </div>
-        <div class="modal-gallery">
-            <img class="gallery-main-image" src="" alt="">
-            <div class="gallery-thumbs"></div>
-        </div>
-        <div class="modal-description">
-            <p></p>
-        </div>
-        <div class="modal-features">
-            <h3>Fonctionnalités</h3>
-            <ul class="features-list"></ul>
-        </div>
-        <div class="modal-technologies">
-            <h3>Technologies utilisées</h3>
-            <div class="tech-icons"></div>
-        </div>
-        <div class="modal-links">
-            <a href="#" class="live-link">Démo en ligne</a>
-            <a href="#" class="github-link">Code source</a>
-        </div>
-    </div>
-</div>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <div class="logo-text">AR</div>
-            </div>
-            <div class="footer-text">
-                &copy; 2025 Alexandre Rippling. Tous droits réservés.
-            </div>
-            <div class="footer-back-to-top">
-                <a href="#hero" class="back-to-top-btn">
-                    <span class="back-text">Haut de page</span>
-                    <i class="fas fa-arrow-up"></i>
-                </a>
+    
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-copyright">
+                        &copy; 2025 Alexandre Rippling. Tous droits réservés.
+                    </p>
+                    <p class="footer-tagline">
+                        Handi&Dev : Coder avec créativité, réussir avec détermination
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#hero" class="footer-link">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                        <span>Retour en haut</span>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.156.1/three.min.js"></script>
-    <script src="js/hero-animation.js"></script>
-    <script type="module" src="js/main.js"></script>
+    
+    <!-- ===== MODAL PROJET ===== -->
+    <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="modal-title" class="modal-title"></h3>
+                <button class="modal-close" aria-label="Fermer la fenêtre">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <!-- Contenu modal généré dynamiquement -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== SCRIPTS ===== -->
+    <!-- Données -->
+    <script src="js/data/profile.js"></script>
+    <script src="js/data/projects.js"></script>
+    <script src="js/data/skills.js"></script>
+    
+    <!-- Utilitaires -->
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/utils/wcag.js"></script>
+    
+    <!-- Core -->
+    <script src="js/core/navigation.js"></script>
+    <script src="js/core/animations.js"></script>
+    
+    <!-- Modules -->
+    <script src="js/modules/projects.js"></script>
+    <script src="js/modules/skills.js"></script>
+    <script src="js/modules/contact.js"></script>
+    
+    <!-- Application principale -->
+    <script src="js/core/app.js"></script>
+    
+    <!-- Service Worker pour PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>

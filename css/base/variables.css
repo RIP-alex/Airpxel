@@ -1,92 +1,267 @@
-/* ===== VARIABLES ===== */
 :root {
-    /* Nouvelle palette de couleurs */
-    --color-primary: #101820; /* Bleu fonc� presque noir */
-    --color-secondary: #c3a343; /* Or */
-    --color-accent: #c3a343; /* Or pour les accents */
-    --color-light: #f5f5f5; /* Blanc cass� */
-    --color-dark: #1a1a1a; /* Noir riche */
-    --color-gray: #777; /* Gris moyen */
-    --color-light-gray: #e0e0e0; /* Gris clair */
-    /* Correspondance avec l'ancien syst�me de couleurs */
-    --color-bg-primary: var(--color-primary);
-    --color-bg-secondary: var(--color-dark);
-    --color-bg-tertiary: #2a2a2a;
-    --color-accent-primary: var(--color-secondary);
-    --color-accent-secondary: var(--color-accent);
-    --color-accent-tertiary: var(--color-accent);
-    --color-text-primary: var(--color-light);
-    --color-text-secondary: var(--color-light-gray);
-    --color-text-muted: var(--color-gray);
-    --color-gradient-1: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    --color-gradient-2: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-    /* Typographie */
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --font-size-xs: 0.75rem; /* 12px */
-    --font-size-sm: 0.875rem; /* 14px */
-    --font-size-base: 1rem; /* 16px */
-    --font-size-lg: 1.125rem; /* 18px */
-    --font-size-xl: 1.25rem; /* 20px */
-    --font-size-2xl: 1.5rem; /* 24px */
-    --font-size-3xl: 1.875rem; /* 30px */
-    --font-size-4xl: 2.25rem; /* 36px */
-    --font-size-5xl: 3rem; /* 48px */
-    --font-size-6xl: 4rem; /* 64px */
-    /* Spacing */
-    --space-1: 0.25rem; /* 4px */
-    --space-2: 0.5rem; /* 8px */
-    --space-3: 0.75rem; /* 12px */
-    --space-4: 1rem; /* 16px */
-    --space-5: 1.25rem; /* 20px */
-    --space-6: 1.5rem; /* 24px */
-    --space-8: 2rem; /* 32px */
-    --space-10: 2.5rem; /* 40px */
-    --space-12: 3rem; /* 48px */
-    --space-16: 4rem; /* 64px */
-    --space-20: 5rem; /* 80px */
-    --space-24: 6rem; /* 96px */
-    /* Bordures et Rayons */
-    --radius-sm: 0.125rem; /* 2px */
-    --radius-md: 0.25rem; /* 4px */
-    --radius-lg: 0.5rem; /* 8px */
-    --radius-xl: 0.75rem; /* 12px */
-    --radius-2xl: 1rem; /* 16px */
-    --radius-full: 9999px; /* Cercle/Pilule */
-    /* Effets */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* ===== COULEURS PRINCIPALES ===== */
+    /* Palette Airpxel adaptée pour contexte professionnel */
+    --color-bg-primary: #0F172A;      /* Fond principal - bleu nuit profond */
+    --color-bg-secondary: #1E293B;    /* Fond secondaire - gris bleu sombre */
+    --color-bg-tertiary: #334155;     /* Fond tertiaire - gris bleu moyen */
+    --color-bg-surface: #475569;      /* Surface - gris bleu clair */
+    
+    /* Variantes claires pour mode jour */
+    --color-bg-light-primary: #F8FAFC;    /* Fond principal clair */
+    --color-bg-light-secondary: #F1F5F9;  /* Fond secondaire clair */
+    --color-bg-light-tertiary: #E2E8F0;   /* Fond tertiaire clair */
+    --color-bg-light-surface: #CBD5E1;    /* Surface claire */
+    
+    /* ===== COULEURS D'ACCENT ===== */
+    --color-accent-primary: #3B82F6;      /* Bleu moderne - accent principal */
+    --color-accent-secondary: #10B981;    /* Vert émeraude - succès/validation */
+    --color-accent-tertiary: #F59E0B;     /* Or ambré - mise en évidence */
+    --color-accent-quaternary: #EF4444;   /* Rouge - erreurs/urgence */
+    
+    /* Variantes des accents */
+    --color-accent-primary-light: #60A5FA;
+    --color-accent-primary-dark: #1D4ED8;
+    --color-accent-secondary-light: #34D399;
+    --color-accent-secondary-dark: #059669;
+    
+    /* ===== COULEURS DE TEXTE ===== */
+    --color-text-primary: #F8FAFC;        /* Texte principal - blanc nacré */
+    --color-text-secondary: #94A3B8;      /* Texte secondaire - gris clair */
+    --color-text-muted: #64748B;          /* Texte discret - gris moyen */
+    --color-text-inverse: #1E293B;        /* Texte inversé */
+    
+    /* Texte mode clair */
+    --color-text-light-primary: #1E293B;
+    --color-text-light-secondary: #475569;
+    --color-text-light-muted: #64748B;
+    
+    /* ===== COULEURS DE BORDURE ===== */
+    --color-border-primary: #475569;      /* Bordure principale */
+    --color-border-secondary: #334155;    /* Bordure secondaire */
+    --color-border-light: #64748B;        /* Bordure claire */
+    
+    /* ===== DÉGRADÉS CARACTÉRISTIQUES ===== */
+    --gradient-primary: linear-gradient(135deg, #3B82F6, #10B981);
+    --gradient-secondary: linear-gradient(135deg, #F59E0B, #EC4899);
+    --gradient-tertiary: linear-gradient(135deg, #0F172A, #1E293B);
+    --gradient-hero: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
+    
+    /* ===== TYPOGRAPHIE ===== */
+    /* Polices Airpxel */
+    --font-family-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    
+    /* Tailles de police */
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px - Base */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 1.875rem;    /* 30px */
+    --font-size-4xl: 2.25rem;     /* 36px */
+    --font-size-5xl: 3rem;        /* 48px */
+    --font-size-6xl: 4rem;        /* 64px */
+    
+    /* Poids de police */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+    
+    /* Hauteur de ligne */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.8;
+    
+    /* ===== ESPACEMENT ===== */
+    /* Système d'espacement cohérent */
+    --space-0: 0;
+    --space-1: 0.25rem;    /* 4px */
+    --space-2: 0.5rem;     /* 8px */
+    --space-3: 0.75rem;    /* 12px */
+    --space-4: 1rem;       /* 16px - Base */
+    --space-5: 1.25rem;    /* 20px */
+    --space-6: 1.5rem;     /* 24px */
+    --space-8: 2rem;       /* 32px */
+    --space-10: 2.5rem;    /* 40px */
+    --space-12: 3rem;      /* 48px */
+    --space-16: 4rem;      /* 64px */
+    --space-20: 5rem;      /* 80px */
+    --space-24: 6rem;      /* 96px */
+    --space-32: 8rem;      /* 128px */
+    
+    /* ===== RAYONS DE BORDURE ===== */
+    --radius-none: 0;
+    --radius-sm: 0.125rem;     /* 2px */
+    --radius-base: 0.25rem;    /* 4px */
+    --radius-md: 0.375rem;     /* 6px */
+    --radius-lg: 0.5rem;       /* 8px */
+    --radius-xl: 0.75rem;      /* 12px */
+    --radius-2xl: 1rem;        /* 16px */
+    --radius-3xl: 1.5rem;      /* 24px */
+    --radius-full: 9999px;     /* Cercle complet */
+    
+    /* ===== OMBRES ===== */
+    /* Ombres Airpxel adaptées */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-2xl: 0 50px 100px -20px rgba(0, 0, 0, 0.25);
     --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-    /* Transitions */
-    --transition-fast: 150ms;
-    --transition-normal: 300ms;
-    --transition-slow: 500ms;
-    --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* Z-index */
+    
+    /* Ombres colorées */
+    --shadow-primary: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+    --shadow-secondary: 0 10px 15px -3px rgba(16, 185, 129, 0.1);
+    
+    /* ===== TRANSITIONS ===== */
+    /* Durées */
+    --duration-75: 75ms;
+    --duration-100: 100ms;
+    --duration-150: 150ms;
+    --duration-200: 200ms;
+    --duration-300: 300ms;
+    --duration-500: 500ms;
+    --duration-700: 700ms;
+    --duration-1000: 1000ms;
+    
+    /* Fonctions d'easing */
+    --ease-linear: linear;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Transitions complètes */
+    --transition-fast: all var(--duration-150) var(--ease-out);
+    --transition-normal: all var(--duration-300) var(--ease-in-out);
+    --transition-slow: all var(--duration-500) var(--ease-in-out);
+    
+    /* ===== Z-INDEX ===== */
     --z-negative: -1;
+    --z-base: 0;
     --z-elevated: 1;
-    --z-sticky: 100;
-    --z-drawer: 200;
-    --z-dropdown: 300;
-    --z-modal: 400;
-    --z-popover: 500;
-    --z-toast: 600;
-    --z-tooltip: 700;
-    /* Dimensions */
-    --header-height: 80px;
-    --side-nav-width-collapsed: 80px;
-    --side-nav-width-expanded: 280px;
-    --section-max-width: 1200px;
+    --z-dropdown: 10;
+    --z-sticky: 20;
+    --z-fixed: 30;
+    --z-overlay: 40;
+    --z-modal: 50;
+    --z-popover: 60;
+    --z-tooltip: 70;
+    --z-top: 100;
+    
+    /* ===== BREAKPOINTS ===== */
+    /* Référence pour les media queries */
+    --bp-xs: 475px;
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+    --bp-2xl: 1536px;
+    
+    /* ===== LARGEURS MAXIMALES ===== */
+    --max-width-xs: 20rem;     /* 320px */
+    --max-width-sm: 24rem;     /* 384px */
+    --max-width-md: 28rem;     /* 448px */
+    --max-width-lg: 32rem;     /* 512px */
+    --max-width-xl: 36rem;     /* 576px */
+    --max-width-2xl: 42rem;    /* 672px */
+    --max-width-3xl: 48rem;    /* 768px */
+    --max-width-4xl: 56rem;    /* 896px */
+    --max-width-5xl: 64rem;    /* 1024px */
+    --max-width-6xl: 72rem;    /* 1152px */
+    --max-width-7xl: 80rem;    /* 1280px */
+    --max-width-screen: 100vw;
+    
+    /* ===== CONFIGURATION SPÉCIFIQUE CV ===== */
+    /* Hauteurs sections */
+    --hero-height: 100vh;
+    --section-padding: var(--space-20);
+    --header-height: 4rem;
+    
+    /* Navigation */
+    --nav-width: 16rem;
+    --nav-width-collapsed: 4rem;
+    
+    /* Animation performance */
+    --will-change-transform: transform;
+    --will-change-auto: auto;
 }
 
-/* ===== LIGHT THEME ===== */
-[data-theme="light"] {
-    --color-bg-primary: var(--color-light);
-    --color-bg-secondary: #f8f8f8;
-    --color-bg-tertiary: var(--color-light-gray);
-    --color-text-primary: var(--color-dark);
-    --color-text-secondary: var(--color-primary);
-    --color-text-muted: var(--color-gray);
+/* ===== MODE SOMBRE (défaut Airpxel) ===== */
+:root {
+    color-scheme: dark;
+}
+
+/* ===== MODE CLAIR ===== */
+:root[data-theme="light"] {
+    color-scheme: light;
+    
+    /* Remplacement des variables pour le mode clair */
+    --color-bg-primary: var(--color-bg-light-primary);
+    --color-bg-secondary: var(--color-bg-light-secondary);
+    --color-bg-tertiary: var(--color-bg-light-tertiary);
+    --color-bg-surface: var(--color-bg-light-surface);
+    
+    --color-text-primary: var(--color-text-light-primary);
+    --color-text-secondary: var(--color-text-light-secondary);
+    --color-text-muted: var(--color-text-light-muted);
+    
+    --gradient-hero: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 50%, #E2E8F0 100%);
+}
+
+/* ===== VARIABLES PERSONNALISÉES CSS POUR ANIMATIONS ===== */
+@property --gradient-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --scroll-progress {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: false;
+}
+
+/* ===== PRÉFÉRENCES UTILISATEUR ===== */
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+        color-scheme: light;
+        --color-bg-primary: var(--color-bg-light-primary);
+        --color-bg-secondary: var(--color-bg-light-secondary);
+        --color-bg-tertiary: var(--color-bg-light-tertiary);
+        --color-text-primary: var(--color-text-light-primary);
+        --color-text-secondary: var(--color-text-light-secondary);
+        --color-text-muted: var(--color-text-light-muted);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --duration-75: 1ms;
+        --duration-100: 1ms;
+        --duration-150: 1ms;
+        --duration-200: 1ms;
+        --duration-300: 1ms;
+        --duration-500: 1ms;
+        --duration-700: 1ms;
+        --duration-1000: 1ms;
+    }
+}
+
+/* ===== CUSTOM PROPERTIES CALCULÉES ===== */
+/* Ces variables se mettent à jour dynamiquement via JavaScript */
+:root {
+    --vh: 1vh; /* Viewport height réel (mobile) */
+    --scroll-y: 0px; /* Position de scroll */
+    --mouse-x: 0px; /* Position souris X */
+    --mouse-y: 0px; /* Position souris Y */
 }
