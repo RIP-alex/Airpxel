@@ -606,229 +606,92 @@
                         </div>
                     </div>
 
-                    <div class="project-card" data-project="restauscan">
-    <div class="project-preview">
-        <div class="project-image restauscan-bg">
-            <div class="project-tech-preview">
-                <div class="tech-stack-visual">
-                    <span class="tech-item">Node.js</span>
-                    <span class="tech-item">Express</span>
-                    <span class="tech-item">JWT</span>
-                    <span class="tech-item">QR</span>
+                   <div class="project-card">
+                    <div class="project-preview">
+                        <div class="project-image placeholder restauscan-bg"></div>
+                        <div class="project-overlay">
+                            <div class="project-cta">
+                                <a href="#" class="project-link">Projet privé</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">RestauScan</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Express.js</span>
+                            <span class="project-tag">JWT</span>
+                            <span class="project-tag">Architecture Modulaire</span>
+                        </div>
+                        <p class="project-description">
+                            Plateforme Node.js de gestion restaurant avec architecture modulaire fine. 
+                            Système d'authentification JWT, cryptographie QR avancée, gestion des passages 
+                            et API RESTful sécurisée. Développement selon les principes Clean Code 
+                            avec modules indépendants et responsabilité unique.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="project-overlay">
-            <div class="project-cta">
-                <a href="https://github.com/rip-alex/restauScan" target="_blank" class="project-link">Voir le projet</a>
-                <button class="project-modal-trigger" data-project="restauscan">Détails</button>
-            </div>
-        </div>
-    </div>
-    <div class="project-info">
-        <h3 class="project-title">RestauScan</h3>
-        <div class="project-version">v2.2.0</div>
-        <div class="project-tags">
-            <span class="project-tag backend">Node.js</span>
-            <span class="project-tag backend">Express.js</span>
-            <span class="project-tag security">JWT</span>
-            <span class="project-tag architecture">Modulaire</span>
-        </div>
-        <p class="project-description">
-            Plateforme Node.js de scan et gestion intelligente de restaurants avec architecture modulaire fine. 
-            Système d'authentification JWT, cryptographie QR avancée et gestion des passages sécurisée.
-        </p>
-    </div>
-</div>
-
-<style>
-/* Styles spécifiques RestauScan pour s'intégrer dans Airpxel */
-.restauscan-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.restauscan-bg::before {
-    content: '🍽️';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4rem;
-    opacity: 0.3;
-    z-index: 1;
-}
-
-.project-tech-preview {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    z-index: 2;
-}
-
-.tech-stack-visual {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.tech-item {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.7rem;
-    color: white;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.project-version {
-    display: inline-block;
-    background: #4CAF50;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 0.7rem;
-    font-weight: 500;
-    margin-left: 8px;
-}
-
-.project-tag.backend {
-    background: linear-gradient(45deg, #4CAF50, #45a049);
-}
-
-.project-tag.security {
-    background: linear-gradient(45deg, #FF9800, #f57c00);
-}
-
-.project-tag.architecture {
-    background: linear-gradient(45deg, #9C27B0, #7b1fa2);
-}
-
-.project-modal-trigger {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    margin-left: 10px;
-}
-
-.project-modal-trigger:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-}
-</style>
-
-<script>
-// JavaScript pour les données de la modale RestauScan
-window.projectsData = window.projectsData || {};
-window.projectsData.restauscan = {
-    title: "RestauScan - Plateforme de Gestion Restaurant",
-    tags: ["Node.js", "Express.js", "JWT", "Architecture Modulaire", "QR Codes", "API REST"],
-    images: [
-        "images/projects/restauscan-architecture.jpg", // À créer
-        "images/projects/restauscan-modules.jpg",      // À créer
-        "images/projects/restauscan-auth.jpg"          // À créer
-    ],
-    description: `
-        <p><strong>RestauScan</strong> est une application Node.js enterprise conçue avec une architecture modulaire avancée pour la gestion intelligente des restaurants et établissements de restauration.</p>
-        
-        <p>Le projet adopte une <strong>architecture Clean Code</strong> avec une séparation stricte des responsabilités, garantissant une maintenabilité et une scalabilité optimales pour un environnement de production.</p>
-        
-        <div class="technical-highlight">
-            <h4>🏗️ Architecture Modulaire Fine</h4>
-            <p>Chaque module respecte le principe de responsabilité unique avec des fichiers courts (50-100 lignes max) et une composition plutôt qu'une approche monolithique.</p>
-        </div>
-    `,
-    features: [
-        "Système d'authentification JWT sécurisé avec tokens",
-        "Module de cryptographie avancée pour QR codes",
-        "Gestion des passages avec validation et historique",
-        "Architecture modulaire avec pattern de composition",
-        "API RESTful avec middleware de protection",
-        "Système de bootstrap d'application robuste",
-        "Logging et monitoring des performances",
-        "Validation des données entrantes et sortantes"
-    ],
-    technologies: [
-        { name: "Node.js", icon: "fab fa-node-js", color: "#339933" },
-        { name: "Express.js", icon: "fas fa-server", color: "#000000" },
-        { name: "JWT", icon: "fas fa-key", color: "#000000" },
-        { name: "QR Codes", icon: "fas fa-qrcode", color: "#333333" },
-        { name: "Architecture Modulaire", icon: "fas fa-cubes", color: "#007ACC" },
-        { name: "API REST", icon: "fas fa-exchange-alt", color: "#61DAFB" }
-    ],
-    links: {
-        github: "https://github.com/rip-alex/restauScan",
-        demo: null // Pas de démo live pour l'instant
-    },
-    metrics: {
-        modules: "5+",
-        version: "v2.2.0",
-        architecture: "100% Modulaire",
-        security: "JWT + Crypto"
-    }
-};
-
-// Fonction pour ouvrir la modale avec les données RestauScan
-function openRestauScanModal() {
-    const modal = document.getElementById('project-modal');
-    const data = window.projectsData.restauscan;
-    
-    // Mise à jour du contenu de la modale
-    modal.querySelector('.modal-title').textContent = data.title;
-    
-    // Tags
-    const tagsContainer = modal.querySelector('.modal-tags');
-    tagsContainer.innerHTML = data.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-    
-    // Description
-    modal.querySelector('.modal-description p').innerHTML = data.description;
-    
-    // Fonctionnalités
-    const featuresList = modal.querySelector('.features-list');
-    featuresList.innerHTML = data.features.map(feature => `<li>${feature}</li>`).join('');
-    
-    // Technologies
-    const techIcons = modal.querySelector('.tech-icons');
-    techIcons.innerHTML = data.technologies.map(tech => `
-        <div class="tech-icon" title="${tech.name}">
-            <i class="${tech.icon}" style="color: ${tech.color}"></i>
-            <span>${tech.name}</span>
-        </div>
-    `).join('');
-    
-    // Liens
-    const githubLink = modal.querySelector('.github-link');
-    githubLink.href = data.links.github;
-    
-    const liveLink = modal.querySelector('.live-link');
-    if (data.links.demo) {
-        liveLink.href = data.links.demo;
-        liveLink.style.display = 'inline-block';
-    } else {
-        liveLink.style.display = 'none';
-    }
-    
-    // Afficher la modale
-    modal.style.display = 'flex';
-}
-
-// Event listener pour le bouton de détails
-document.addEventListener('DOMContentLoaded', function() {
-    const modalTrigger = document.querySelector('[data-project="restauscan"] .project-modal-trigger');
-    if (modalTrigger) {
-        modalTrigger.addEventListener('click', openRestauScanModal);
-    }
-});
-</script>
-
+                
+                <style>
+                /* Styles spécifiques RestauScan - Intégration Airpxel */
+                .restauscan-bg {
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                .restauscan-bg::before {
+                    content: '🍽️';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 3rem;
+                    opacity: 0.4;
+                    color: white;
+                }
+                
+                .restauscan-bg::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    width: 40px;
+                    height: 40px;
+                    background: rgba(255, 255, 255, 0.2);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                /* Badges spécialisés pour technologies backend */
+                .project-tag:nth-child(1) { /* Node.js */
+                    background: linear-gradient(45deg, #339933, #66cc66);
+                    color: white;
+                }
+                
+                .project-tag:nth-child(2) { /* Express.js */
+                    background: linear-gradient(45deg, #000000, #333333);
+                    color: white;
+                }
+                
+                .project-tag:nth-child(3) { /* JWT */
+                    background: linear-gradient(45deg, #000000, #d63aff);
+                    color: white;
+                }
+                
+                .project-tag:nth-child(4) { /* Architecture */
+                    background: linear-gradient(45deg, #9C27B0, #E91E63);
+                    color: white;
+                }
+                
+                /* Animation subtile pour le projet RestauScan */
+                .project-card:hover .restauscan-bg::before {
+                    transform: translate(-50%, -50%) scale(1.1);
+                    transition: transform 0.3s ease;
+                }
+                </style>
 
 
                     
