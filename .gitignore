@@ -1,1 +1,7 @@
 *.db-shm
+*.sqlite
+*.json
+.vs/CV/v17/.wsuo
+*.vsidx
+*.db-wal
+*.db
