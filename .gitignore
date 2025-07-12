@@ -1,7 +1,10 @@
 *.db-shm
 *.sqlite
-*.json
 .vs/CV/v17/.wsuo
 *.vsidx
 *.db-wal
 *.db
+.vs/CV/v17/DocumentLayout.backup.json
+.vs/CV/v17/DocumentLayout.json
+.vs/ProjectSettings.json
+.vs/VSWorkspaceState.json
