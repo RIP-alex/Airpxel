@@ -1,6 +1,6 @@
 /**
  * Configuration complète des compétences
- * Données réelles des compétences d'Alexandre Rippling
+ * Données réelles des compétences
  */
 const SKILLS_DATA = {
     // ===== COMPÉTENCES TECHNIQUES =====
@@ -75,7 +75,7 @@ const SKILLS_DATA = {
                 {
                     name: "PHP",
                     level: 75,
-                    experience: "2 ans",
+                    experience: "1 ans",
                     description: "PHP moderne, OOP, MVC, frameworks, sécurité",
                     projects: ["Bugtracker", "APIs custom", "Applications web"],
                     certifications: [],
@@ -84,16 +84,16 @@ const SKILLS_DATA = {
                 {
                     name: "Node.js",
                     level: 70,
-                    experience: "1.5 ans",
+                    experience: "1 ans",
                     description: "Express.js, middleware, APIs REST, gestion asynchrone",
                     projects: ["Microservices", "APIs backend", "Serveurs web"],
                     certifications: [],
                     lastUsed: "2024-12"
                 },
                 {
-                    name: "MySQL/PostgreSQL",
+                    name: "MySQL",
                     level: 75,
-                    experience: "2 ans",
+                    experience: "1 ans",
                     description: "Conception BDD, requêtes complexes, optimisation",
                     projects: ["Bugtracker DB", "Bases données projets"],
                     certifications: [],
