@@ -15,18 +15,18 @@
     <!-- ===== SEO ET PARTAGE SOCIAL ===== -->
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.handietdev.fr">
+    <meta property="og:url" content="https://rip-alex.github.io/Airpxel/">
     <meta property="og:title" content="Alexandre Rippling | Développeur Fullstack & Designer Créatif">
     <meta property="og:description" content="Handi&Dev : Coder avec créativité, réussir avec détermination. Développeur Fullstack en formation, expert en communication et design.">
-    <meta property="og:image" content="https://www.handietdev.fr/assets/images/og-image.jpg">
+    <meta property="og:image" content="https://rip-alex.github.io/Airpxel//assets/images/og-image.jpg">
     <meta property="og:locale" content="fr_FR">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.handietdev.fr">
+    <meta property="twitter:url" content="https://arippling.github.io/cv/">
     <meta property="twitter:title" content="Alexandre Rippling | Développeur Fullstack & Designer Créatif">
     <meta property="twitter:description" content="Handi&Dev : Coder avec créativité, réussir avec détermination.">
-    <meta property="twitter:image" content="https://www.handietdev.fr/assets/images/og-image.jpg">
+    <meta property="twitter:image" content="https://arippling.github.io/cv/assets/images/og-image.jpg">
     
     <!-- ===== FAVICON ET ICÔNES ===== -->
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -36,7 +36,7 @@
     <link rel="manifest" href="manifest.json">
     
     <!-- ===== PWA ET MOBILE ===== -->
-    <meta name="theme-color" content="#3B82F6">
+    <meta name="theme-color" content="#1e3a8a">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -66,6 +66,7 @@
     <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/components/cards.css">
     <link rel="stylesheet" href="css/components/timeline.css">
+    <link rel="stylesheet" href="css/components/forms.css">
     
     <!-- Sections -->
     <link rel="stylesheet" href="css/sections/hero.css">
@@ -129,97 +130,127 @@
     <div class="loader" aria-hidden="true">
         <div class="loader-content">
             <div class="loader-spinner"></div>
-            <p class="loader-text">Chargement du portfolio...</p>
+            <div class="loader-text">Chargement du portfolio...</div>
         </div>
     </div>
     
-    <!-- ===== NAVIGATION PRINCIPALE ===== -->
-    <header class="header" id="navigation" role="banner">
-        <div class="header-container">
-            <!-- Logo -->
-            <a href="#hero" class="header-logo" aria-label="Alexandre Rippling - Retour à l'accueil">
-                <span class="logo-text">A<span class="logo-accent">R</span></span>
-            </a>
-            
-            <!-- Navigation principale -->
-            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#hero" class="nav-link active" data-section="hero">
+    <!-- ===== EN-TÊTE ET NAVIGATION ===== -->
+    <header class="header" role="banner">
+        <nav class="navbar" id="navigation" role="navigation" aria-label="Navigation principale">
+            <div class="navbar-container">
+                <!-- Logo/Nom -->
+                <div class="navbar-brand">
+                    <a href="#hero" class="brand-link" aria-label="Retour à l'accueil">
+                        <span class="brand-text">Alexandre Rippling</span>
+                        <span class="brand-tagline">Handi&Dev</span>
+                    </a>
+                </div>
+                
+                <!-- Menu desktop -->
+                <ul class="navbar-menu" role="menubar">
+                    <li role="none">
+                        <a href="#hero" class="nav-link active" role="menuitem" data-section="hero">
                             <span class="nav-text">Accueil</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link" data-section="about">
+                    <li role="none">
+                        <a href="#about" class="nav-link" role="menuitem" data-section="about">
                             <span class="nav-text">À propos</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#experience" class="nav-link" data-section="experience">
+                    <li role="none">
+                        <a href="#experience" class="nav-link" role="menuitem" data-section="experience">
                             <span class="nav-text">Parcours</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#skills" class="nav-link" data-section="skills">
+                    <li role="none">
+                        <a href="#skills" class="nav-link" role="menuitem" data-section="skills">
                             <span class="nav-text">Compétences</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link" data-section="projects">
+                    <li role="none">
+                        <a href="#projects" class="nav-link" role="menuitem" data-section="projects">
                             <span class="nav-text">Projets</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link" data-section="contact">
+                    <li role="none">
+                        <a href="#contact" class="nav-link" role="menuitem" data-section="contact">
                             <span class="nav-text">Contact</span>
                         </a>
                     </li>
                 </ul>
-            </nav>
-            
-            <!-- Actions header -->
-            <div class="header-actions">
-                <!-- Toggle thème -->
-                <button class="theme-toggle" aria-label="Basculer entre thème sombre et clair" title="Changer de thème">
-                    <i class="fas fa-sun theme-icon-light" aria-hidden="true"></i>
-                    <i class="fas fa-moon theme-icon-dark" aria-hidden="true"></i>
-                </button>
                 
-                <!-- Menu mobile -->
-                <button class="mobile-menu-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+                <!-- Contrôles accessibilité et thème -->
+                <div class="navbar-controls">
+                    <button class="theme-toggle" aria-label="Basculer le mode sombre/clair" title="Changer le thème">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                    <button class="accessibility-toggle" aria-label="Options d'accessibilité" title="Paramètres d'accessibilité">
+                        <i class="fas fa-universal-access" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <!-- Menu mobile toggle -->
+                <button class="mobile-menu-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobile-menu">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                 </button>
             </div>
-        </div>
-        
-        <!-- Indicateur de progression -->
-        <div class="scroll-progress" aria-hidden="true">
-            <div class="scroll-progress-bar"></div>
-        </div>
+            
+            <!-- Menu mobile -->
+            <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+                <ul class="mobile-menu-list" role="menu">
+                    <li role="none">
+                        <a href="#hero" class="mobile-nav-link" role="menuitem" data-section="hero">Accueil</a>
+                    </li>
+                    <li role="none">
+                        <a href="#about" class="mobile-nav-link" role="menuitem" data-section="about">À propos</a>
+                    </li>
+                    <li role="none">
+                        <a href="#experience" class="mobile-nav-link" role="menuitem" data-section="experience">Parcours</a>
+                    </li>
+                    <li role="none">
+                        <a href="#skills" class="mobile-nav-link" role="menuitem" data-section="skills">Compétences</a>
+                    </li>
+                    <li role="none">
+                        <a href="#projects" class="mobile-nav-link" role="menuitem" data-section="projects">Projets</a>
+                    </li>
+                    <li role="none">
+                        <a href="#contact" class="mobile-nav-link" role="menuitem" data-section="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     
     <!-- ===== CONTENU PRINCIPAL ===== -->
-    <main id="main-content" class="main-content" role="main">
+    <main id="main-content" role="main">
+        
         <!-- Section Hero -->
         <section id="hero" class="section hero-section" aria-labelledby="hero-title">
-            <div class="hero-background" aria-hidden="true"></div>
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
+                        <div class="hero-greeting">
+                            <span class="greeting-text">Bonjour, je suis</span>
+                        </div>
+                        
                         <h1 id="hero-title" class="hero-title">
-                            Alexandre<br>
-                            <span class="hero-accent">Rippling</span>
+                            <span class="hero-name">Alexandre Rippling</span>
+                            <span class="hero-tagline">Handi&Dev</span>
                         </h1>
                         
-                        <p class="hero-tagline">
-                            <strong>Handi&Dev</strong> : Coder avec créativité, réussir avec détermination
-                        </p>
+                        <div class="hero-subtitle">
+                            <span class="subtitle-text">Développeur Fullstack</span>
+                            <span class="subtitle-emphasis">& Designer Créatif</span>
+                        </div>
                         
                         <p class="hero-description">
-                            Développeur Fullstack en formation chez Metz Numérique School, expert en communication et design. 
-                            Mon parcours atypique me donne une perspective unique pour créer des solutions innovantes et accessibles.
+                            <strong>Coder avec créativité, réussir avec détermination.</strong><br>
+                            Développeur Fullstack en formation chez Metz Numérique School, 
+                            expert en communication et design. Mon parcours atypique me donne 
+                            une perspective unique pour créer des solutions innovantes et accessibles.
                         </p>
                         
                         <div class="hero-cta">
@@ -233,7 +264,6 @@
                             </a>
                         </div>
                         
-                        <!-- Réseaux sociaux -->
                         <div class="hero-social">
                             <a href="https://linkedin.com/in/alexandrerippling" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil LinkedIn d'Alexandre Rippling">
                                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
@@ -247,21 +277,28 @@
                         </div>
                     </div>
                     
-                    <!-- Illustration hero -->
                     <div class="hero-visual" aria-hidden="true">
                         <div class="hero-illustration">
-                            <!-- Animation canvas sera injectée ici -->
-                            <canvas id="hero-canvas"></canvas>
+                            <!-- [Icône à remplacer ici : Illustration développeur ou animation CSS] -->
+                            <div class="code-animation">
+                                <div class="code-lines">
+                                    <span class="code-line">const developer = {</span>
+                                    <span class="code-line">  name: 'Alexandre',</span>
+                                    <span class="code-line">  passion: 'creativity',</span>
+                                    <span class="code-line">  goal: 'innovation'</span>
+                                    <span class="code-line">};</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Indicateur de scroll -->
-                <div class="scroll-indicator" aria-hidden="true">
-                    <div class="scroll-arrow">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <span class="scroll-text">Défiler pour explorer</span>
+            </div>
+            
+            <!-- Indicateur de scroll -->
+            <div class="scroll-indicator" aria-hidden="true">
+                <span class="scroll-text">Découvrir</span>
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </div>
             </div>
         </section>
@@ -272,12 +309,67 @@
                 <header class="section-header">
                     <h2 id="about-title" class="section-title">À propos de moi</h2>
                     <p class="section-subtitle">
-                        Un parcours riche et diversifié au service de l'innovation technologique
+                        Un parcours riche et varié au service de l'innovation
                     </p>
                 </header>
                 
                 <div class="about-content">
-                    <!-- Contenu généré dynamiquement -->
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <p class="intro-text">
+                                Je suis <strong>Alexandre Rippling</strong>, développeur Fullstack en formation 
+                                chez Metz Numérique School. Mon parcours atypique, allant de la mécanique 
+                                agricole à l'infographie, puis au développement web, m'a forgé une 
+                                perspective unique sur la résolution de problèmes.
+                            </p>
+                        </div>
+                        
+                        <div class="about-qualities">
+                            <h3 class="qualities-title">Mes atouts</h3>
+                            <ul class="qualities-list">
+                                <li class="quality-item">
+                                    <strong>Polyvalence :</strong> Capacité d'adaptation à différents environnements et technologies
+                                </li>
+                                <li class="quality-item">
+                                    <strong>Créativité :</strong> Approche innovante des problèmes techniques et visuels
+                                </li>
+                                <li class="quality-item">
+                                    <strong>Communication :</strong> Expérience solide en gestion de communication et d'événements
+                                </li>
+                                <li class="quality-item">
+                                    <strong>Détermination :</strong> Persévérance face aux défis, incarnée par ma devise "Handi&Dev"
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="about-philosophy">
+                            <blockquote class="philosophy-quote">
+                                <p>
+                                    "Handi&Dev : Coder avec créativité, réussir avec détermination"
+                                </p>
+                                <cite>Ma philosophie de développement</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2024</div>
+                            <div class="stat-label">Formation en cours</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Années d'expérience pro</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Domaines d'expertise</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Passion pour l'innovation</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -288,12 +380,14 @@
                 <header class="section-header">
                     <h2 id="experience-title" class="section-title">Mon Parcours</h2>
                     <p class="section-subtitle">
-                        Expériences professionnelles et formation continue
+                        Une évolution constante vers l'excellence technique
                     </p>
                 </header>
                 
                 <div class="experience-content">
-                    <!-- Timeline générée dynamiquement -->
+                    <div class="timeline">
+                        <!-- Expérience générée dynamiquement -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -356,57 +450,41 @@
                         &copy; 2025 Alexandre Rippling. Tous droits réservés.
                     </p>
                     <p class="footer-tagline">
-                        Handi&Dev : Coder avec créativité, réussir avec détermination
+                        Développé avec <i class="fas fa-heart" aria-hidden="true"></i> et beaucoup de <i class="fas fa-coffee" aria-hidden="true"></i>
                     </p>
                 </div>
                 
                 <div class="footer-links">
-                    <a href="#hero" class="footer-link">
-                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
-                        <span>Retour en haut</span>
+                    <a href="assets/documents/cv-alexandre-rippling.pdf" target="_blank" rel="noopener noreferrer" class="footer-link">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                        Télécharger le CV
+                    </a>
+                    <a href="https://github.com/arippling" target="_blank" rel="noopener noreferrer" class="footer-link">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/alexandrerippling" target="_blank" rel="noopener noreferrer" class="footer-link">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        LinkedIn
                     </a>
                 </div>
             </div>
         </div>
     </footer>
     
-    <!-- ===== MODAL PROJET ===== -->
-    <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-backdrop"></div>
-        <div class="modal-container">
-            <div class="modal-header">
-                <h3 id="modal-title" class="modal-title"></h3>
-                <button class="modal-close" aria-label="Fermer la fenêtre">
-                    <i class="fas fa-times" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="modal-content">
-                <!-- Contenu modal généré dynamiquement -->
-            </div>
-        </div>
-    </div>
-    
-    <!-- ===== SCRIPTS ===== -->
-    <!-- Données -->
-    <script src="js/data/profile.js"></script>
-    <script src="js/data/projects.js"></script>
-    <script src="js/data/skills.js"></script>
-    
-    <!-- Utilitaires -->
+    <!-- ===== SCRIPTS JAVASCRIPT ===== -->
+    <!-- Scripts utilitaires -->
     <script src="js/utils/helpers.js"></script>
-    <script src="js/utils/wcag.js"></script>
-    
-    <!-- Core -->
-    <script src="js/core/navigation.js"></script>
-    <script src="js/core/animations.js"></script>
+    <script src="js/utils/accessibility.js"></script>
     
     <!-- Modules -->
+    <script src="js/modules/navigation.js"></script>
+    <script src="js/modules/animations.js"></script>
+    <script src="js/modules/theme.js"></script>
     <script src="js/modules/projects.js"></script>
-    <script src="js/modules/skills.js"></script>
-    <script src="js/modules/contact.js"></script>
     
-    <!-- Application principale -->
-    <script src="js/core/app.js"></script>
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
     
     <!-- Service Worker pour PWA -->
     <script>
