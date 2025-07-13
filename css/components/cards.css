@@ -1,279 +1,904 @@
-/* ===== CARDS ===== */
+/* ===== COMPOSANTS CARTES ===== */
 
-/* Styles de base des cartes */
+/* ===== CARTE DE BASE ===== */
 .card {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    background-color: var(--color-bg-secondary);
-    transition: transform var(--transition-normal) var(--transition-function), box-shadow var(--transition-normal) var(--transition-function);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-all);
+  position: relative;
+  overflow: hidden;
+  
+  /* Performance */
+  will-change: transform, box-shadow;
 }
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
-    }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-alpha);
+}
 
-/* Cartes de projet */
+/* ===== HEADER DE CARTE ===== */
+.card-header {
+  padding: var(--spacing-4) var(--spacing-6);
+  border-bottom: 1px solid var(--border-color-light);
+  margin: calc(var(--card-padding) * -1) calc(var(--card-padding) * -1) var(--spacing-4);
+  background: var(--bg-secondary);
+  border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+.card-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin: var(--spacing-1) 0 0;
+  font-weight: var(--font-weight-normal);
+}
+
+/* ===== BODY DE CARTE ===== */
+.card-body {
+  padding: 0;
+}
+
+.card-content {
+  margin-bottom: var(--spacing-4);
+}
+
+.card-content:last-child {
+  margin-bottom: 0;
+}
+
+.card-text {
+  color: var(--text-secondary);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-3);
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== FOOTER DE CARTE ===== */
+.card-footer {
+  padding: var(--spacing-4) var(--spacing-6);
+  border-top: 1px solid var(--border-color-light);
+  margin: var(--spacing-4) calc(var(--card-padding) * -1) calc(var(--card-padding) * -1);
+  background: var(--bg-secondary);
+  border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+}
+
+/* ===== CARTE AVEC IMAGE ===== */
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  margin: calc(var(--card-padding) * -1) calc(var(--card-padding) * -1) var(--spacing-4);
+  transition: var(--transition-normal);
+}
+
+.card:hover .card-image {
+  transform: scale(1.02);
+}
+
+/* Image avec overlay */
+.card-image-container {
+  position: relative;
+  margin: calc(var(--card-padding) * -1) calc(var(--card-padding) * -1) var(--spacing-4);
+  border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  overflow: hidden;
+}
+
+.card-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.card:hover .card-image-overlay {
+  opacity: 0.8;
+}
+
+/* ===== VARIANTES DE CARTES ===== */
+
+/* Carte compacte */
+.card-compact {
+  padding: var(--spacing-4);
+}
+
+.card-compact .card-header {
+  padding: var(--spacing-3) var(--spacing-4);
+  margin: calc(var(--spacing-4) * -1) calc(var(--spacing-4) * -1) var(--spacing-3);
+}
+
+.card-compact .card-footer {
+  padding: var(--spacing-3) var(--spacing-4);
+  margin: var(--spacing-3) calc(var(--spacing-4) * -1) calc(var(--spacing-4) * -1);
+}
+
+/* Carte large */
+.card-spacious {
+  padding: var(--spacing-8);
+}
+
+.card-spacious .card-header {
+  padding: var(--spacing-6) var(--spacing-8);
+  margin: calc(var(--spacing-8) * -1) calc(var(--spacing-8) * -1) var(--spacing-6);
+}
+
+.card-spacious .card-footer {
+  padding: var(--spacing-6) var(--spacing-8);
+  margin: var(--spacing-6) calc(var(--spacing-8) * -1) calc(var(--spacing-8) * -1);
+}
+
+/* Carte sans ombre */
+.card-flat {
+  box-shadow: none;
+  border: 2px solid var(--border-color);
+}
+
+.card-flat:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+/* Carte avec bordure colorée */
+.card-bordered {
+  border: 2px solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-bordered:hover {
+  box-shadow: var(--shadow-primary);
+}
+
+/* ===== CARTES SPÉCIALISÉES ===== */
+
+/* Carte de projet */
 .project-card {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    background-color: var(--color-bg-secondary);
-    transition: transform var(--transition-normal) var(--transition-function), box-shadow var(--transition-normal) var(--transition-function);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: var(--transition-normal);
 }
 
-    .project-card:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--shadow-lg);
-    }
+.project-card:hover {
+  transform: translateY(-6px);
+}
 
 .project-preview {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
+  position: relative;
+  height: 200px;
+  background: var(--bg-tertiary);
+  margin: calc(var(--card-padding) * -1) calc(var(--card-padding) * -1) var(--spacing-4);
+  border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-normal) var(--transition-function);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-normal);
 }
 
-    .project-image.placeholder {
-        background: linear-gradient(135deg, var(--color-bg-tertiary), var(--color-accent-primary));
-        opacity: 0.3;
-    }
+.project-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
 
-.project-card:hover .project-image {
-    transform: scale(1.05);
+.project-placeholder i {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary-alpha);
 }
 
 .project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(16, 24, 32, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity var(--transition-normal) var(--transition-function);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-normal);
 }
 
 .project-card:hover .project-overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
-.project-cta {
-    transform: translateY(20px);
-    transition: transform var(--transition-normal) var(--transition-function);
-}
-
-.project-card:hover .project-cta {
-    transform: translateY(0);
+.project-actions {
+  display: flex;
+  gap: var(--spacing-3);
 }
 
 .project-link {
-    display: inline-block;
-    padding: var(--space-2) var(--space-4);
-    background-color: var(--color-accent-primary);
-    color: white;
-    font-weight: 500;
-    border-radius: var(--radius-full);
-    transition: background-color var(--transition-normal) var(--transition-function);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--color-white);
+  color: var(--text-primary);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-md);
 }
 
-    .project-link:hover {
-        background-color: var(--color-accent-secondary);
-    }
+.project-link:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.1);
+}
 
 .project-info {
-    padding: var(--space-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-title {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--space-2);
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-    margin-bottom: var(--space-3);
-}
-
-.project-tag {
-    font-size: var(--font-size-xs);
-    padding: var(--space-1) var(--space-2);
-    background-color: var(--color-bg-tertiary);
-    border-radius: var(--radius-full);
-    color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
 }
 
 .project-description {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    line-height: 1.6;
+  color: var(--text-secondary);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-4);
+  flex: 1;
 }
 
-/* Cartes de forces */
-.strength-item {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-3);
-    padding: var(--space-4);
-    background-color: var(--color-bg-primary);
-    border-radius: var(--radius-lg);
-    transition: transform var(--transition-normal) var(--transition-function), box-shadow var(--transition-normal) var(--transition-function);
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
 }
 
-    .strength-item:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-md);
-    }
+.tech-tag {
+  padding: var(--spacing-1) var(--spacing-3);
+  background: var(--color-primary-alpha);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
-.strength-icon {
-    width: 40px;
-    height: 40px;
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+}
+
+.project-type {
+  font-weight: var(--font-weight-medium);
+}
+
+.project-year {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.project-status {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.5px;
+}
+
+.project-status.private {
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.project-status.public {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+/* ===== CARTE DE COMPÉTENCE ===== */
+.skill-card {
+  text-align: center;
+  padding: var(--spacing-6);
+  transition: var(--transition-normal);
+}
+
+.skill-card:hover {
+  background: var(--gradient-card);
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-4);
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: var(--font-size-2xl);
+  transition: var(--transition-normal);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.skill-name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-2);
+  color: var(--text-primary);
+}
+
+.skill-description {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+/* ===== CARTE D'ÉDUCATION ===== */
+.education-card {
+  border-left: 4px solid var(--color-primary);
+  position: relative;
+  transition: var(--transition-normal);
+}
+
+.education-card:hover {
+  border-left-color: var(--color-primary-dark);
+  background: var(--gradient-card);
+}
+
+.education-card.current {
+  background: var(--color-primary-alpha);
+  border-left-color: var(--color-primary);
+  box-shadow: var(--shadow-primary);
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.education-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.education-period {
+  margin-left: auto;
+  text-align: right;
+}
+
+.period-badge {
+  display: block;
+  padding: var(--spacing-1) var(--spacing-3);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-1);
+}
+
+.period-badge.current {
+  background: var(--color-success);
+  animation: pulse 2s infinite;
+}
+
+.period-year {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+  font-weight: var(--font-weight-medium);
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.education-institution {
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-1);
+}
+
+.education-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: var(--spacing-3);
+}
+
+.education-description {
+  color: var(--text-secondary);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-4);
+}
+
+.education-subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.subject-tag {
+  padding: var(--spacing-1) var(--spacing-2);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color-light);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.card-float {
+  animation: cardFloat 3s ease-in-out infinite;
+}
+
+/* ===== GRILLES DE CARTES ===== */
+.cards-grid {
+  display: grid;
+  gap: var(--spacing-6);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 576px) {
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .cards-grid {
+    gap: var(--spacing-8);
+  }
+}
+
+/* Grilles spécialisées */
+.projects-grid {
+  display: grid;
+  gap: var(--spacing-6);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.education-grid {
+  display: grid;
+  gap: var(--spacing-6);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .education-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== ÉTATS RESPONSIFS ===== */
+@media (max-width: 576px) {
+  .card {
+    padding: var(--spacing-4);
     border-radius: var(--radius-md);
-    background-color: var(--color-accent-primary);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.strength-text {
-    flex-grow: 1;
-}
-
-    .strength-text h3 {
-        font-size: var(--font-size-lg);
-        margin-bottom: var(--space-1);
-    }
-
-    .strength-text p {
-        font-size: var(--font-size-sm);
-        color: var(--color-text-secondary);
-    }
-
-/* Cartes de comp�tences */
-.skill-item {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    padding: var(--space-3);
-    background-color: var(--color-bg-primary);
-    border-radius: var(--radius-lg);
-    transition: transform var(--transition-normal) var(--transition-function), box-shadow var(--transition-normal) var(--transition-function);
-}
-
-    .skill-item:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--shadow-md);
-    }
-
-.skill-logo {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-full);
-    background-color: var(--color-bg-tertiary);
-    color: var(--color-accent-primary);
-    font-size: var(--font-size-xl);
-    flex-shrink: 0;
-}
-
-.skill-info {
-    flex-grow: 1;
-}
-
-    .skill-info h4 {
-        font-size: var(--font-size-base);
-        margin-bottom: var(--space-1);
-    }
-
-.skill-level {
-    height: 6px;
-    background-color: var(--color-bg-tertiary);
-    border-radius: var(--radius-full);
-    overflow: hidden;
-}
-
-.skill-bar {
-    height: 100%;
-    background: var(--color-gradient-1);
-    border-radius: var(--radius-full);
-    width: 0;
-    transition: width 1s ease;
-}
-
-/* Cartes de contact social */
-.contact-social-item {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    padding: var(--space-3);
-    background-color: var(--color-bg-primary);
-    border-radius: var(--radius-lg);
-    transition: transform var(--transition-normal) var(--transition-function), box-shadow var(--transition-normal) var(--transition-function);
-}
-
-    .contact-social-item:hover {
-        transform: translateX(5px);
-        box-shadow: var(--shadow-md);
-    }
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-full);
-    background-color: var(--color-bg-tertiary);
-    color: var(--color-accent-primary);
-    font-size: var(--font-size-lg);
-    flex-shrink: 0;
-    transition: all var(--transition-normal) var(--transition-function);
-}
-
-.contact-social-item:hover .social-icon {
-    background-color: var(--color-accent-primary);
-    color: white;
-}
-
-.social-text {
-    display: flex;
+  }
+  
+  .card-header {
+    padding: var(--spacing-3) var(--spacing-4);
+    margin: calc(var(--spacing-4) * -1) calc(var(--spacing-4) * -1) var(--spacing-3);
+  }
+  
+  .card-footer {
+    padding: var(--spacing-3) var(--spacing-4);
+    margin: var(--spacing-3) calc(var(--spacing-4) * -1) calc(var(--spacing-4) * -1);
     flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .project-preview {
+    height: 160px;
+    margin: calc(var(--spacing-4) * -1) calc(var(--spacing-4) * -1) var(--spacing-3);
+  }
+  
+  .project-tech {
+    gap: var(--spacing-1);
+  }
+  
+  .tech-tag {
+    font-size: 10px;
+    padding: 2px var(--spacing-2);
+  }
+  
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+  
+  .education-period {
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
-.social-label {
-    font-size: var(--font-size-sm);
-    font-weight: 500;
+/* ===== ACCESSIBILITÉ ===== */
+.card:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
-.social-username {
-    font-size: var(--font-size-xs);
-    color: var(--color-text-secondary);
+.project-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
-/* Carte en verre (glassmorphism) */
-.glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .card {
+    border-width: 2px;
+    border-color: var(--text-primary);
+  }
+  
+  .card:hover {
+    border-color: var(--color-primary);
+    border-width: 3px;
+  }
+  
+  .tech-tag,
+  .subject-tag,
+  .period-badge {
+    border: 1px solid currentColor;
+  }
 }
 
-[data-theme="light"] .glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .project-card,
+  .skill-card,
+  .education-card {
+    transition: none;
+  }
+  
+  .card:hover,
+  .project-card:hover,
+  .skill-card:hover {
+    transform: none;
+  }
+  
+  .card-float {
+    animation: none;
+  }
+  
+  .period-badge.current {
+    animation: none;
+  }
+  
+  .skill-card:hover .skill-icon {
+    transform: none;
+  }
+}
+
+/* ===== DARK MODE ===== */
+[data-theme="dark"] .card {
+  background: var(--color-gray-800);
+  border-color: var(--color-gray-700);
+}
+
+[data-theme="dark"] .card:hover {
+  background: var(--color-gray-750);
+  border-color: var(--color-primary);
+}
+
+[data-theme="dark"] .card-header,
+[data-theme="dark"] .card-footer {
+  background: var(--color-gray-900);
+  border-color: var(--color-gray-600);
+}
+
+[data-theme="dark"] .project-placeholder {
+  color: var(--color-gray-400);
+}
+
+[data-theme="dark"] .tech-tag {
+  background: var(--color-gray-700);
+  color: var(--color-primary-light);
+}
+
+[data-theme="dark"] .subject-tag {
+  background: var(--color-gray-700);
+  color: var(--color-gray-300);
+  border-color: var(--color-gray-600);
+}
+
+[data-theme="dark"] .education-card {
+  background: var(--color-gray-800);
+}
+
+[data-theme="dark"] .education-card:hover {
+  background: var(--color-gray-750);
+}
+
+[data-theme="dark"] .education-card.current {
+  background: var(--color-gray-750);
+  border-left-color: var(--color-primary);
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .card {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .card:hover,
+  .project-card:hover,
+  .skill-card:hover,
+  .education-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  .project-overlay,
+  .card-image-overlay {
+    display: none !important;
+  }
+  
+  .project-actions {
+    display: none !important;
+  }
+  
+  .tech-tag,
+  .subject-tag {
+    border: 1px solid #333 !important;
+    background: white !important;
+    color: #333 !important;
+  }
+  
+  .period-badge {
+    background: #333 !important;
+    color: white !important;
+  }
+  
+  .skill-icon,
+  .education-icon {
+    background: #333 !important;
+    color: white !important;
+  }
+}
+
+/* ===== CARTES ÉTAT VIDE ===== */
+.card-empty {
+  text-align: center;
+  padding: var(--spacing-12) var(--spacing-6);
+  color: var(--text-tertiary);
+  border: 2px dashed var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.card-empty-icon {
+  font-size: var(--font-size-4xl);
+  color: var(--color-primary-alpha);
+  margin-bottom: var(--spacing-4);
+}
+
+.card-empty-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-2);
+  color: var(--text-secondary);
+}
+
+.card-empty-text {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+}
+
+/* ===== CARTES AVEC BADGES ===== */
+.card-badge {
+  position: absolute;
+  top: var(--spacing-3);
+  right: var(--spacing-3);
+  z-index: 2;
+}
+
+.badge {
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.badge-new {
+  background: var(--color-success);
+  color: var(--color-white);
+}
+
+.badge-featured {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.badge-updated {
+  background: var(--color-info);
+  color: var(--color-white);
+}
+
+.badge-private {
+  background: var(--color-warning);
+  color: var(--color-white);
+}
+
+/* ===== EFFETS AVANCÉS ===== */
+.card-glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .card-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-gradient-border {
+  background: var(--gradient-primary);
+  padding: 2px;
+  border-radius: calc(var(--card-border-radius) + 2px);
+}
+
+.card-gradient-border .card {
+  background: var(--bg-primary);
+  border: none;
+  border-radius: var(--card-border-radius);
+  margin: 0;
+}
+
+/* ===== INTERACTIONS AVANCÉES ===== */
+.card-interactive {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.card-interactive:active {
+  transform: scale(0.98);
+  transition-duration: 100ms;
+}
+
+.card-flip {
+  perspective: 1000px;
+  height: 300px;
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip-front,
+.card-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--card-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-6);
+}
+
+.card-flip-back {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  transform: rotateY(180deg);
 }
