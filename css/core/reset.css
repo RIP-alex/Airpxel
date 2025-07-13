@@ -1,0 +1,37 @@
+/* ===== RESET CSS MODERNE - BASE PROPRE ===== */
+/* Foundation clean pour l'expérience tunnel de vente */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--dark-void);
+  color: var(--text-bright);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: all var(--speed-quick) ease;
+}
+
+button, input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a { text-decoration: none; color: inherit; }

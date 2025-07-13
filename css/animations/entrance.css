@@ -1,0 +1,54 @@
+/* ===== ANIMATIONS D'ENTRÉE SPECTACULAIRES ===== */
+/* Orchestration d'impact émotionnel immédiat */
+
+.entrance-loading {
+  animation: matrix-loading var(--speed-epic) ease-in-out forwards;
+  transform: scaleY(0);
+  transform-origin: center;
+}
+
+.entrance-glitch {
+  animation: glitch-reveal var(--speed-dramatic) var(--ease-elastic) forwards;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.entrance-neon-pulse {
+  animation: neon-birth var(--speed-smooth) var(--ease-power) forwards;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.entrance-typewriter {
+  overflow: hidden;
+  border-right: 3px solid var(--primary-neon);
+  white-space: nowrap;
+  animation: 
+    typewriter 2s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes matrix-loading {
+  to { transform: scaleY(1); }
+}
+
+@keyframes glitch-reveal {
+  0% { opacity: 0; transform: translateX(-100px) skewX(10deg); }
+  20% { opacity: 0.8; transform: translateX(10px) skewX(-5deg); }
+  40% { opacity: 0.6; transform: translateX(-5px) skewX(2deg); }
+  60% { opacity: 1; transform: translateX(2px) skewX(-1deg); }
+  100% { opacity: 1; transform: translateX(0) skewX(0); }
+}
+
+@keyframes neon-birth {
+  to { opacity: 1; filter: blur(0); }
+}
+
+@keyframes typewriter {
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary-neon); }
+}

@@ -1,0 +1,72 @@
+/* ===== AIMANT DE CONTACT - PSYCHOLOGIE DE CONVERSION ===== */
+/* Zone de contact irrésistible avec urgence et facilitation */
+
+.contact-magnetism {
+  background: linear-gradient(135deg, var(--dark-void), var(--medium-shadow));
+  padding: var(--space-xl) 0;
+  position: relative;
+  border-top: 2px solid var(--primary-neon);
+}
+
+.contact-urgency {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.urgency-message {
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  color: var(--warning-fire);
+  animation: urgency-pulse 1.5s ease-in-out infinite;
+  margin-bottom: var(--space-sm);
+}
+
+.availability-counter {
+  font-family: var(--font-body);
+  color: var(--primary-neon);
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-sm);
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.contact-method {
+  background: var(--medium-shadow);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: var(--space-md);
+  text-align: center;
+  transition: all var(--speed-quick) var(--ease-power);
+  cursor: pointer;
+  animation: method-float 3s ease-in-out infinite alternate;
+}
+
+.contact-method:hover {
+  border-color: var(--primary-neon);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--primary-neon);
+}
+
+@keyframes urgency-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes method-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}

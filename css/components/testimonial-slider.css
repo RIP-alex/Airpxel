@@ -1,0 +1,50 @@
+/* ===== TÉMOIGNAGES SLIDER - PREUVE SOCIALE ===== */
+/* Carousel de témoignages pour renforcer la crédibilité */
+
+.testimonials-showcase {
+  background: var(--medium-shadow);
+  padding: var(--space-xl) 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials-slider {
+  display: flex;
+  animation: slide-testimonials 20s linear infinite;
+  width: 300%;
+}
+
+.testimonial-card {
+  flex: 0 0 300px;
+  background: var(--light-glow);
+  border-radius: 12px;
+  padding: var(--space-md);
+  margin: 0 var(--space-sm);
+  border-left: 4px solid var(--primary-neon);
+  position: relative;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: var(--text-bright);
+  margin-bottom: var(--space-sm);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.testimonial-author {
+  font-family: var(--font-accent);
+  font-weight: 600;
+  color: var(--primary-neon);
+  font-size: 0.9rem;
+}
+
+.testimonial-role {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+@keyframes slide-testimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}

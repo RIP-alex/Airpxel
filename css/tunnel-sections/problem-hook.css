@@ -1,0 +1,44 @@
+/* ===== HOOK PROBLÈME - ACCROCHE PSYCHOLOGIQUE ===== */
+/* Identification du problème pour créer le besoin */
+
+.problem-hook {
+  background: linear-gradient(135deg, var(--dark-void) 0%, var(--medium-shadow) 100%);
+  padding: var(--space-xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-statement {
+  font-family: var(--font-accent);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: var(--warning-fire);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  animation: urgency-pulse 2s ease-in-out infinite;
+}
+
+.pain-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.pain-point {
+  background: rgba(255, 107, 0, 0.1);
+  border-left: 4px solid var(--warning-fire);
+  padding: var(--space-md);
+  border-radius: 8px;
+  animation: reveal-pain var(--speed-smooth) var(--ease-power) forwards;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+@keyframes urgency-pulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes reveal-pain {
+  to { opacity: 1; transform: translateX(0); }
+}

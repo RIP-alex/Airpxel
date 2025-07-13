@@ -1,0 +1,66 @@
+/* ===== JAUGES DE COMPÉTENCES ANIMÉES ===== */
+/* Visualisation impactante des capacités Alexandre */
+
+.skill-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.skill-meter {
+  position: relative;
+  background: var(--medium-shadow);
+  border-radius: 12px;
+  padding: var(--space-md);
+  border: 1px solid var(--primary-neon);
+  animation: skill-reveal var(--speed-smooth) var(--ease-bounce) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.skill-name {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  color: var(--text-bright);
+  font-size: 1.1rem;
+}
+
+.skill-level {
+  font-family: var(--font-body);
+  color: var(--primary-neon);
+  font-weight: 600;
+}
+
+.skill-bar {
+  height: 8px;
+  background: var(--dark-void);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-neon), var(--accent-electric));
+  border-radius: 4px;
+  width: 0%;
+  animation: skill-fill 2s var(--ease-power) forwards;
+  position: relative;
+  box-shadow: 0 0 10px var(--primary-neon);
+}
+
+@keyframes skill-reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes skill-fill {
+  to { width: var(--skill-value, 85%); }
+}

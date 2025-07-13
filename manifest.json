@@ -1,211 +1,30 @@
 {
-  "name": "Alexandre Rippling - Développeur Fullstack & Designer Créatif",
-  "short_name": "Alexandre Rippling CV",
-  "description": "Portfolio professionnel d'Alexandre Rippling - Handi&Dev : Coder avec créativité, réussir avec détermination",
-  "version": "2.0.0",
+  "name": "Alexandre Rippling - CV Tunnel de Vente",
+  "short_name": "Handi&Dev CV",
+  "description": "CV interactif révolutionnaire d'Alexandre Rippling - Développeur Fullstack",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00ff88",
   "orientation": "portrait-primary",
-  "theme_color": "#3B82F6",
-  "background_color": "#0F172A",
+  "scope": "/",
   "lang": "fr",
-  "dir": "ltr",
-  "categories": [
-    "education",
-    "productivity",
-    "business"
-  ],
   "icons": [
     {
-      "src": "assets/icons/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icons/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icons/icon-192x192.png",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "assets/icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
     }
   ],
-  "screenshots": [
-    {
-      "src": "assets/screenshots/desktop-hero.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "platform": "wide",
-      "label": "Vue d'accueil desktop du CV d'Alexandre Rippling"
-    },
-    {
-      "src": "assets/screenshots/mobile-hero.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "platform": "narrow",
-      "label": "Vue mobile du portfolio Alexandre Rippling"
-    },
-    {
-      "src": "assets/screenshots/desktop-projects.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "platform": "wide",
-      "label": "Section projets - Portfolio technique"
-    },
-    {
-      "src": "assets/screenshots/mobile-contact.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "platform": "narrow",
-      "label": "Formulaire de contact mobile"
-    }
-  ],
+  "categories": ["productivity", "business"],
+  "screenshots": [],
   "shortcuts": [
     {
-      "name": "Mes Projets",
-      "short_name": "Projets",
-      "description": "Accéder directement à la section projets",
-      "url": "/#projects",
-      "icons": [
-        {
-          "src": "assets/icons/shortcut-projects.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Me Contacter",
-      "short_name": "Contact", 
-      "description": "Formulaire de contact direct",
-      "url": "/#contact",
-      "icons": [
-        {
-          "src": "assets/icons/shortcut-contact.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Mon Parcours",
-      "short_name": "Parcours",
-      "description": "Expériences et formation",
-      "url": "/#experience",
-      "icons": [
-        {
-          "src": "assets/icons/shortcut-experience.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Mes Compétences",
-      "short_name": "Compétences",
-      "description": "Compétences techniques et soft skills",
-      "url": "/#skills",
-      "icons": [
-        {
-          "src": "assets/icons/shortcut-skills.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
+      "name": "Contact Direct",
+      "short_name": "Contact",
+      "description": "Contacter Alexandre directement",
+      "url": "/#contact"
     }
-  ],
-  "related_applications": [
-    {
-      "platform": "web",
-      "url": "https://www.handietdev.fr"
-    },
-    {
-      "platform": "web",
-      "url": "https://linkedin.com/in/alexandrerippling"
-    },
-    {
-      "platform": "web", 
-      "url": "https://github.com/arippling"
-    }
-  ],
-  "prefer_related_applications": false,
-  "protocol_handlers": [
-    {
-      "protocol": "mailto",
-      "url": "/#contact?email=%s"
-    }
-  ],
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  },
-  "handle_links": "preferred",
-  "capture_links": "existing-client-navigate",
-  "id": "alexandre-rippling-cv",
-  "iarc_rating_id": "",
-  "note_taking": {
-    "new_note_url": "/#contact"
-  },
-  "share_target": {
-    "action": "/#contact",
-    "method": "GET",
-    "params": {
-      "title": "subject",
-      "text": "message",
-      "url": "url"
-    }
-  },
-  "file_handlers": [
-    {
-      "action": "/#contact",
-      "accept": {
-        "text/*": [".txt", ".md"],
-        "application/pdf": [".pdf"]
-      }
-    }
-  ],
-  "display_override": [
-    "window-controls-overlay",
-    "standalone",
-    "minimal-ui",
-    "browser"
-  ],
-  "edge_side_panel": {
-    "preferred_width": 320
-  }
+  ]
 }

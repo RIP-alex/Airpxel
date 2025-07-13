@@ -1,0 +1,68 @@
+/* ===== EFFETS NÉONS PULSANTS - ATMOSPHÈRE FUTURISTE ===== */
+/* Création d'ambiance cyberpunk pour l'impact émotionnel */
+
+.neon-text {
+  color: var(--text-bright);
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px var(--primary-neon),
+    0 0 20px var(--primary-neon),
+    0 0 35px var(--primary-neon);
+  animation: neon-flicker 2s ease-in-out infinite alternate;
+}
+
+.neon-border {
+  border: 2px solid var(--primary-neon);
+  border-radius: 8px;
+  box-shadow: 
+    inset 0 0 20px rgba(0, 255, 136, 0.1),
+    0 0 20px rgba(0, 255, 136, 0.4),
+    0 0 40px rgba(0, 255, 136, 0.2);
+  animation: neon-pulse 3s ease-in-out infinite;
+}
+
+.neon-button {
+  background: transparent;
+  color: var(--primary-neon);
+  border: 2px solid var(--primary-neon);
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-accent);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--speed-quick) var(--ease-power);
+  position: relative;
+  overflow: hidden;
+}
+
+.neon-button:hover {
+  background: var(--primary-neon);
+  color: var(--dark-void);
+  box-shadow: 0 0 30px var(--primary-neon);
+  transform: translateY(-2px);
+}
+
+.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left var(--speed-smooth);
+}
+
+.neon-button:hover::before {
+  left: 100%;
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes neon-pulse {
+  0%, 100% { box-shadow: inset 0 0 20px rgba(0, 255, 136, 0.1), 0 0 20px rgba(0, 255, 136, 0.4); }
+  50% { box-shadow: inset 0 0 30px rgba(0, 255, 136, 0.2), 0 0 40px rgba(0, 255, 136, 0.6); }
+}
