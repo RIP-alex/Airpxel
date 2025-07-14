@@ -25,6 +25,224 @@
     <script src="js/data/alex-story.js" defer></script>
 </head>
 <body class="tunnel-experience" id="alex-universe">
-    <!-- L'expérience commence ici -->
+
+        <!-- ===== SECTION HERO IMPACT ===== -->
+    <section class="hero-impact" id="hero">
+        <div class="hero-hologram"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-text="Alexandre Rippling">
+                Alexandre Rippling
+            </h1>
+            <p class="impact-subtitle">
+                Handi&Dev : Coder avec créativité, réussir avec détermination
+            </p>
+            <div class="tech-quote">
+                "Le développeur que les machines n'ont pas encore remplacé"
+            </div>
+            
+            <!-- CTA Hero -->
+            <div class="cta-conversion-zone">
+                <button class="cta-magnetic" onclick="scrollToContact()">
+                    <span>[Icône Contact]</span>
+                    Recruter ce profil unique
+                </button>
+            </div>
+        </div>
+        
+        <!-- Effets hologramme -->
+        <div class="hologram-container">
+            <div class="hologram-layer"></div>
+            <div class="hologram-scan"></div>
+        </div>
+    </section>
+    
+    <!-- ===== SECTION TRANSFORMATION JOURNEY ===== -->
+    <section class="solution-reveal" id="parcours">
+        <div class="solution-spotlight"></div>
+        <div class="solution-content">
+            <h2 class="solution-hook">Mon Parcours Unique</h2>
+            
+            <div class="unique-value-grid">
+                <!-- Phase 1: Mécanicien -->
+                <div class="value-card">
+                    <div class="achievement-icon">[Icône Mécanique]</div>
+                    <h3 class="achievement-title">L'Artisan Mécanique</h3>
+                    <div class="achievement-metric">2019-2021</div>
+                    <p>Mécanicien Agricole - SARL Voutrin-Cherrier</p>
+                    <p class="tech-quote">
+                        "Réparer des machines m'a appris à diagnostiquer les problèmes invisibles"
+                    </p>
+                </div>
+                
+                <!-- Phase 2: Designer -->
+                <div class="value-card">
+                    <div class="achievement-icon">[Icône Design]</div>
+                    <h3 class="achievement-title">Le Créateur Visuel</h3>
+                    <div class="achievement-metric">2013-2024</div>
+                    <p>Responsable Communication - CASI Lorraine</p>
+                    <p class="tech-quote">
+                        "Transformer les idées en visuels impactants, c'est déjà coder"
+                    </p>
+                </div>
+                
+                <!-- Phase 3: Développeur -->
+                <div class="value-card">
+                    <div class="achievement-icon">[Icône Code]</div>
+                    <h3 class="achievement-title">Le Révolutionnaire Code</h3>
+                    <div class="achievement-metric">2024-Présent</div>
+                    <p>Développeur Fullstack - Metz Numérique School</p>
+                    <p class="tech-quote">
+                        "Mon parcours atypique me donne une perspective unique"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== SECTION COMPÉTENCES ===== -->
+    <section class="skills-section" id="competences">
+        <h2 class="hero-title">Mes Super-Pouvoirs</h2>
+        
+        <div class="skill-matrix">
+            <!-- Frontend -->
+            <div class="skill-meter">
+                <div class="skill-header">
+                    <span class="skill-name">HTML5/CSS3</span>
+                    <span class="skill-level">85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--skill-value: 85%"></div>
+                </div>
+            </div>
+            
+            <div class="skill-meter">
+                <div class="skill-header">
+                    <span class="skill-name">JavaScript ES6+</span>
+                    <span class="skill-level">80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--skill-value: 80%"></div>
+                </div>
+            </div>
+            
+            <div class="skill-meter">
+                <div class="skill-header">
+                    <span class="skill-name">React</span>
+                    <span class="skill-level">75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--skill-value: 75%"></div>
+                </div>
+            </div>
+            
+            <!-- Backend -->
+            <div class="skill-meter">
+                <div class="skill-header">
+                    <span class="skill-name">PHP</span>
+                    <span class="skill-level">70%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--skill-value: 70%"></div>
+                </div>
+            </div>
+            
+            <div class="skill-meter">
+                <div class="skill-header">
+                    <span class="skill-name">Node.js</span>
+                    <span class="skill-level">65%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--skill-value: 65%"></div>
+                </div>
+            </div>
+            
+            <!-- Créativité -->
+            <div class="skill-meter">
+                <div class="skill-header">
+                    <span class="skill-name">Communication Digitale</span>
+                    <span class="skill-level">95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--skill-value: 95%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== SECTION CONTACT ===== -->
+    <section class="cta-conversion-zone" id="contact">
+        <h2 class="hero-title">Prêt à Recruter l'Exception ?</h2>
+        
+        <div class="contact-options">
+            <div class="contact-method">
+                <div class="contact-icon">[Icône Email]</div>
+                <h3>Email Direct</h3>
+                <p>alexandre.rippling@gmail.com</p>
+                <small>Réponse garantie sous 24h</small>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">[Icône LinkedIn]</div>
+                <h3>LinkedIn Pro</h3>
+                <p>linkedin.com/in/alexandrerippling</p>
+                <small>Connexion directe recommandée</small>
+            </div>
+            
+            <div class="contact-method">
+                <div class="contact-icon">[Icône Téléphone]</div>
+                <h3>Téléphone</h3>
+                <p>06.69.59.14.34</p>
+                <small>Échange vocal immédiat</small>
+            </div>
+        </div>
+        
+        <div class="urgency-message">
+            ⚡ Disponible pour 3 projets ce mois seulement
+        </div>
+        
+        <button class="cta-magnetic" onclick="window.location.href='mailto:alexandre.rippling@gmail.com'">
+            <span>[Icône Fusée]</span>
+            Déverrouiller mon potentiel
+        </button>
+    </section>
+    
+    <!-- JavaScript simple pour navigation -->
+    <script>
+        // Navigation smooth
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+        
+        // Animation des skills au scroll
+        const observerOptions = {
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.5s';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observer les skill meters
+        document.querySelectorAll('.skill-meter').forEach(skill => {
+            observer.observe(skill);
+        });
+        
+        // Effet entrée retardée
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 500);
+        });
+    </script>
+    
+
 </body>
 </html>
