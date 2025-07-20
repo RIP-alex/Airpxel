@@ -1,248 +1,1854 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark" data-tunnel-phase="loading">
+<html lang="fr" data-theme="luxury">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚀 Alexandre Rippling | Le Développeur Qui Révolutionne Votre Vision du Code</title>
-    <meta name="description" content="Découvrez Alexandre Rippling - Le développeur fullstack qui transforme l'impossible en possible. Handi&Dev : Coder avec créativité, réussir avec détermination.">
+    <title>Alexandre Rippling | Visionnaire Tech & Stratège Digital - Élite Innovation</title>
+    <meta name="description" content="Alexandre Rippling - Visionnaire technologique transformant les défis en opportunités. Leader d'innovation accessible, expert en solutions différenciantes pour l'élite business.">
     
-    <!-- Préchargement critique pour impact immédiat -->
-    <link rel="preload" href="css/core/variables.css" as="style">
-    <link rel="preload" href="js/core/tunnel-orchestrator.js" as="script">
+    <!-- Polices ultra-premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Crimson+Pro:wght@200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS Tunnel de Vente - Chargement progressif optimisé -->
-    <link rel="stylesheet" href="css/core/variables.css">
-    <link rel="stylesheet" href="css/core/reset.css">
-    <link rel="stylesheet" href="css/core/typography.css">
-    <link rel="stylesheet" href="css/animations/entrance.css">
-    <link rel="stylesheet" href="css/tunnel-sections/hero-impact.css">
-    <link rel="stylesheet" href="css/effects/hologram.css">
-    
-    <!-- JavaScript Tunnel - Orchestration émotionnelle -->
-    <script src="js/core/app-core.js" defer></script>
-    <script src="js/core/tunnel-orchestrator.js" defer></script>
-    <script src="js/animations/entrance-director.js" defer></script>
-    <script src="js/data/alex-story.js" defer></script>
-</head>
-<body class="tunnel-experience" id="alex-universe">
+    <style>
+        /* ===== DESIGN SYSTEM ÉLITE ===== */
+        :root {
+            /* Palette Sophistiquée Monochromatique + Accents */
+            --elite-black: #0D0D0D;           /* Noir élite absolu */
+            --luxury-charcoal: #1A1A1A;       /* Charbon luxueux */
+            --premium-steel: #2D2D2D;         /* Acier premium */
+            --refined-silver: #404040;        /* Argent raffiné */
+            --elegant-gray: #666666;          /* Gris élégant */
+            --sophisticated-light: #999999;   /* Lumière sophistiquée */
+            --pristine-white: #FFFFFF;        /* Blanc pristine */
+            --platinum-shine: #F8F9FA;        /* Éclat platine */
+            
+            /* Accents Signature Exclusifs */
+            --signature-gold: #C9A96E;        /* Or signature discret */
+            --elite-amber: #D4AF37;           /* Ambre élite */
+            --luxury-bronze: #CD7F32;         /* Bronze luxueux */
+            --success-emerald: #50C878;       /* Émeraude succès */
+            
+            /* Glassmorphism Elite */
+            --glass-primary: rgba(255, 255, 255, 0.08);
+            --glass-secondary: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --glass-shadow: rgba(0, 0, 0, 0.2);
+            
+            /* Gradients Premium */
+            --gradient-elite: linear-gradient(135deg, rgba(201, 169, 110, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+            --gradient-signature: linear-gradient(135deg, #C9A96E 0%, #D4AF37 50%, #CD7F32 100%);
+            
+            /* Typographie Élite */
+            --font-display: 'Crimson Pro', serif;        /* Titres élégants */
+            --font-modern: 'Space Grotesk', sans-serif;  /* Modernité tech */
+            --font-system: 'Inter', sans-serif;          /* Lisibilité parfaite */
+            
+            /* Timing Précis */
+            --time-instant: 0.1s;
+            --time-swift: 0.25s;
+            --time-elegant: 0.4s;
+            --time-luxury: 0.6s;
+            --time-signature: 0.8s;
+            
+            /* Courbes Sophistiquées */
+            --ease-elite: cubic-bezier(0.25, 0.1, 0.25, 1);
+            --ease-luxury: cubic-bezier(0.4, 0, 0.2, 1);
+            --ease-signature: cubic-bezier(0.23, 1, 0.32, 1);
+            
+            /* Espacements Raffinés */
+            --space-xs: 0.5rem;    --space-s: 1rem;     --space-m: 2rem;
+            --space-l: 3rem;       --space-xl: 5rem;    --space-xxl: 8rem;
+            
+            /* Ombres Premium */
+            --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.04);
+            --shadow-elegant: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --shadow-luxury: 0 16px 64px rgba(0, 0, 0, 0.12);
+            --shadow-signature: 0 24px 96px rgba(0, 0, 0, 0.16);
+            
+            /* Glass Effects */
+            --blur-light: blur(8px);
+            --blur-medium: blur(16px);
+            --blur-heavy: blur(24px);
+        }
 
-        <!-- ===== SECTION HERO IMPACT ===== -->
-    <section class="hero-impact" id="hero">
-        <div class="hero-hologram"></div>
-        <div class="hero-content">
-            <h1 class="hero-title" data-text="Alexandre Rippling">
-                Alexandre Rippling
-            </h1>
-            <p class="impact-subtitle">
-                Handi&Dev : Coder avec créativité, réussir avec détermination
+        /* ===== RESET ÉLITE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-system);
+            background: var(--elite-black);
+            color: var(--pristine-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            letter-spacing: 0.01em;
+        }
+
+        /* ===== GLASSMORPHISM COMPONENTS ===== */
+        .glass-card {
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-medium);
+            -webkit-backdrop-filter: var(--blur-medium);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: var(--shadow-elegant);
+        }
+
+        .glass-subtle {
+            background: var(--glass-secondary);
+            backdrop-filter: var(--blur-light);
+            -webkit-backdrop-filter: var(--blur-light);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* ===== LOADER SIGNATURE ===== */
+        .signature-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--elite-black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity var(--time-signature) var(--ease-luxury);
+        }
+
+        .signature-loader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-elite {
+            text-align: center;
+            animation: signature-pulse var(--time-signature) ease-in-out infinite alternate;
+        }
+
+        .loader-brand {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 600;
+            background: var(--gradient-signature);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .loader-vision {
+            font-family: var(--font-modern);
+            font-size: 1rem;
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        @keyframes signature-pulse {
+            0% { transform: scale(1); opacity: 0.9; }
+            100% { transform: scale(1.02); opacity: 1; }
+        }
+
+        /* ===== HERO VISION ÉLITE ===== */
+        .hero-elite {
+            position: relative;
+            height: 100vh;
+            background: radial-gradient(circle at 30% 40%, rgba(201, 169, 110, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                        var(--elite-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-background-elite {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(201, 169, 110, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 40%);
+            animation: elite-float 20s ease-in-out infinite;
+        }
+
+        .hero-content-elite {
+            text-align: center;
+            z-index: 10;
+            max-width: 900px;
+            padding: 0 2rem;
+            animation: hero-emergence var(--time-signature) var(--ease-signature) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .hero-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.5rem;
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-light);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            font-family: var(--font-modern);
+            font-size: 0.9rem;
+            color: var(--signature-gold);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            background: var(--success-emerald);
+            border-radius: 50%;
+            animation: status-pulse 2s ease-in-out infinite;
+        }
+
+        .hero-identity {
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 8vw, 6.5rem);
+            font-weight: 600;
+            background: var(--gradient-signature);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-position {
+            font-family: var(--font-modern);
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            color: var(--platinum-shine);
+            font-weight: 300;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero-vision-statement {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--signature-gold);
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        .cta-signature {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 3rem;
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-medium);
+            border: 1px solid var(--signature-gold);
+            color: var(--pristine-white);
+            font-family: var(--font-modern);
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all var(--time-elegant) var(--ease-luxury);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-elegant);
+            letter-spacing: 0.02em;
+        }
+
+        .cta-signature:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-luxury);
+            border-color: var(--elite-amber);
+            background: rgba(201, 169, 110, 0.1);
+        }
+
+        .cta-signature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left var(--time-elegant);
+        }
+
+        .cta-signature:hover::before {
+            left: 100%;
+        }
+
+        .scroll-invitation {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--elegant-gray);
+            font-size: 0.9rem;
+            font-weight: 300;
+            animation: gentle-bounce 2s ease-in-out infinite;
+            cursor: pointer;
+            transition: color var(--time-swift);
+        }
+
+        .scroll-invitation:hover {
+            color: var(--signature-gold);
+        }
+
+        /* ===== SECTION ARCHITECTURE ÉLITE ===== */
+        .section-elite {
+            padding: var(--space-xxl) 2rem;
+            position: relative;
+        }
+
+        .section-container-elite {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-header-elite {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            background: var(--glass-subtle);
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            border-radius: 50px;
+            font-family: var(--font-modern);
+            font-size: 0.85rem;
+            color: var(--signature-gold);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .section-title-elite {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 600;
+            color: var(--pristine-white);
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle-elite {
+            font-family: var(--font-system);
+            font-size: 1.3rem;
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .signature-divider {
+            width: 100px;
+            height: 2px;
+            background: var(--gradient-signature);
+            margin: 2.5rem auto;
+            border-radius: 1px;
+        }
+
+        /* ===== SECTION OPPORTUNITÉ STRATÉGIQUE ===== */
+        .opportunity-section {
+            background: var(--luxury-charcoal);
+        }
+
+        .opportunity-statement {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .opportunity-question {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            color: var(--signature-gold);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .opportunity-context {
+            font-family: var(--font-system);
+            font-size: 1.2rem;
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-top: var(--space-xl);
+        }
+
+        .challenge-card {
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-medium);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: all var(--time-elegant) var(--ease-luxury);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .challenge-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-signature);
+            opacity: 0;
+            transition: opacity var(--time-elegant);
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-luxury);
+            border-color: rgba(201, 169, 110, 0.3);
+        }
+
+        .challenge-card:hover::before {
+            opacity: 1;
+        }
+
+        .challenge-icon {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+        }
+
+        .challenge-title {
+            font-family: var(--font-modern);
+            font-size: 1.4rem;
+            color: var(--pristine-white);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .challenge-description {
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* ===== SECTION DIFFÉRENCIATION ÉLITE ===== */
+        .differentiation-section {
+            background: var(--elite-black);
+        }
+
+        .value-proposition {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .value-headline {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            color: var(--pristine-white);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .value-highlight {
+            background: var(--gradient-signature);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .value-promise {
+            font-family: var(--font-system);
+            font-size: 1.3rem;
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            max-width: 750px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .rqth-advantage {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            background: var(--glass-primary);
+            border: 1px solid rgba(80, 200, 120, 0.3);
+            border-radius: 16px;
+            font-family: var(--font-modern);
+            font-size: 1rem;
+            color: var(--success-emerald);
+            font-weight: 500;
+            margin: 2rem auto;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: var(--space-xl);
+        }
+
+        .advantage-card {
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-medium);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            transition: all var(--time-elegant) var(--ease-luxury);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-signature);
+            border-radius: 24px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity var(--time-elegant);
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-signature);
+        }
+
+        .advantage-card:hover::after {
+            opacity: 1;
+        }
+
+        .advantage-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--gradient-signature);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.2rem;
+            color: var(--elite-black);
+            transition: transform var(--time-elegant);
+        }
+
+        .advantage-card:hover .advantage-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .advantage-title {
+            font-family: var(--font-modern);
+            font-size: 1.4rem;
+            color: var(--pristine-white);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .advantage-description {
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* ===== SECTION PREUVES ÉLITE ===== */
+        .evidence-section {
+            background: var(--luxury-charcoal);
+        }
+
+        .achievements-elite {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: var(--space-xl);
+        }
+
+        .achievement-elite {
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-medium);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all var(--time-elegant) var(--ease-luxury);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-elite::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-signature);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--time-elegant);
+        }
+
+        .achievement-elite:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-luxury);
+            border-color: rgba(201, 169, 110, 0.4);
+        }
+
+        .achievement-elite:hover::before {
+            transform: scaleX(1);
+        }
+
+        .achievement-icon-elite {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-signature);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            color: var(--elite-black);
+            transition: transform var(--time-elegant);
+        }
+
+        .achievement-elite:hover .achievement-icon-elite {
+            transform: scale(1.15);
+        }
+
+        .achievement-metric {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--signature-gold);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .achievement-title-elite {
+            font-family: var(--font-modern);
+            font-size: 1.2rem;
+            color: var(--pristine-white);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-description-elite {
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== SECTION EXPERTISE SIGNATURE ===== */
+        .expertise-section {
+            background: var(--elite-black);
+        }
+
+        .expertise-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: var(--space-xl);
+        }
+
+        .expertise-category {
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-medium);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            transition: all var(--time-elegant) var(--ease-luxury);
+        }
+
+        .expertise-category:hover {
+            border-color: rgba(201, 169, 110, 0.3);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .category-header-elite {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .category-icon-elite {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-signature);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--elite-black);
+        }
+
+        .category-title-elite {
+            font-family: var(--font-modern);
+            font-size: 1.4rem;
+            color: var(--signature-gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-subtitle-elite {
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+
+        .skills-list-elite {
+            list-style: none;
+        }
+
+        .skill-item-elite {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all var(--time-swift);
+        }
+
+        .skill-item-elite:last-child {
+            border-bottom: none;
+        }
+
+        .skill-item-elite:hover {
+            padding-left: 1rem;
+            background: rgba(201, 169, 110, 0.05);
+            border-radius: 12px;
+        }
+
+        .skill-name-elite {
+            color: var(--pristine-white);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .skill-level-elite {
+            color: var(--signature-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .skill-bar-elite {
+            width: 100%;
+            height: 3px;
+            background: rgba(201, 169, 110, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .skill-progress-elite {
+            height: 100%;
+            background: var(--gradient-signature);
+            border-radius: 2px;
+            width: 0%;
+            transition: width 1.5s var(--ease-luxury);
+        }
+
+        /* ===== SECTION CONTACT ÉLITE ===== */
+        .contact-elite-section {
+            background: var(--luxury-charcoal);
+        }
+
+        .contact-introduction {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            padding: 3rem;
+            background: var(--glass-primary);
+            border-radius: 24px;
+            border: 1px solid rgba(201, 169, 110, 0.2);
+        }
+
+        .contact-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 2rem;
+            background: var(--glass-subtle);
+            border: 1px solid rgba(80, 200, 120, 0.3);
+            border-radius: 50px;
+            font-family: var(--font-modern);
+            font-size: 0.9rem;
+            color: var(--success-emerald);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .contact-headline {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--signature-gold);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-description {
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-methods-elite {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: var(--space-xl);
+        }
+
+        .contact-method-elite {
+            background: var(--glass-primary);
+            backdrop-filter: var(--blur-medium);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all var(--time-elegant) var(--ease-luxury);
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-method-elite::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-signature);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--time-elegant);
+        }
+
+        .contact-method-elite:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-luxury);
+            border-color: rgba(201, 169, 110, 0.4);
+        }
+
+        .contact-method-elite:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-icon-elite {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-signature);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--elite-black);
+            transition: transform var(--time-elegant);
+        }
+
+        .contact-method-elite:hover .contact-icon-elite {
+            transform: scale(1.1);
+        }
+
+        .contact-label-elite {
+            font-family: var(--font-modern);
+            font-size: 1.2rem;
+            color: var(--pristine-white);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-elite {
+            color: var(--sophisticated-light);
+            font-weight: 300;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-benefit-elite {
+            color: var(--signature-gold);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .contact-signature {
+            background: var(--gradient-signature);
+            color: var(--elite-black);
+            border-color: var(--signature-gold);
+        }
+
+        .contact-signature .contact-icon-elite {
+            background: var(--elite-black);
+            color: var(--signature-gold);
+        }
+
+        .contact-signature .contact-label-elite,
+        .contact-signature .contact-info-elite {
+            color: var(--elite-black);
+        }
+
+        .contact-signature .contact-benefit-elite {
+            color: var(--luxury-charcoal);
+        }
+
+        /* ===== ANIMATIONS ÉLITE ===== */
+        @keyframes elite-float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(0.5deg); }
+            50% { transform: translateY(-8px) rotate(-0.3deg); }
+            75% { transform: translateY(-20px) rotate(0.3deg); }
+        }
+
+        @keyframes hero-emergence {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes status-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        @keyframes gentle-bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* ===== RESPONSIVE ÉLITE ===== */
+        @media (max-width: 768px) {
+            .hero-identity {
+                font-size: 3rem;
+            }
+
+            .section-elite {
+                padding: var(--space-xl) 1rem;
+            }
+
+            .challenges-grid,
+            .advantages-grid,
+            .achievements-elite,
+            .expertise-categories,
+            .contact-methods-elite {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title-elite {
+                font-size: 2.5rem;
+            }
+
+            .challenge-card,
+            .advantage-card,
+            .expertise-category {
+                padding: 2rem;
+            }
+        }
+
+        /* ===== UTILS ÉLITE ===== */
+        .text-signature {
+            background: var(--gradient-signature);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .fade-in-elite {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all var(--time-elegant) var(--ease-luxury);
+        }
+
+        .fade-in-elite.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-elite {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all var(--time-elegant) var(--ease-luxury);
+        }
+
+        .slide-in-elite.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in-elite {
+            opacity: 0;
+            transform: scale(0.85);
+            transition: all var(--time-elegant) var(--ease-luxury);
+        }
+
+        .scale-in-elite.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ===== FOCUS STATES ÉLITE ===== */
+        .cta-signature:focus,
+        .contact-method-elite:focus {
+            outline: 2px solid var(--signature-gold);
+            outline-offset: 2px;
+        }
+
+        /* ===== SELECTION STYLING ===== */
+        ::selection {
+            background: rgba(201, 169, 110, 0.3);
+            color: var(--pristine-white);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader Signature -->
+    <div class="signature-loader" id="loader">
+        <div class="loader-elite">
+            <div class="loader-brand">Alexandre Rippling</div>
+            <div class="loader-vision">Visionnaire • Innovation • Leadership</div>
+        </div>
+    </div>
+
+    <!-- HERO VISION ÉLITE -->
+    <section class="hero-elite" id="hero">
+        <div class="hero-background-elite"></div>
+        
+        <div class="hero-content-elite">
+            <div class="hero-status">
+                <div class="status-indicator"></div>
+                <span>Ouvert aux opportunités élite</span>
+            </div>
+            
+            <h1 class="hero-identity">Alexandre Rippling</h1>
+            
+            <p class="hero-position">Architecte Digital & Visionnaire Technologique</p>
+            
+            <p class="hero-vision-statement">
+                "Transformer les défis complexes en avantages concurrentiels"
             </p>
-            <div class="tech-quote">
-                "Le développeur que les machines n'ont pas encore remplacé"
+
+            <div class="rqth-advantage">
+                <span>🧠</span>
+                <span>Neurodiversité = Innovation • Résilience = Excellence</span>
             </div>
             
-            <!-- CTA Hero -->
-            <div class="cta-conversion-zone">
-                <button class="cta-magnetic" onclick="scrollToContact()">
-                    <span>[Icône Contact]</span>
-                    Recruter ce profil unique
-                </button>
-            </div>
+            <a href="#contact" class="cta-signature">
+                <span>Découvrir ma vision</span>
+                <span>→</span>
+            </a>
         </div>
-        
-        <!-- Effets hologramme -->
-        <div class="hologram-container">
-            <div class="hologram-layer"></div>
-            <div class="hologram-scan"></div>
+
+        <div class="scroll-invitation" onclick="scrollToSection('opportunity')">
+            <div>↓ L'opportunité vous attend</div>
         </div>
     </section>
-    
-    <!-- ===== SECTION TRANSFORMATION JOURNEY ===== -->
-    <section class="solution-reveal" id="parcours">
-        <div class="solution-spotlight"></div>
-        <div class="solution-content">
-            <h2 class="solution-hook">Mon Parcours Unique</h2>
+
+    <!-- SECTION OPPORTUNITÉ STRATÉGIQUE -->
+    <section class="section-elite opportunity-section" id="opportunity">
+        <div class="section-container-elite">
+            <div class="section-header-elite">
+                <div class="section-badge">Analyse Stratégique</div>
+                <h2 class="section-title-elite">Votre Défi de Leadership</h2>
+                <div class="signature-divider"></div>
+            </div>
             
-            <div class="unique-value-grid">
-                <!-- Phase 1: Mécanicien -->
-                <div class="value-card">
-                    <div class="achievement-icon">[Icône Mécanique]</div>
-                    <h3 class="achievement-title">L'Artisan Mécanique</h3>
-                    <div class="achievement-metric">2019-2021</div>
-                    <p>Mécanicien Agricole - SARL Voutrin-Cherrier</p>
-                    <p class="tech-quote">
-                        "Réparer des machines m'a appris à diagnostiquer les problèmes invisibles"
+            <div class="opportunity-statement">
+                <h3 class="opportunity-question">
+                    Comment identifier le talent qui transformera votre vision en réalité ?
+                </h3>
+                <p class="opportunity-context">
+                    Les dirigeants d'exception recherchent des collaborateurs capables de comprendre l'écosystème complet,
+                    d'anticiper les enjeux et de livrer des solutions qui dépassent les attentes.
+                    La différence réside dans l'approche, la vision et l'exécution.
+                </p>
+            </div>
+
+            <div class="challenges-grid">
+                <div class="challenge-card fade-in-elite">
+                    <div class="challenge-icon">⚡</div>
+                    <h4 class="challenge-title">Exécutants vs Visionnaires</h4>
+                    <p class="challenge-description">
+                        Vous cherchez plus qu'un exécutant technique. Vous voulez quelqu'un qui comprend 
+                        l'impact business, anticipe les besoins futurs et propose des solutions stratégiques 
+                        qui renforcent votre position concurrentielle.
                     </p>
                 </div>
                 
-                <!-- Phase 2: Designer -->
-                <div class="value-card">
-                    <div class="achievement-icon">[Icône Design]</div>
-                    <h3 class="achievement-title">Le Créateur Visuel</h3>
-                    <div class="achievement-metric">2013-2024</div>
-                    <p>Responsable Communication - CASI Lorraine</p>
-                    <p class="tech-quote">
-                        "Transformer les idées en visuels impactants, c'est déjà coder"
+                <div class="challenge-card fade-in-elite">
+                    <div class="challenge-icon">🎯</div>
+                    <h4 class="challenge-title">Vision Tunnel vs Approche Systémique</h4>
+                    <p class="challenge-description">
+                        Les spécialistes techniques excellent dans leur domaine mais manquent souvent 
+                        de vision transversale. Vous avez besoin de quelqu'un qui voit l'ensemble 
+                        et optimise pour l'écosystème global, pas juste pour un composant.
                     </p>
                 </div>
                 
-                <!-- Phase 3: Développeur -->
-                <div class="value-card">
-                    <div class="achievement-icon">[Icône Code]</div>
-                    <h3 class="achievement-title">Le Révolutionnaire Code</h3>
-                    <div class="achievement-metric">2024-Présent</div>
-                    <p>Développeur Fullstack - Metz Numérique School</p>
-                    <p class="tech-quote">
-                        "Mon parcours atypique me donne une perspective unique"
+                <div class="challenge-card fade-in-elite">
+                    <div class="challenge-icon">🚀</div>
+                    <h4 class="challenge-title">Conformité vs Innovation</h4>
+                    <p class="challenge-description">
+                        L'innovation naît de la différence. Vous recherchez des profils atypiques 
+                        qui apportent des perspectives uniques, remettent en question le status quo 
+                        et trouvent des solutions là où d'autres voient des problèmes.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- ===== SECTION COMPÉTENCES ===== -->
-    <section class="skills-section" id="competences">
-        <h2 class="hero-title">Mes Super-Pouvoirs</h2>
-        
-        <div class="skill-matrix">
-            <!-- Frontend -->
-            <div class="skill-meter">
-                <div class="skill-header">
-                    <span class="skill-name">HTML5/CSS3</span>
-                    <span class="skill-level">85%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-value: 85%"></div>
-                </div>
+
+    <!-- SECTION DIFFÉRENCIATION ÉLITE -->
+    <section class="section-elite differentiation-section" id="differentiation">
+        <div class="section-container-elite">
+            <div class="section-header-elite">
+                <div class="section-badge">Proposition de Valeur Unique</div>
+                <h2 class="section-title-elite">La <span class="value-highlight">Différence</span> Alexandre</h2>
+                <div class="signature-divider"></div>
             </div>
             
-            <div class="skill-meter">
-                <div class="skill-header">
-                    <span class="skill-name">JavaScript ES6+</span>
-                    <span class="skill-level">80%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-value: 80%"></div>
-                </div>
+            <div class="value-proposition">
+                <h3 class="value-headline">
+                    Le profil qui allie <span class="value-highlight">expertise technique d'élite</span> 
+                    et <span class="value-highlight">vision stratégique</span>
+                </h3>
+                <p class="value-promise">
+                    Mon parcours non-conventionnel - de l'artisanat mécanique au design digital, 
+                    du design à l'architecture logicielle - forge une perspective unique qui transforme 
+                    les contraintes en opportunités et les défis en avantages concurrentiels.
+                </p>
             </div>
-            
-            <div class="skill-meter">
-                <div class="skill-header">
-                    <span class="skill-name">React</span>
-                    <span class="skill-level">75%</span>
+
+            <div class="advantages-grid">
+                <div class="advantage-card scale-in-elite">
+                    <div class="advantage-icon">🔧</div>
+                    <h4 class="advantage-title">Pensée Systémique</h4>
+                    <p class="advantage-description">
+                        Mon expérience en mécanique agricole a développé ma capacité à diagnostiquer 
+                        les défaillances systémiques, à comprendre les interdépendances complexes 
+                        et à optimiser les performances globales plutôt que locales.
+                    </p>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-value: 75%"></div>
+                
+                <div class="advantage-card scale-in-elite">
+                    <div class="advantage-icon">🎨</div>
+                    <h4 class="advantage-title">Excellence Communicationnelle</h4>
+                    <p class="advantage-description">
+                        En tant que responsable communication, j'ai maîtrisé l'art de traduire 
+                        la complexité technique en valeur métier, de mobiliser les équipes 
+                        et de créer l'adhésion autour d'une vision commune.
+                    </p>
                 </div>
-            </div>
-            
-            <!-- Backend -->
-            <div class="skill-meter">
-                <div class="skill-header">
-                    <span class="skill-name">PHP</span>
-                    <span class="skill-level">70%</span>
+                
+                <div class="advantage-card scale-in-elite">
+                    <div class="advantage-icon">🧠</div>
+                    <h4 class="advantage-title">Innovation par la Neurodiversité</h4>
+                    <p class="advantage-description">
+                        Ma RQTH n'est pas une limitation mais un atout stratégique. Elle nourrit 
+                        ma créativité, ma résilience et ma capacité à voir des solutions 
+                        là où la pensée conventionnelle échoue. L'innovation naît de la différence.
+                    </p>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-value: 70%"></div>
-                </div>
-            </div>
-            
-            <div class="skill-meter">
-                <div class="skill-header">
-                    <span class="skill-name">Node.js</span>
-                    <span class="skill-level">65%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-value: 65%"></div>
-                </div>
-            </div>
-            
-            <!-- Créativité -->
-            <div class="skill-meter">
-                <div class="skill-header">
-                    <span class="skill-name">Communication Digitale</span>
-                    <span class="skill-level">95%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-value: 95%"></div>
+                
+                <div class="advantage-card scale-in-elite">
+                    <div class="advantage-icon">⚡</div>
+                    <h4 class="advantage-title">Agilité Transformationnelle</h4>
+                    <p class="advantage-description">
+                        Ma reconversion réussie démontre ma capacité d'adaptation exceptionnelle, 
+                        ma détermination à exceller et ma maîtrise de l'apprentissage continu. 
+                        Des qualités essentielles dans un environnement en mutation constante.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- ===== SECTION CONTACT ===== -->
-    <section class="cta-conversion-zone" id="contact">
-        <h2 class="hero-title">Prêt à Recruter l'Exception ?</h2>
-        
-        <div class="contact-options">
-            <div class="contact-method">
-                <div class="contact-icon">[Icône Email]</div>
-                <h3>Email Direct</h3>
-                <p>alexandre.rippling@gmail.com</p>
-                <small>Réponse garantie sous 24h</small>
+
+    <!-- SECTION PREUVES D'EXCELLENCE -->
+    <section class="section-elite evidence-section" id="evidence">
+        <div class="section-container-elite">
+            <div class="section-header-elite">
+                <div class="section-badge">Track Record Prouvé</div>
+                <h2 class="section-title-elite">Excellence Mesurable</h2>
+                <p class="section-subtitle-elite">
+                    Des résultats concrets qui démontrent la capacité à transformer 
+                    la vision en réalité et à livrer l'excellence en toutes circonstances
+                </p>
+                <div class="signature-divider"></div>
             </div>
-            
-            <div class="contact-method">
-                <div class="contact-icon">[Icône LinkedIn]</div>
-                <h3>LinkedIn Pro</h3>
-                <p>linkedin.com/in/alexandrerippling</p>
-                <small>Connexion directe recommandée</small>
-            </div>
-            
-            <div class="contact-method">
-                <div class="contact-icon">[Icône Téléphone]</div>
-                <h3>Téléphone</h3>
-                <p>06.69.59.14.34</p>
-                <small>Échange vocal immédiat</small>
+
+            <div class="achievements-elite">
+                <div class="achievement-elite fade-in-elite">
+                    <div class="achievement-icon-elite">🔄</div>
+                    <div class="achievement-metric">2024</div>
+                    <h4 class="achievement-title-elite">Transformation Réussie</h4>
+                    <p class="achievement-description-elite">
+                        Reconversion maîtrisée vers le développement fullstack - 
+                        Formation intensive Metz Numérique School avec excellence
+                    </p>
+                </div>
+                
+                <div class="achievement-elite fade-in-elite">
+                    <div class="achievement-icon-elite">📢</div>
+                    <div class="achievement-metric">5+ ans</div>
+                    <h4 class="achievement-title-elite">Leadership Communication</h4>
+                    <p class="achievement-description-elite">
+                        Responsable communication CASI Lorraine - 
+                        Stratégies digitales, gestion d'équipe et développement de présence
+                    </p>
+                </div>
+                
+                <div class="achievement-elite fade-in-elite">
+                    <div class="achievement-icon-elite">🎭</div>
+                    <div class="achievement-metric">4+ ans</div>
+                    <h4 class="achievement-title-elite">Direction Exécutive</h4>
+                    <p class="achievement-description-elite">
+                        Président Hurrikane Crew (2015-2019) - 
+                        Gestion d'équipes, coordination d'événements complexes, leadership créatif
+                    </p>
+                </div>
+                
+                <div class="achievement-elite fade-in-elite">
+                    <div class="achievement-icon-elite">🛠️</div>
+                    <div class="achievement-metric">3+ ans</div>
+                    <h4 class="achievement-title-elite">Expertise Technique</h4>
+                    <p class="achievement-description-elite">
+                        Mécanicien agricole spécialisé - 
+                        Maîtrise des systèmes complexes, diagnostic avancé, optimisation
+                    </p>
+                </div>
             </div>
         </div>
-        
-        <div class="urgency-message">
-            ⚡ Disponible pour 3 projets ce mois seulement
-        </div>
-        
-        <button class="cta-magnetic" onclick="window.location.href='mailto:alexandre.rippling@gmail.com'">
-            <span>[Icône Fusée]</span>
-            Déverrouiller mon potentiel
-        </button>
     </section>
-    
-    <!-- JavaScript simple pour navigation -->
+
+    <!-- SECTION EXPERTISE TECHNIQUE -->
+    <section class="section-elite expertise-section" id="expertise">
+        <div class="section-container-elite">
+            <div class="section-header-elite">
+                <div class="section-badge">Maîtrise Technologique</div>
+                <h2 class="section-title-elite">Arsenal d'Excellence</h2>
+                <p class="section-subtitle-elite">
+                    Stack technique moderne maîtrisée avec une approche qualité 
+                    et une attention particulière à l'accessibilité et aux performances
+                </p>
+                <div class="signature-divider"></div>
+            </div>
+
+            <div class="expertise-categories">
+                <div class="expertise-category slide-in-elite">
+                    <div class="category-header-elite">
+                        <div class="category-icon-elite">🎨</div>
+                        <h4 class="category-title-elite">Frontend Architecture</h4>
+                        <p class="category-subtitle-elite">Interfaces premium et accessibles</p>
+                    </div>
+                    <ul class="skills-list-elite">
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">HTML5 / CSS3 Avancé</span>
+                            <span class="skill-level-elite">Expert</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">JavaScript ES6+</span>
+                            <span class="skill-level-elite">Solide</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 80%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">React.js</span>
+                            <span class="skill-level-elite">En cours</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 75%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Design Responsif</span>
+                            <span class="skill-level-elite">Expert</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 95%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category slide-in-elite">
+                    <div class="category-header-elite">
+                        <div class="category-icon-elite">⚙️</div>
+                        <h4 class="category-title-elite">Backend Systems</h4>
+                        <p class="category-subtitle-elite">Architecture et APIs robustes</p>
+                    </div>
+                    <ul class="skills-list-elite">
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">PHP</span>
+                            <span class="skill-level-elite">Solide</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 70%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Node.js</span>
+                            <span class="skill-level-elite">En cours</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 65%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Bases de Données</span>
+                            <span class="skill-level-elite">Solide</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 75%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">API REST</span>
+                            <span class="skill-level-elite">Solide</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 75%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category slide-in-elite">
+                    <div class="category-header-elite">
+                        <div class="category-icon-elite">🛠️</div>
+                        <h4 class="category-title-elite">DevOps & Outils</h4>
+                        <p class="category-subtitle-elite">Workflow et déploiement modernes</p>
+                    </div>
+                    <ul class="skills-list-elite">
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Git / GitHub</span>
+                            <span class="skill-level-elite">Expert</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 85%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">VS Code</span>
+                            <span class="skill-level-elite">Expert</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Docker</span>
+                            <span class="skill-level-elite">Apprentissage</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 60%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Accessibilité WCAG</span>
+                            <span class="skill-level-elite">Expert</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 85%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="expertise-category slide-in-elite">
+                    <div class="category-header-elite">
+                        <div class="category-icon-elite">✨</div>
+                        <h4 class="category-title-elite">Leadership Skills</h4>
+                        <p class="category-subtitle-elite">La différence qui fait la différence</p>
+                    </div>
+                    <ul class="skills-list-elite">
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Communication Stratégique</span>
+                            <span class="skill-level-elite">Expert</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 95%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Résolution Systémique</span>
+                            <span class="skill-level-elite">Expert</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Gestion de Projet</span>
+                            <span class="skill-level-elite">Avancé</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 80%;"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item-elite">
+                            <span class="skill-name-elite">Vision Stratégique</span>
+                            <span class="skill-level-elite">Signature</span>
+                            <div class="skill-bar-elite">
+                                <div class="skill-progress-elite" style="--skill-width: 100%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT ÉLITE -->
+    <section class="section-elite contact-elite-section" id="contact">
+        <div class="section-container-elite">
+            <div class="section-header-elite">
+                <div class="section-badge">Étape Suivante</div>
+                <h2 class="section-title-elite">Évaluons la Synergie</h2>
+                <p class="section-subtitle-elite">
+                    Les grandes réussites naissent de rencontres exceptionnelles. 
+                    Explorons ensemble comment ma vision peut servir vos ambitions.
+                </p>
+                <div class="signature-divider"></div>
+            </div>
+            
+            <div class="contact-introduction">
+                <div class="contact-status">
+                    <div class="status-indicator"></div>
+                    <span>Évaluation d'opportunités stratégiques</span>
+                </div>
+                <div class="contact-headline">
+                    Prêt pour des défis d'exception
+                </div>
+                <p class="contact-description">
+                    Je recherche des organisations visionnaires qui valorisent l'innovation, 
+                    l'excellence et la différence. Des environnements où ma perspective unique 
+                    peut créer un impact mesurable et durable.
+                </p>
+            </div>
+
+            <div class="contact-methods-elite">
+                <a href="mailto:alexandre.rippling@gmail.com" class="contact-method-elite">
+                    <div class="contact-icon-elite">✉️</div>
+                    <div class="contact-label-elite">Contact Stratégique</div>
+                    <div class="contact-info-elite">alexandre.rippling@gmail.com</div>
+                    <div class="contact-benefit-elite">Réponse sous 24h - Discussion de haut niveau</div>
+                </a>
+                
+                <a href="tel:+33669591434" class="contact-method-elite">
+                    <div class="contact-icon-elite">📱</div>
+                    <div class="contact-label-elite">Échange Direct</div>
+                    <div class="contact-info-elite">06.69.59.14.34</div>
+                    <div class="contact-benefit-elite">Conversation approfondie immédiate</div>
+                </a>
+                
+                <a href="https://linkedin.com/in/alexandrerippling" target="_blank" class="contact-method-elite">
+                    <div class="contact-icon-elite">💼</div>
+                    <div class="contact-label-elite">Réseau Professionnel</div>
+                    <div class="contact-info-elite">Alexandre Rippling</div>
+                    <div class="contact-benefit-elite">Recommandations et parcours vérifié</div>
+                </a>
+                
+                <a href="https://github.com/arippling" target="_blank" class="contact-method-elite">
+                    <div class="contact-icon-elite">💻</div>
+                    <div class="contact-label-elite">Portfolio Technique</div>
+                    <div class="contact-info-elite">GitHub.com/arippling</div>
+                    <div class="contact-benefit-elite">Code source et contributions</div>
+                </a>
+                
+                <a href="https://www.handietdev.fr" target="_blank" class="contact-method-elite">
+                    <div class="contact-icon-elite">🌐</div>
+                    <div class="contact-label-elite">Écosystème Complet</div>
+                    <div class="contact-info-elite">www.handietdev.fr</div>
+                    <div class="contact-benefit-elite">Vision d'ensemble et projets</div>
+                </a>
+                
+                <div class="contact-method-elite contact-signature">
+                    <div class="contact-icon-elite">📍</div>
+                    <div class="contact-label-elite">Base Stratégique</div>
+                    <div class="contact-info-elite">Lunéville, Grand Est, France</div>
+                    <div class="contact-benefit-elite">Mobilité nationale • Remote • International</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
-        // Navigation smooth
-        function scrollToContact() {
-            document.getElementById('contact').scrollIntoView({ 
-                behavior: 'smooth' 
+        // ===== ORCHESTRATEUR EXPÉRIENCE ÉLITE =====
+        class EliteExperience {
+            constructor() {
+                this.isLoaded = false;
+                this.observedElements = new Set();
+                this.skillBarsAnimated = false;
+                this.engagementScore = 0;
+                this.leadershipIndicators = [];
+            }
+
+            init() {
+                this.hideLoader();
+                this.setupEliteObserver();
+                this.setupSmoothNavigation();
+                this.setupSkillsAnimation();
+                this.setupLeadershipTracking();
+                this.setupGlassmorphismEffects();
+                console.log('👑 Expérience Élite Alexandre activée - Leadership mode ON');
+            }
+
+            hideLoader() {
+                setTimeout(() => {
+                    document.getElementById('loader').classList.add('hide');
+                    this.isLoaded = true;
+                    this.triggerEliteEntrance();
+                }, 3000);
+            }
+
+            triggerEliteEntrance() {
+                // Effet d'entrée sophistiqué
+                document.body.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.style.transition = 'opacity 0.8s ease';
+                    document.body.style.opacity = '1';
+                }, 100);
+            }
+
+            setupEliteObserver() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -80px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !this.observedElements.has(entry.target)) {
+                            this.animateEliteElement(entry.target);
+                            this.observedElements.add(entry.target);
+                            this.trackEngagement();
+                        }
+                    });
+                }, observerOptions);
+
+                // Observer tous les éléments élite
+                document.querySelectorAll('.fade-in-elite, .slide-in-elite, .scale-in-elite').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            animateEliteElement(element) {
+                // Animation en cascade sophistiquée
+                const siblings = Array.from(element.parentNode.children).filter(el => 
+                    el.classList.contains('fade-in-elite') || 
+                    el.classList.contains('slide-in-elite') || 
+                    el.classList.contains('scale-in-elite')
+                );
+                const index = siblings.indexOf(element);
+                
+                setTimeout(() => {
+                    element.classList.add('visible');
+                    this.addEliteGlow(element);
+                }, index * 200);
+            }
+
+            addEliteGlow(element) {
+                // Effet de brillance subtil
+                element.style.boxShadow = '0 0 30px rgba(201, 169, 110, 0.1)';
+                setTimeout(() => {
+                    element.style.boxShadow = '';
+                }, 1000);
+            }
+
+            setupSkillsAnimation() {
+                const expertiseSection = document.getElementById('expertise');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !this.skillBarsAnimated) {
+                            this.animateEliteSkills();
+                            this.skillBarsAnimated = true;
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                observer.observe(expertiseSection);
+            }
+
+            animateEliteSkills() {
+                const skillBars = document.querySelectorAll('.skill-progress-elite');
+                skillBars.forEach((bar, index) => {
+                    setTimeout(() => {
+                        const width = bar.style.getPropertyValue('--skill-width');
+                        bar.style.width = width;
+                        
+                        // Effet de signature pour les skills experts
+                        if (parseInt(width) >= 90) {
+                            bar.style.boxShadow = '0 0 15px rgba(201, 169, 110, 0.4)';
+                        }
+                    }, index * 150);
+                });
+            }
+
+            setupLeadershipTracking() {
+                // Tracking sophistiqué des interactions leadership
+                let interactionDepth = 0;
+                let timeSpent = 0;
+                const startTime = Date.now();
+
+                window.addEventListener('scroll', () => {
+                    const scrollDepth = window.pageYOffset / (document.body.scrollHeight - window.innerHeight);
+                    if (scrollDepth > 0.8 && !this.leadershipIndicators.includes('deep_scroll')) {
+                        this.leadershipIndicators.push('deep_scroll');
+                        this.triggerLeadershipMoment('Engagement approfondi détecté');
+                    }
+                });
+
+                document.addEventListener('click', (e) => {
+                    interactionDepth++;
+                    if (interactionDepth >= 5 && !this.leadershipIndicators.includes('high_interaction')) {
+                        this.leadershipIndicators.push('high_interaction');
+                        this.triggerLeadershipMoment('Profil d\'interaction leadership confirmé');
+                    }
+                });
+
+                // Calcul d'engagement toutes les 30 secondes
+                setInterval(() => {
+                    timeSpent = (Date.now() - startTime) / 1000;
+                    if (timeSpent > 120 && !this.leadershipIndicators.includes('executive_time')) {
+                        this.leadershipIndicators.push('executive_time');
+                        this.triggerLeadershipMoment('Temps d\'évaluation executive');
+                    }
+                }, 30000);
+            }
+
+            triggerLeadershipMoment(message) {
+                // Notification subtile d'engagement de qualité
+                const notification = document.createElement('div');
+                notification.innerHTML = `
+                    <div style="
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: var(--glass-primary);
+                        backdrop-filter: var(--blur-medium);
+                        border: 1px solid var(--signature-gold);
+                        border-radius: 12px;
+                        padding: 1rem 1.5rem;
+                        color: var(--signature-gold);
+                        font-family: var(--font-modern);
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        z-index: 10000;
+                        animation: leadership-notification 4s ease forwards;
+                        box-shadow: var(--shadow-luxury);
+                    ">
+                        ✨ ${message}
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.remove();
+                }, 4000);
+            }
+
+            setupGlassmorphismEffects() {
+                // Effets glassmorphism dynamiques
+                document.querySelectorAll('.glass-card, .contact-method-elite, .advantage-card').forEach(element => {
+                    element.addEventListener('mouseenter', function() {
+                        this.style.background = 'rgba(255, 255, 255, 0.12)';
+                        this.style.transform = 'translateY(-8px) scale(1.02)';
+                    });
+
+                    element.addEventListener('mouseleave', function() {
+                        this.style.background = 'var(--glass-primary)';
+                        this.style.transform = 'translateY(0) scale(1)';
+                    });
+                });
+            }
+
+            setupSmoothNavigation() {
+                // Navigation ultra-fluide
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            }
+
+            calculateLeadershipScore() {
+                // Score d'engagement leadership
+                const timeBonus = Math.min(50, (Date.now() - this.startTime) / 1000 * 2);
+                const interactionBonus = this.leadershipIndicators.length * 15;
+                const depthBonus = this.observedElements.size * 5;
+                
+                return Math.min(100, timeBonus + interactionBonus + depthBonus);
+            }
+        }
+
+        // Fonction utilitaire pour navigation
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
         }
-        
-        // Animation des skills au scroll
-        const observerOptions = {
-            threshold: 0.5
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0.5s';
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+
+        // CSS dynamique pour animations supplémentaires
+        const eliteAnimations = document.createElement('style');
+        eliteAnimations.textContent = `
+            @keyframes leadership-notification {
+                0% { opacity: 0; transform: translateX(100px); }
+                15% { opacity: 1; transform: translateX(0); }
+                85% { opacity: 1; transform: translateX(0); }
+                100% { opacity: 0; transform: translateX(100px); }
+            }
+
+            @keyframes signature-glow {
+                0%, 100% { box-shadow: 0 0 20px rgba(201, 169, 110, 0.2); }
+                50% { box-shadow: 0 0 40px rgba(201, 169, 110, 0.4); }
+            }
+
+            .elite-glow {
+                animation: signature-glow 3s ease-in-out infinite;
+            }
+
+            /* Effet parallax subtil */
+            .hero-background-elite {
+                will-change: transform;
+            }
+
+            /* Optimisations performance */
+            .glass-card,
+            .contact-method-elite,
+            .advantage-card {
+                will-change: transform, background;
+            }
+
+            /* Focus states accessibles */
+            .cta-signature:focus-visible,
+            .contact-method-elite:focus-visible {
+                outline: 2px solid var(--signature-gold);
+                outline-offset: 3px;
+            }
+
+            /* Préférences d'accessibilité */
+            @media (prefers-reduced-motion: reduce) {
+                .hero-background-elite {
+                    animation: none;
                 }
+                
+                .status-indicator {
+                    animation: none;
+                }
+            }
+        `;
+        document.head.appendChild(eliteAnimations);
+
+        // Initialisation de l'expérience élite
+        const eliteExperience = new EliteExperience();
+        
+        // Démarrage intelligent
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => eliteExperience.init());
+        } else {
+            eliteExperience.init();
+        }
+
+        // Optimisation performance - Intersection Observer natif
+        if ('IntersectionObserver' in window) {
+            // Support moderne confirmé
+            console.log('🏆 Optimisations performance activées');
+        } else {
+            // Fallback pour navigateurs anciens
+            document.querySelectorAll('.fade-in-elite, .slide-in-elite, .scale-in-elite').forEach(el => {
+                el.classList.add('visible');
             });
-        }, observerOptions);
+        }
+
+        // Easter egg pour les vrais leaders
+        let leadershipSequence = [];
+        const leadershipCode = [76, 69, 65, 68, 69, 82]; // "LEADER"
         
-        // Observer les skill meters
-        document.querySelectorAll('.skill-meter').forEach(skill => {
-            observer.observe(skill);
-        });
-        
-        // Effet entrée retardée
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                document.body.classList.add('loaded');
-            }, 500);
+        document.addEventListener('keydown', (e) => {
+            leadershipSequence.push(e.keyCode);
+            if (leadershipSequence.length > leadershipCode.length) {
+                leadershipSequence.shift();
+            }
+            
+            if (leadershipSequence.length === leadershipCode.length && 
+                leadershipSequence.every((key, index) => key === leadershipCode[index])) {
+                
+                // Mode leadership secret activé !
+                document.body.style.setProperty('--signature-gold', '#FFD700');
+                document.body.style.setProperty('--elite-amber', '#FFA500');
+                
+                // Effet spécial
+                document.querySelector('.hero-identity').textContent = 'ALEXANDRE RIPPLING - VISIONNAIRE MODE';
+                
+                // Message personnalisé
+                setTimeout(() => {
+                    alert('Mode Visionnaire Activé ! Vous avez la mentalité d\'un vrai leader. C\'est exactement le type de curiosité et de détermination que je recherche chez mes futurs collaborateurs !');
+                }, 500);
+            }
         });
     </script>
-    
-
 </body>
 </html>
