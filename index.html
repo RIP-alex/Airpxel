@@ -9,6 +9,9 @@
     <!-- Polices ultra-premium -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Crimson+Pro:wght@200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Icônes Lucide (CDN) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
     <style>
         /* ===== DESIGN SYSTEM ÉLITE ===== */
         :root {
@@ -44,11 +47,11 @@
             --font-modern: 'Space Grotesk', sans-serif;  /* Modernité tech */
             --font-system: 'Inter', sans-serif;          /* Lisibilité parfaite */
             
-            /* Timing Précis */
+            /* Timing Optimisé Performance */
             --time-instant: 0.1s;
-            --time-swift: 0.25s;
-            --time-elegant: 0.4s;
-            --time-luxury: 0.6s;
+            --time-swift: 0.2s;
+            --time-elegant: 0.3s;
+            --time-luxury: 0.5s;
             --time-signature: 0.8s;
             
             /* Courbes Sophistiquées */
@@ -96,6 +99,13 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             letter-spacing: 0.01em;
+        }
+
+        /* ===== OPTIMISATION PERFORMANCE ===== */
+        .performance-optimized {
+            will-change: transform;
+            backface-visibility: hidden;
+            transform: translateZ(0);
         }
 
         /* ===== GLASSMORPHISM COMPONENTS ===== */
@@ -255,9 +265,24 @@
             color: var(--signature-gold);
             font-style: italic;
             font-weight: 400;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             opacity: 0.95;
             line-height: 1.4;
+        }
+
+        .rqth-advantage {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            background: var(--glass-primary);
+            border: 1px solid rgba(80, 200, 120, 0.3);
+            border-radius: 16px;
+            font-family: var(--font-modern);
+            font-size: 1rem;
+            color: var(--success-emerald);
+            font-weight: 500;
+            margin-bottom: 3rem;
         }
 
         .cta-signature {
@@ -424,7 +449,7 @@
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             padding: 2.5rem;
-            transition: all var(--time-elegant) var(--ease-luxury);
+            transition: all var(--time-swift) var(--ease-luxury);
             position: relative;
             overflow: hidden;
         }
@@ -438,7 +463,7 @@
             height: 3px;
             background: var(--gradient-signature);
             opacity: 0;
-            transition: opacity var(--time-elegant);
+            transition: opacity var(--time-swift);
         }
 
         .challenge-card:hover {
@@ -449,12 +474,6 @@
 
         .challenge-card:hover::before {
             opacity: 1;
-        }
-
-        .challenge-icon {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            opacity: 0.7;
         }
 
         .challenge-title {
@@ -509,21 +528,6 @@
             line-height: 1.6;
         }
 
-        .rqth-advantage {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 1rem 2rem;
-            background: var(--glass-primary);
-            border: 1px solid rgba(80, 200, 120, 0.3);
-            border-radius: 16px;
-            font-family: var(--font-modern);
-            font-size: 1rem;
-            color: var(--success-emerald);
-            font-weight: 500;
-            margin: 2rem auto;
-        }
-
         .advantages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -538,7 +542,7 @@
             border-radius: 24px;
             padding: 3rem;
             text-align: center;
-            transition: all var(--time-elegant) var(--ease-luxury);
+            transition: all var(--time-swift) var(--ease-luxury);
             position: relative;
             overflow: hidden;
         }
@@ -554,7 +558,7 @@
             border-radius: 24px;
             z-index: -1;
             opacity: 0;
-            transition: opacity var(--time-elegant);
+            transition: opacity var(--time-swift);
         }
 
         .advantage-card:hover {
@@ -575,9 +579,8 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 2rem;
-            font-size: 2.2rem;
             color: var(--elite-black);
-            transition: transform var(--time-elegant);
+            transition: transform var(--time-swift);
         }
 
         .advantage-card:hover .advantage-icon {
@@ -617,7 +620,7 @@
             border-radius: 20px;
             padding: 2.5rem;
             text-align: center;
-            transition: all var(--time-elegant) var(--ease-luxury);
+            transition: all var(--time-swift) var(--ease-luxury);
             position: relative;
             overflow: hidden;
         }
@@ -632,7 +635,7 @@
             background: var(--gradient-signature);
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform var(--time-elegant);
+            transition: transform var(--time-swift);
         }
 
         .achievement-elite:hover {
@@ -654,9 +657,8 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 2rem;
-            font-size: 2rem;
             color: var(--elite-black);
-            transition: transform var(--time-elegant);
+            transition: transform var(--time-swift);
         }
 
         .achievement-elite:hover .achievement-icon-elite {
@@ -705,7 +707,7 @@
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             padding: 3rem;
-            transition: all var(--time-elegant) var(--ease-luxury);
+            transition: all var(--time-swift) var(--ease-luxury);
         }
 
         .expertise-category:hover {
@@ -727,7 +729,6 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            font-size: 1.8rem;
             color: var(--elite-black);
         }
 
@@ -794,7 +795,7 @@
             background: var(--gradient-signature);
             border-radius: 2px;
             width: 0%;
-            transition: width 1.5s var(--ease-luxury);
+            transition: width 1s var(--ease-luxury);
         }
 
         /* ===== SECTION CONTACT ÉLITE ===== */
@@ -836,7 +837,7 @@
             margin-bottom: 1.5rem;
         }
 
-        .contact-description {
+ .contact-description {
             color: var(--sophisticated-light);
             font-weight: 300;
             font-size: 1.1rem;
@@ -857,7 +858,7 @@
             border-radius: 20px;
             padding: 2.5rem;
             text-align: center;
-            transition: all var(--time-elegant) var(--ease-luxury);
+            transition: all var(--time-swift) var(--ease-luxury);
             text-decoration: none;
             color: inherit;
             position: relative;
@@ -874,7 +875,7 @@
             background: var(--gradient-signature);
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform var(--time-elegant);
+            transition: transform var(--time-swift);
         }
 
         .contact-method-elite:hover {
@@ -896,9 +897,8 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            font-size: 1.8rem;
             color: var(--elite-black);
-            transition: transform var(--time-elegant);
+            transition: transform var(--time-swift);
         }
 
         .contact-method-elite:hover .contact-icon-elite {
@@ -944,6 +944,40 @@
 
         .contact-signature .contact-benefit-elite {
             color: var(--luxury-charcoal);
+        }
+
+        /* ===== ANIMATIONS OPTIMISÉES ===== */
+        .fade-in-elite {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all var(--time-swift) var(--ease-luxury);
+        }
+
+        .fade-in-elite.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-elite {
+            opacity: 0;
+            transform: translateX(-15px);
+            transition: all var(--time-swift) var(--ease-luxury);
+        }
+
+        .slide-in-elite.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in-elite {
+            opacity: 0;
+            transform: scale(0.97);
+            transition: all var(--time-swift) var(--ease-luxury);
+        }
+
+        .scale-in-elite.visible {
+            opacity: 1;
+            transform: scale(1);
         }
 
         /* ===== ANIMATIONS ÉLITE ===== */
@@ -998,48 +1032,7 @@
             }
         }
 
-        /* ===== UTILS ÉLITE ===== */
-        .text-signature {
-            background: var(--gradient-signature);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .fade-in-elite {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all var(--time-elegant) var(--ease-luxury);
-        }
-
-        .fade-in-elite.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .slide-in-elite {
-            opacity: 0;
-            transform: translateX(-40px);
-            transition: all var(--time-elegant) var(--ease-luxury);
-        }
-
-        .slide-in-elite.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .scale-in-elite {
-            opacity: 0;
-            transform: scale(0.85);
-            transition: all var(--time-elegant) var(--ease-luxury);
-        }
-
-        .scale-in-elite.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        /* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+        /* ===== ACCESSIBILITY ===== */
         @media (prefers-reduced-motion: reduce) {
             *,
             *::before,
@@ -1061,6 +1054,13 @@
         ::selection {
             background: rgba(201, 169, 110, 0.3);
             color: var(--pristine-white);
+        }
+
+        /* ===== ICÔNES LUCIDE STYLING ===== */
+        .lucide {
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
         }
     </style>
 </head>
@@ -1092,13 +1092,13 @@
             </p>
 
             <div class="rqth-advantage">
-                <span>🧠</span>
-                <span>Neurodiversité = Innovation • Résilience = Excellence</span>
+                <i data-lucide="brain" style="color: var(--success-emerald); width: 24px; height: 24px;"></i>
+                <span>Résilience Post-AVC = Innovation • Force Mentale = Excellence</span>
             </div>
             
             <a href="#contact" class="cta-signature">
                 <span>Découvrir ma vision</span>
-                <span>→</span>
+                <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
             </a>
         </div>
 
@@ -1128,8 +1128,8 @@
             </div>
 
             <div class="challenges-grid">
-                <div class="challenge-card fade-in-elite">
-                    <div class="challenge-icon">⚡</div>
+                <div class="challenge-card fade-in-elite performance-optimized">
+                    <i data-lucide="zap" style="color: var(--signature-gold); width: 48px; height: 48px; margin-bottom: 2rem;"></i>
                     <h4 class="challenge-title">Exécutants vs Visionnaires</h4>
                     <p class="challenge-description">
                         Vous cherchez plus qu'un exécutant technique. Vous voulez quelqu'un qui comprend 
@@ -1138,8 +1138,8 @@
                     </p>
                 </div>
                 
-                <div class="challenge-card fade-in-elite">
-                    <div class="challenge-icon">🎯</div>
+                <div class="challenge-card fade-in-elite performance-optimized">
+                    <i data-lucide="target" style="color: var(--signature-gold); width: 48px; height: 48px; margin-bottom: 2rem;"></i>
                     <h4 class="challenge-title">Vision Tunnel vs Approche Systémique</h4>
                     <p class="challenge-description">
                         Les spécialistes techniques excellent dans leur domaine mais manquent souvent 
@@ -1148,8 +1148,8 @@
                     </p>
                 </div>
                 
-                <div class="challenge-card fade-in-elite">
-                    <div class="challenge-icon">🚀</div>
+                <div class="challenge-card fade-in-elite performance-optimized">
+                    <i data-lucide="rocket" style="color: var(--signature-gold); width: 48px; height: 48px; margin-bottom: 2rem;"></i>
                     <h4 class="challenge-title">Conformité vs Innovation</h4>
                     <p class="challenge-description">
                         L'innovation naît de la différence. Vous recherchez des profils atypiques 
@@ -1183,8 +1183,10 @@
             </div>
 
             <div class="advantages-grid">
-                <div class="advantage-card scale-in-elite">
-                    <div class="advantage-icon">🔧</div>
+                <div class="advantage-card scale-in-elite performance-optimized">
+                    <div class="advantage-icon">
+                        <i data-lucide="wrench" style="width: 40px; height: 40px;"></i>
+                    </div>
                     <h4 class="advantage-title">Pensée Systémique</h4>
                     <p class="advantage-description">
                         Mon expérience en mécanique agricole a développé ma capacité à diagnostiquer 
@@ -1193,8 +1195,10 @@
                     </p>
                 </div>
                 
-                <div class="advantage-card scale-in-elite">
-                    <div class="advantage-icon">🎨</div>
+                <div class="advantage-card scale-in-elite performance-optimized">
+                    <div class="advantage-icon">
+                        <i data-lucide="palette" style="width: 40px; height: 40px;"></i>
+                    </div>
                     <h4 class="advantage-title">Excellence Communicationnelle</h4>
                     <p class="advantage-description">
                         En tant que responsable communication, j'ai maîtrisé l'art de traduire 
@@ -1203,18 +1207,22 @@
                     </p>
                 </div>
                 
-                <div class="advantage-card scale-in-elite">
-                    <div class="advantage-icon">🧠</div>
-                    <h4 class="advantage-title">Innovation par la Neurodiversité</h4>
+                <div class="advantage-card scale-in-elite performance-optimized">
+                    <div class="advantage-icon">
+                        <i data-lucide="brain" style="width: 40px; height: 40px;"></i>
+                    </div>
+                    <h4 class="advantage-title">Résilience Post-AVC</h4>
                     <p class="advantage-description">
-                        Ma RQTH n'est pas une limitation mais un atout stratégique. Elle nourrit 
-                        ma créativité, ma résilience et ma capacité à voir des solutions 
-                        là où la pensée conventionnelle échoue. L'innovation naît de la différence.
+                        Surmonter un AVC et ses séquelles cognitives a forgé ma détermination exceptionnelle. 
+                        Cette épreuve a renforcé ma capacité d'adaptation, ma créativité pour contourner 
+                        les obstacles et ma perspective unique sur la résolution de problèmes complexes.
                     </p>
                 </div>
                 
-                <div class="advantage-card scale-in-elite">
-                    <div class="advantage-icon">⚡</div>
+                <div class="advantage-card scale-in-elite performance-optimized">
+                    <div class="advantage-icon">
+                        <i data-lucide="lightning-bolt" style="width: 40px; height: 40px;"></i>
+                    </div>
                     <h4 class="advantage-title">Agilité Transformationnelle</h4>
                     <p class="advantage-description">
                         Ma reconversion réussie démontre ma capacité d'adaptation exceptionnelle, 
@@ -1240,8 +1248,10 @@
             </div>
 
             <div class="achievements-elite">
-                <div class="achievement-elite fade-in-elite">
-                    <div class="achievement-icon-elite">🔄</div>
+                <div class="achievement-elite fade-in-elite performance-optimized">
+                    <div class="achievement-icon-elite">
+                        <i data-lucide="refresh-cw" style="width: 32px; height: 32px;"></i>
+                    </div>
                     <div class="achievement-metric">2024</div>
                     <h4 class="achievement-title-elite">Transformation Réussie</h4>
                     <p class="achievement-description-elite">
@@ -1250,8 +1260,10 @@
                     </p>
                 </div>
                 
-                <div class="achievement-elite fade-in-elite">
-                    <div class="achievement-icon-elite">📢</div>
+                <div class="achievement-elite fade-in-elite performance-optimized">
+                    <div class="achievement-icon-elite">
+                        <i data-lucide="megaphone" style="width: 32px; height: 32px;"></i>
+                    </div>
                     <div class="achievement-metric">5+ ans</div>
                     <h4 class="achievement-title-elite">Leadership Communication</h4>
                     <p class="achievement-description-elite">
@@ -1260,8 +1272,10 @@
                     </p>
                 </div>
                 
-                <div class="achievement-elite fade-in-elite">
-                    <div class="achievement-icon-elite">🎭</div>
+                <div class="achievement-elite fade-in-elite performance-optimized">
+                    <div class="achievement-icon-elite">
+                        <i data-lucide="music" style="width: 32px; height: 32px;"></i>
+                    </div>
                     <div class="achievement-metric">4+ ans</div>
                     <h4 class="achievement-title-elite">Direction Exécutive</h4>
                     <p class="achievement-description-elite">
@@ -1270,8 +1284,10 @@
                     </p>
                 </div>
                 
-                <div class="achievement-elite fade-in-elite">
-                    <div class="achievement-icon-elite">🛠️</div>
+                <div class="achievement-elite fade-in-elite performance-optimized">
+                    <div class="achievement-icon-elite">
+                        <i data-lucide="settings" style="width: 32px; height: 32px;"></i>
+                    </div>
                     <div class="achievement-metric">3+ ans</div>
                     <h4 class="achievement-title-elite">Expertise Technique</h4>
                     <p class="achievement-description-elite">
@@ -1297,9 +1313,11 @@
             </div>
 
             <div class="expertise-categories">
-                <div class="expertise-category slide-in-elite">
+                <div class="expertise-category slide-in-elite performance-optimized">
                     <div class="category-header-elite">
-                        <div class="category-icon-elite">🎨</div>
+                        <div class="category-icon-elite">
+                            <i data-lucide="palette" style="width: 32px; height: 32px;"></i>
+                        </div>
                         <h4 class="category-title-elite">Frontend Architecture</h4>
                         <p class="category-subtitle-elite">Interfaces premium et accessibles</p>
                     </div>
@@ -1335,9 +1353,11 @@
                     </ul>
                 </div>
 
-                <div class="expertise-category slide-in-elite">
+                <div class="expertise-category slide-in-elite performance-optimized">
                     <div class="category-header-elite">
-                        <div class="category-icon-elite">⚙️</div>
+                        <div class="category-icon-elite">
+                            <i data-lucide="server" style="width: 32px; height: 32px;"></i>
+                        </div>
                         <h4 class="category-title-elite">Backend Systems</h4>
                         <p class="category-subtitle-elite">Architecture et APIs robustes</p>
                     </div>
@@ -1373,9 +1393,11 @@
                     </ul>
                 </div>
 
-                <div class="expertise-category slide-in-elite">
+                <div class="expertise-category slide-in-elite performance-optimized">
                     <div class="category-header-elite">
-                        <div class="category-icon-elite">🛠️</div>
+                        <div class="category-icon-elite">
+                            <i data-lucide="tool" style="width: 32px; height: 32px;"></i>
+                        </div>
                         <h4 class="category-title-elite">DevOps & Outils</h4>
                         <p class="category-subtitle-elite">Workflow et déploiement modernes</p>
                     </div>
@@ -1411,9 +1433,11 @@
                     </ul>
                 </div>
 
-                <div class="expertise-category slide-in-elite">
+                <div class="expertise-category slide-in-elite performance-optimized">
                     <div class="category-header-elite">
-                        <div class="category-icon-elite">✨</div>
+                        <div class="category-icon-elite">
+                            <i data-lucide="star" style="width: 32px; height: 32px;"></i>
+                        </div>
                         <h4 class="category-title-elite">Leadership Skills</h4>
                         <p class="category-subtitle-elite">La différence qui fait la différence</p>
                     </div>
@@ -1481,43 +1505,55 @@
             </div>
 
             <div class="contact-methods-elite">
-                <a href="mailto:alexandre.rippling@gmail.com" class="contact-method-elite">
-                    <div class="contact-icon-elite">✉️</div>
+                <a href="mailto:alexandre.rippling@gmail.com" class="contact-method-elite performance-optimized">
+                    <div class="contact-icon-elite">
+                        <i data-lucide="mail" style="width: 32px; height: 32px;"></i>
+                    </div>
                     <div class="contact-label-elite">Contact Stratégique</div>
                     <div class="contact-info-elite">alexandre.rippling@gmail.com</div>
                     <div class="contact-benefit-elite">Réponse sous 24h - Discussion de haut niveau</div>
                 </a>
                 
-                <a href="tel:+33669591434" class="contact-method-elite">
-                    <div class="contact-icon-elite">📱</div>
+                <a href="tel:+33669591434" class="contact-method-elite performance-optimized">
+                    <div class="contact-icon-elite">
+                        <i data-lucide="phone" style="width: 32px; height: 32px;"></i>
+                    </div>
                     <div class="contact-label-elite">Échange Direct</div>
                     <div class="contact-info-elite">06.69.59.14.34</div>
                     <div class="contact-benefit-elite">Conversation approfondie immédiate</div>
                 </a>
                 
-                <a href="https://linkedin.com/in/alexandrerippling" target="_blank" class="contact-method-elite">
-                    <div class="contact-icon-elite">💼</div>
+                <a href="https://linkedin.com/in/alexandrerippling" target="_blank" class="contact-method-elite performance-optimized">
+                    <div class="contact-icon-elite">
+                        <i data-lucide="linkedin" style="width: 32px; height: 32px;"></i>
+                    </div>
                     <div class="contact-label-elite">Réseau Professionnel</div>
                     <div class="contact-info-elite">Alexandre Rippling</div>
                     <div class="contact-benefit-elite">Recommandations et parcours vérifié</div>
                 </a>
                 
-                <a href="https://github.com/arippling" target="_blank" class="contact-method-elite">
-                    <div class="contact-icon-elite">💻</div>
+                <a href="https://github.com/arippling" target="_blank" class="contact-method-elite performance-optimized">
+                    <div class="contact-icon-elite">
+                        <i data-lucide="github" style="width: 32px; height: 32px;"></i>
+                    </div>
                     <div class="contact-label-elite">Portfolio Technique</div>
                     <div class="contact-info-elite">GitHub.com/arippling</div>
                     <div class="contact-benefit-elite">Code source et contributions</div>
                 </a>
                 
-                <a href="https://www.handietdev.fr" target="_blank" class="contact-method-elite">
-                    <div class="contact-icon-elite">🌐</div>
+                <a href="https://www.handietdev.fr" target="_blank" class="contact-method-elite performance-optimized">
+                    <div class="contact-icon-elite">
+                        <i data-lucide="globe" style="width: 32px; height: 32px;"></i>
+                    </div>
                     <div class="contact-label-elite">Écosystème Complet</div>
                     <div class="contact-info-elite">www.handietdev.fr</div>
                     <div class="contact-benefit-elite">Vision d'ensemble et projets</div>
                 </a>
                 
-                <div class="contact-method-elite contact-signature">
-                    <div class="contact-icon-elite">📍</div>
+                <div class="contact-method-elite contact-signature performance-optimized">
+                    <div class="contact-icon-elite">
+                        <i data-lucide="map-pin" style="width: 32px; height: 32px; color: var(--signature-gold);"></i>
+                    </div>
                     <div class="contact-label-elite">Base Stratégique</div>
                     <div class="contact-info-elite">Lunéville, Grand Est, France</div>
                     <div class="contact-benefit-elite">Mobilité nationale • Remote • International</div>
@@ -1527,7 +1563,7 @@
     </section>
 
     <script>
-        // ===== ORCHESTRATEUR EXPÉRIENCE ÉLITE =====
+        // ===== ORCHESTRATEUR EXPÉRIENCE ÉLITE OPTIMISÉE =====
         class EliteExperience {
             constructor() {
                 this.isLoaded = false;
@@ -1539,12 +1575,13 @@
 
             init() {
                 this.hideLoader();
-                this.setupEliteObserver();
+                this.setupOptimizedObserver();
                 this.setupSmoothNavigation();
                 this.setupSkillsAnimation();
                 this.setupLeadershipTracking();
                 this.setupGlassmorphismEffects();
-                console.log('👑 Expérience Élite Alexandre activée - Leadership mode ON');
+                this.initializeLucideIcons();
+                console.log('👑 Expérience Élite Alexandre activée - Performance optimisée');
             }
 
             hideLoader() {
@@ -1552,61 +1589,39 @@
                     document.getElementById('loader').classList.add('hide');
                     this.isLoaded = true;
                     this.triggerEliteEntrance();
-                }, 3000);
+                }, 2500);
             }
 
             triggerEliteEntrance() {
-                // Effet d'entrée sophistiqué
+                // Effet d'entrée sophistiqué mais rapide
                 document.body.style.opacity = '0';
                 setTimeout(() => {
-                    document.body.style.transition = 'opacity 0.8s ease';
+                    document.body.style.transition = 'opacity 0.6s ease';
                     document.body.style.opacity = '1';
                 }, 100);
             }
 
-            setupEliteObserver() {
+            setupOptimizedObserver() {
                 const observerOptions = {
                     threshold: 0.1,
-                    rootMargin: '0px 0px -80px 0px'
+                    rootMargin: '0px 0px -50px 0px'
                 };
 
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting && !this.observedElements.has(entry.target)) {
-                            this.animateEliteElement(entry.target);
+                            // Animation immédiate pour performance optimale
+                            entry.target.classList.add('visible');
                             this.observedElements.add(entry.target);
                             this.trackEngagement();
                         }
                     });
                 }, observerOptions);
 
-                // Observer tous les éléments élite
+                // Observer tous les éléments animables
                 document.querySelectorAll('.fade-in-elite, .slide-in-elite, .scale-in-elite').forEach(el => {
                     observer.observe(el);
                 });
-            }
-
-            animateEliteElement(element) {
-                // Animation en cascade sophistiquée
-                const siblings = Array.from(element.parentNode.children).filter(el => 
-                    el.classList.contains('fade-in-elite') || 
-                    el.classList.contains('slide-in-elite') || 
-                    el.classList.contains('scale-in-elite')
-                );
-                const index = siblings.indexOf(element);
-                
-                setTimeout(() => {
-                    element.classList.add('visible');
-                    this.addEliteGlow(element);
-                }, index * 200);
-            }
-
-            addEliteGlow(element) {
-                // Effet de brillance subtil
-                element.style.boxShadow = '0 0 30px rgba(201, 169, 110, 0.1)';
-                setTimeout(() => {
-                    element.style.boxShadow = '';
-                }, 1000);
             }
 
             setupSkillsAnimation() {
@@ -1632,14 +1647,13 @@
                         
                         // Effet de signature pour les skills experts
                         if (parseInt(width) >= 90) {
-                            bar.style.boxShadow = '0 0 15px rgba(201, 169, 110, 0.4)';
+                            bar.style.boxShadow = '0 0 10px rgba(201, 169, 110, 0.3)';
                         }
-                    }, index * 150);
+                    }, index * 50); // Réduction du délai pour plus de fluidité
                 });
             }
 
             setupLeadershipTracking() {
-                // Tracking sophistiqué des interactions leadership
                 let interactionDepth = 0;
                 let timeSpent = 0;
                 const startTime = Date.now();
@@ -1660,7 +1674,7 @@
                     }
                 });
 
-                // Calcul d'engagement toutes les 30 secondes
+                // Calcul d'engagement optimisé
                 setInterval(() => {
                     timeSpent = (Date.now() - startTime) / 1000;
                     if (timeSpent > 120 && !this.leadershipIndicators.includes('executive_time')) {
@@ -1688,7 +1702,7 @@
                         font-size: 0.9rem;
                         font-weight: 500;
                         z-index: 10000;
-                        animation: leadership-notification 4s ease forwards;
+                        animation: leadership-notification 3s ease forwards;
                         box-shadow: var(--shadow-luxury);
                     ">
                         ✨ ${message}
@@ -1699,15 +1713,15 @@
                 
                 setTimeout(() => {
                     notification.remove();
-                }, 4000);
+                }, 3000);
             }
 
             setupGlassmorphismEffects() {
-                // Effets glassmorphism dynamiques
+                // Effets glassmorphism optimisés
                 document.querySelectorAll('.glass-card, .contact-method-elite, .advantage-card').forEach(element => {
                     element.addEventListener('mouseenter', function() {
                         this.style.background = 'rgba(255, 255, 255, 0.12)';
-                        this.style.transform = 'translateY(-8px) scale(1.02)';
+                        this.style.transform = 'translateY(-6px) scale(1.01)';
                     });
 
                     element.addEventListener('mouseleave', function() {
@@ -1733,13 +1747,19 @@
                 });
             }
 
-            calculateLeadershipScore() {
-                // Score d'engagement leadership
-                const timeBonus = Math.min(50, (Date.now() - this.startTime) / 1000 * 2);
-                const interactionBonus = this.leadershipIndicators.length * 15;
-                const depthBonus = this.observedElements.size * 5;
-                
-                return Math.min(100, timeBonus + interactionBonus + depthBonus);
+            initializeLucideIcons() {
+                // Initialisation des icônes Lucide après chargement
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                    console.log('✨ Icônes Lucide initialisées');
+                } else {
+                    // Retry si Lucide n'est pas encore chargé
+                    setTimeout(() => this.initializeLucideIcons(), 100);
+                }
+            }
+
+            trackEngagement() {
+                this.engagementScore += 5;
             }
         }
 
@@ -1761,25 +1781,15 @@
                 100% { opacity: 0; transform: translateX(100px); }
             }
 
-            @keyframes signature-glow {
-                0%, 100% { box-shadow: 0 0 20px rgba(201, 169, 110, 0.2); }
-                50% { box-shadow: 0 0 40px rgba(201, 169, 110, 0.4); }
-            }
-
             .elite-glow {
-                animation: signature-glow 3s ease-in-out infinite;
-            }
-
-            /* Effet parallax subtil */
-            .hero-background-elite {
-                will-change: transform;
+                box-shadow: 0 0 20px rgba(201, 169, 110, 0.2);
             }
 
             /* Optimisations performance */
-            .glass-card,
-            .contact-method-elite,
-            .advantage-card {
-                will-change: transform, background;
+            .performance-optimized {
+                will-change: transform;
+                backface-visibility: hidden;
+                transform: translateZ(0);
             }
 
             /* Focus states accessibles */
@@ -1798,6 +1808,11 @@
                 .status-indicator {
                     animation: none;
                 }
+                
+                * {
+                    transition-duration: 0.01ms !important;
+                    animation-duration: 0.01ms !important;
+                }
             }
         `;
         document.head.appendChild(eliteAnimations);
@@ -1805,16 +1820,17 @@
         // Initialisation de l'expérience élite
         const eliteExperience = new EliteExperience();
         
-        // Démarrage intelligent
+        // Démarrage intelligent avec gestion des dépendances
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => eliteExperience.init());
+            document.addEventListener('DOMContentLoaded', () => {
+                eliteExperience.init();
+            });
         } else {
             eliteExperience.init();
         }
 
         // Optimisation performance - Intersection Observer natif
         if ('IntersectionObserver' in window) {
-            // Support moderne confirmé
             console.log('🏆 Optimisations performance activées');
         } else {
             // Fallback pour navigateurs anciens
@@ -1845,10 +1861,20 @@
                 
                 // Message personnalisé
                 setTimeout(() => {
-                    alert('Mode Visionnaire Activé ! Vous avez la mentalité d\'un vrai leader. C\'est exactement le type de curiosité et de détermination que je recherche chez mes futurs collaborateurs !');
+                    alert('🎯 Mode Visionnaire Activé ! Vous avez la mentalité d\'un vrai leader. C\'est exactement le type de curiosité et de détermination que je recherche chez mes futurs collaborateurs !');
                 }, 500);
             }
         });
+
+        // Performance monitoring (optionnel)
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                if (loadTime < 3000) {
+                    console.log('⚡ Performance excellente: ' + loadTime + 'ms');
+                }
+            });
+        }
     </script>
 </body>
 </html>
