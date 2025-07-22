@@ -1794,7 +1794,7 @@
 
         // CSS dynamique pour animations supplémentaires
         const eliteAnimations = document.createElement('style');
-        eliteAnimations.textContent = 
+        eliteAnimations.textContent = `
             @keyframes leadership-notification {
                 0% { opacity: 0; transform: translateX(100px); }
                 15% { opacity: 1; transform: translateX(0); }
@@ -1835,7 +1835,7 @@
                     animation-duration: 0.01ms !important;
                 }
             }
-        ;
+        `;
         document.head.appendChild(eliteAnimations);
 
         // Initialisation de l'expérience élite
