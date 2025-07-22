@@ -1602,7 +1602,7 @@
                 this.setupLeadershipTracking();
                 this.setupGlassmorphismEffects();
                 this.initializeLucideIcons();
-                console.log('👑 Expérience Élite Alexandre activée - Performance optimisée');
+                console.log('Expérience Élite Alexandre activée - Performance optimisée');
             }
 
             hideLoader() {
@@ -1726,7 +1726,7 @@
                         animation: leadership-notification 3s ease forwards;
                         box-shadow: var(--shadow-luxury);
                     ">
-                        ✨ ${message}
+                         ${message}
                     </div>
                 `;
                 
@@ -1772,7 +1772,7 @@
                 // Initialisation des icônes Lucide après chargement
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
-                    console.log('✨ Icônes Lucide initialisées');
+                    console.log('Icônes Lucide initialisées');
                 } else {
                     // Retry si Lucide n'est pas encore chargé
                     setTimeout(() => this.initializeLucideIcons(), 100);
@@ -1794,7 +1794,7 @@
 
         // CSS dynamique pour animations supplémentaires
         const eliteAnimations = document.createElement('style');
-        eliteAnimations.textContent = `
+        eliteAnimations.textContent = 
             @keyframes leadership-notification {
                 0% { opacity: 0; transform: translateX(100px); }
                 15% { opacity: 1; transform: translateX(0); }
@@ -1835,7 +1835,7 @@
                     animation-duration: 0.01ms !important;
                 }
             }
-        `;
+        ;
         document.head.appendChild(eliteAnimations);
 
         // Initialisation de l'expérience élite
@@ -1852,7 +1852,7 @@
 
         // Optimisation performance - Intersection Observer natif
         if ('IntersectionObserver' in window) {
-            console.log('🏆 Optimisations performance activées');
+            console.log('Optimisations performance activées');
         } else {
             // Fallback pour navigateurs anciens
             document.querySelectorAll('.fade-in-elite, .slide-in-elite, .scale-in-elite').forEach(el => {
@@ -1882,7 +1882,7 @@
                 
                 // Message personnalisé
                 setTimeout(() => {
-                    alert('🎯 Mode Visionnaire Activé ! Vous avez la mentalité d\'un vrai leader. C\'est exactement le type de curiosité et de détermination que je recherche chez mes futurs collaborateurs !');
+                    alert('Mode Visionnaire Activé ! Vous avez la mentalité d\'un vrai leader. C\'est exactement le type de curiosité et de détermination que je recherche chez mes futurs collaborateurs !');
                 }, 500);
             }
         });
